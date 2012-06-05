@@ -7,5 +7,6 @@ BOOTSTRAP_LESS = ./less/bootstrap.less
 bootstrap:
 	cp img/* ../../img/
 	lessc --compress ${BOOTSTRAP_LESS} > ../../css/bootstrap.min.css
+	cp ../../css/bootstrap.min.css ../../_site/css/bootstrap.min.css
 
 .PHONY: bootstrap
