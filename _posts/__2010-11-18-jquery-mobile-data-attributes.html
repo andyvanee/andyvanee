@@ -1,0 +1,26 @@
+---
+layout: post
+title: jQuery Mobile Data Attributes
+---
+In testing out the newly released <a href="http://jquerymobile.com/">jQuery Mobile</a>&nbsp;library, I'm left with strong but mixed feelings about it.<br />
+<br />
+First, it's a surprisingly unique solution. The jQuery team is very good at simplifying hard problems, but in some ways you come to expect that the solutions will be quite similar. I expected a bunch of jQuery-type functions that would transform your markup into the mobile look and feel. I expected jQueryUI for mobile, and was ready to start moaning about how inflexible and unsemantic it was.<br />
+<br />
+Instead, their solution is to add HTML syntax and automatically wire up all of the functionality for you. Not what I was expecting. You don't have to write a single line of JavaScript for the default functionality. This has got to be the easiest solution for porting HTML content to a device. Your "pages" can all live inside one HTML file or be loaded dynamically with AJAX. All the URL's get dynamically referenced to the main page and resolve correctly. And no handwritten JavaScript or CSS in sight.<br />
+<br />
+A lot of this functionality comes through the use of custom data attributes in your HTML. In my perusing of the HTML5 features I have to admit: this one seemed fairly boring. So what if I can add custom attributes and my page still validates? Why should I care?<br />
+<br />
+But the guys at jQuery Mobile have capitalized heavily on this notion. By using custom attributes quite liberally to alter the semantic meaning of lists, headers and anchors, they can automate all the behind the scenes JavaScript and CSS necessary to make it work.<br />
+<br />
+It's a strange reversal of the web technology where the withering old HTML document is front and center again and the CSS and JavaScript hide in the back room, pulling on the invisible strings.<br />
+<br />
+For a "Navigate to Text Content" site, this is a dead-simple solution. I think a 'Project Gutenberg' site is at the top of my list. Or maybe an RSS reader.<br />
+Some negatives that I see:<br />
+<br />
+<ol><li>Building or altering UI components is going to be a pain.</li>
+<li>Really only scales to iPhone-size devices. (They support iPad, but who uses full-width buttons on iPad?)</li>
+<li>The UI is a tad bland. (Erring on the side of caution, I guess)</li>
+<li>I'm undecided on all of those data-role tags.</li>
+<li>It's new and strange. I don't like new things. I'm scared of it. What if it doesn't like me?</li>
+</ol><div><i>Anyway</i>...</div><div><br />
+My real takeaway is not the tool itself, but understanding how it works and how I can incorporate those ideas into my own projects. There's a lot of smart people working on projects like this, and you really only get to know them by reading their code.</div><div class="blogger-post-footer"><img alt="" height="1" src="https://blogger.googleusercontent.com/tracker/3761776372224414205-3732528388850362951?l=amxor.blogspot.com" width="1" /></div>

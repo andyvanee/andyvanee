@@ -1,0 +1,34 @@
+body {
+}
+h1.page-title {
+border-bottom: 2px solid #B46B1D;
+margin-bottom: 30px;
+}
+.listed-post {
+border-bottom: 1px solid #E0E2D2;
+position: relative;
+}
+.listed-post-date {
+font-size: 80%;
+position: absolute;
+right: 0;
+top: 0;
+}
+.listed-post-title {
+display: block;
+width: 400px;
+}
+
+.post-single .date {
+float: right;
+font-size: 75%;
+color: #555;
+}
+
+.footer {
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+}
+.footer a {
+color: #999;
+}

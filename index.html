@@ -1,0 +1,10 @@
+---
+layout: default
+title: Home
+---
+{% for page in site.posts %}
+<div class="listed-post">
+  <div class='listed-post-title'><a href="{{ page.url }}">{{ page.title }}</a></div>
+  <div class='listed-post-date'>{{ page.date | date:"%d-%b-%Y" }}</div>
+</div>
+{% endfor %}
