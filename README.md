@@ -1,4 +1,4 @@
 andyvanee.github.com
 ====================
 
-My Homepage [andyvanee.com](andyvanee.com)
+My Homepage [andyvanee.com](http://andyvanee.com/)
