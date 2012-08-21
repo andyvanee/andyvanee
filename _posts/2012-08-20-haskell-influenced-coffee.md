@@ -36,7 +36,7 @@ a tendency to grow in ugly ways. I'd like to break it into it's own
 named function, but I have a problem: my response handle will go out of
 scope so I can't actually write my response. My Haskell-influenced
 solution uses a function-returning function and looks surprisingly
-like a Haskell function signature:
+like a Haskell type signature:
 
     handler = (req, res) ->
       fs.readFile 'myfile.html', fileResponder(res)
@@ -63,8 +63,8 @@ think, "I should do this recursively", it just came naturally.
 
     # Pad a string to len using padding
     String.prototype.pad = (padding, len) ->
-      throw 'Argument 1 for String.pad must me a string' if typeof padding != 'string'
-      throw 'Argument 2 for String.pad must be an integer count' if typeof len != 'number'
+      throw 'Argument 1 for pad must me a string' if typeof padding != 'string'
+      throw 'Argument 2 for pad must be a number' if typeof len != 'number'
       if @.length < len then (padding + @).pad(padding, len) else @
 
 Now we can change "7" to "007", just by doing `"7".pad("0", 3)`. Sure, this
@@ -100,4 +100,3 @@ As it turns out, I was able to use this inside a string interpolation
 which was much cleaner and more or less self-documenting.
 
     fileContents = "title: #{dashToTitleCase postTitle}"
-
