@@ -3,14 +3,14 @@ layout: post
 title: Haskell Influenced Coffee
 ---
 
-I've been learning Haskell. It's very interesting experience to learn to
-think in the very different way that Haskell forces you to think, but I
-have been unsure whether it would actually have any practical benefit in
-my day to day work.
+I've been learning Haskell. It's been a very interesting experience to
+learn to think in the Haskell way, but I have been unsure whether it will
+actually have any practical benefit in my day to day work.
 
 Then I switched modes and wrote a little CoffeeScript. The lessons I had
 been struggling with Haskell suddenly became so clear when applied to
-CoffeeScript (and JavaScript, by extension).
+CoffeeScript (and JavaScript, by extension). Here's a few examples of
+what I'm talking about...
 
 ### Example #1 - Callbacks with scope
 
