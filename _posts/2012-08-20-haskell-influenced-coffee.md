@@ -61,11 +61,11 @@ things recursively more since using Haskell. Here's a simple example that
 pads a string with another string up to a certain length. I didn't even
 think, "I should do this recursively", it just came naturally.
 
-    # Pad a string to len using padString
-    String.prototype.pad = (padString, len) ->
-      throw 'Argument 1 for String.pad must me a string' if typeof padString != 'string'
+    # Pad a string to len using padding
+    String.prototype.pad = (padding, len) ->
+      throw 'Argument 1 for String.pad must me a string' if typeof padding != 'string'
       throw 'Argument 2 for String.pad must be an integer count' if typeof len != 'number'
-      if @.length < len then (padString + @).pad(padString, len) else @
+      if @.length < len then (padding + @).pad(padding, len) else @
 
 Now we can change "7" to "007", just by doing `"7".pad("0", 3)`. Sure, this
 could have been done just fine with a while or for loop. The thing I like
