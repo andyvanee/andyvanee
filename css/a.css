@@ -32,3 +32,6 @@ h1.page-title {
 .footer a {
     color: #999;
 }
+
+.gist { padding: 8px 0;}
+.gist, .gist pre { font-size: 12px; }
