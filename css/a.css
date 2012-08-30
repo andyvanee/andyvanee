@@ -3,6 +3,12 @@ h1.page-title {
     border-bottom: 2px solid #CB6A2A;
     margin-bottom: 30px;
 }
+h1 span.subhead {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #9a9a93;
+    float: right;
+}
 .listed-post {
     border-bottom: 1px solid #E0E2D2;
     position: relative;
@@ -24,7 +30,9 @@ h1.page-title {
     font-size: 75%;
     color: #555;
 }
-
+.pagination a {
+    line-height: 30px;
+}
 .footer {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
