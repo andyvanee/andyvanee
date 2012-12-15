@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>andyvanee.com - Photo Archiving</title>
+    <link href="http://fonts.googleapis.com/css?family=Rokkitt:700|Cantarell:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/a.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" type="application/rss+xml" title="andyvanee.com feed" href="http://andyvanee.com/feed.xml" />
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <h1 class="page-title"><a href="/">andyvanee</a><span class="subhead">blog</span></h1>
+      </div>
+      <div class="span8">
+        <div class="post-single">
+  <h2>
+    <a href="/2010/08/27/photo-archiving.html">Photo Archiving</a>
+    <span class="date">27-Aug-2010</span>
+  </h2>
+  <p>Backups and Archives are two different things. Ideally you should have
+a good archiving system, and your backup would be a redundant copy of
+that.</p>
+
+<p>In photography, a robust archiving system has between two and four copies of
+any file. These copies are:</p>
+
+<ul>
+<li>Camera Card</li>
+<li>Working Copy</li>
+<li>Source</li>
+<li>Backup</li>
+</ul>
+
+<p>In this case, Source and Backup are read-only copies that are exact
+duplicates of the file off the camera. The Backup copy should be on a
+seperate physical media and ideally in a seperate physical location.</p>
+
+<p>The working copy is the one you edit, view and share. Once a file is
+edited, it is important to make a Source and Backup copy of them as
+well.</p>
+
+<p>It is good to view these copies as layers of mutability. </p>
+
+<p><b>Camera Card:</b> Changes the most. Every shooting session will create and
+erase content from the card. </p>
+
+<p><b>Working Copy:</b> Can change with each editing session and these files 
+can be safely erased once backups are made.</p>
+
+<p><b>Source Copy:</b> Should never change, it is the copy that is
+accessed for viewing and making working copies. Any Source copy that is
+deleted will be deleted forever.</p>
+
+<p><b>Backup Copy:</b> A mirror image of your Source copy. It will only be accessed 
+in the rare event that your source copies are compromised (HD failure, fire, theft, etc.).</p>
+
+<h3>Implementation</h3>
+
+<p>The way to implement this structure will vary with the tools that you
+are using. The first step might be to disable automatic importing when
+you connect your camera. A better solution when connecting your camera is
+to make source and backup copies immediately. </p>
+
+<p>If you are using DVD's as your Backup copy, it probably makes sense to 
+use a USB thumb drive as an intermediate backup until you have enough 
+to fill a DVD.</p>
+
+<p>It is important though to do regular integrity checks on your Backup
+copies. You need to make sure that they aren't compromised without 
+you knowing. If you use an external hard drive, and are command-line 
+savvy you might do "diff -r PictureSource/ PictureBackup/" to compare 
+the entire contents of the two folders. If you are using DVD's you 
+either have to trust the quality of your media, or do periodic checks 
+of your media.</p>
+
+<ol>
+<li>Connect Camera.</li>
+<li>Make Source copy, check file count.</li>
+<li>Organize Source photos into events, deleting any <em>Absolute Garbage</em>.</li>
+<li>Make Backup copies, check file count.</li>
+<li>Make Working Copy from Source copy by importing into your editor of
+choice.</li>
+</ol>
+
+<p>Resist the temptation to organize your Source folder too much. Use only 
+large, time-based, linear chunks. </p>
+
+<ul>
+<li>DO: Pete's Wedding, Reception, Saloman Bay Beach...</li>
+<li>DON'T: Flowers, Trees, Close-ups, Saloman Bay Beach...</li>
+</ul>
+
+<p>The attentive reader will notice that the beach name is both in the do
+and don't list. This is because in the first, I've assumed that it was
+an afternoon of shooting at the beach. In the second it is a couple
+shots of that subject interspersed with shots of other subjects.</p>
+
+<p>On a related note, don't rename your files. The filenames from your
+camera are a very good <em>shooting record</em> of your camera. If you want
+to attach descriptions and tags, do it in the file's metadata.</p>
+
+<p>Now you are ready to edit your files. A typical editing session might
+look like this.</p>
+
+<ol>
+<li>Make a Working Copy from Source copy (if it's not already done).</li>
+<li>Edit the file(s).</li>
+<li>Make a new source copy next to the original (eg. DSC1255-edit1.jpg)</li>
+<li>Make a Backup of what has changed in the Source.</li>
+</ol>
+
+<p>If you are using DVD's, you probably want to make a new folder for any
+edited files, because the original folder might already be burned to
+disc. Again, use the original name with a standard suffix (Pete's Wedding-edited).</p>
+
+<h3>Generalized Strategy</h3>
+
+<p>Photos are actually quite easy to organize, compared to the myriad of
+other file types out there. But the systematic logic can be
+transferred to other types of files as well.</p>
+
+<p>By being systematic, a lot of confusion can be avoided. It also makes
+it possible to work toward automating the process entirely. But as the
+number of file types increases, so does the tendency to use different
+sorting methods or mixing methods.</p>
+<div class="blogger-post-footer"><img alt="" height="1" src="https://blogger.googleusercontent.com/tracker/3761776372224414205-4285408644096465940?l=amxor.blogspot.com" width="1" /></div>
+</div>
+<p>
+    tags:
+    
+</p>
+<p class="well">
+    <a href="mailto:andy@andyvanee.com?subject=Comments%20on%3A%20Photo Archiving">
+        Email
+    </a>
+    your comments to me. I will try to respond to all comments either by revising the
+    post, or by responding personally. I promise not post or otherwise mishandle
+    your email address.
+</p>
+      </div>
+      <div class="span8 footer">
+        <div class="inside">
+          <p><a href="/">andyvanee.com</a> | <a href="https://github.com/Andyvanee/andyvanee.github.com/wiki">wiki</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" charset="utf-8" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/app.min.js"></script>
+</html>
