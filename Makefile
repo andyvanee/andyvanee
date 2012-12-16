@@ -3,9 +3,9 @@ SITE_TARGET = ./public
 default: run
 
 run: build
-	@ cd _site && python -m SimpleHTTPServer 8000
+	@ cd public && python -m SimpleHTTPServer 8000
 
-build: build-site build-assets combine
+build: build-site build-assets combine copy-static
 
 combine:
 	mkdir -p public
@@ -15,10 +15,18 @@ combine:
 copy-static:
 	@ echo andyvanee.com > ${SITE_TARGET}/CNAME
 	@ echo 'url: http://andyvanee.com' > ${SITE_TARGET}/_config.yml
-	@ echo 'gitdir: ../.git/modules/site' > ${SITE_TARGET}/.git
+	@ echo 'gitdir: ../.git/modules/public' > ${SITE_TARGET}/.git
 
 build-site:
 	@ jekyll
 
 build-assets:
 	cd src && make
+
+clean:
+	@ rm -rf build
+	@ echo "Cleaning build/"
+
+dist-clean: clean
+	@ rm -rf public
+	@ echo "Cleaning public/"

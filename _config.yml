@@ -5,3 +5,5 @@ pygments:  true
 exclude: [src, Makefile, README.md]
 paginate:  16
 destination: build/pages
+source: jekyll/
+plugins: jekyll/_plugins
