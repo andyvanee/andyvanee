@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>andyvanee.com - RPN Calculator - v0.02</title>
+    <link href="http://fonts.googleapis.com/css?family=Rokkitt:700|Cantarell:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/a.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" type="application/rss+xml" title="andyvanee.com feed" href="http://andyvanee.com/feed.xml" />
+    <meta name="description" content="Thoughts on Programming, Metaphysics, and anything in between">
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <h1 class="page-title"><a href="/">andyvanee</a><span class="subhead">blog</span></h1>
+      </div>
+      <div class="span8">
+        <div class="post-single">
+  <h2>
+    <a href="/2010/02/03/rpn-calculator-v002.html">RPN Calculator - v0.02</a>
+    <span class="date">03-Feb-2010</span>
+  </h2>
+  <p><em>disclaimer: I copied this from my old blog. Not sure if it actually works:)</em></p>
+
+<p>My calculator code was quite easily polished up. Here&#8217;s the revised code which stacks operands properly and supports the main arithmetic operators +, -, * , /. If you flush the stack completely, you get a &#8220;nan&#8221; warning, which seems reasonable. Here&#8217;s the code: (gas, x86)</p>
+
+<pre><code>.section .data
+expr_length:    .int 128
+ADD:            .ascii &quot;+&quot;
+SUB:            .ascii &quot;-&quot;
+MUL:           .ascii &quot;*&quot;
+DIV:            .ascii &quot;/&quot;
+null:           .ascii &quot;\0&quot;
+disp_float:     .ascii &quot;%f\n\n\0&quot;
+.section .bss
+    .lcomm expr, 128
+.section .text
+.globl main
+
+main:
+    finit
+    1:
+    leal    null, %esi          #Clear the expr buffer
+    leal    expr, %edi
+    movl    expr_length, %ecx
+    cld
+    lodsb
+    rep     stosb
+    addl    $4, %esp
+    pushl   stdin               # Read an expression
+    pushl   $64
+    pushl   $expr
+    call    fgets
+    addl    $12, %esp
+
+    movb    ADD, %ah            # Test For Operators
+    movb    expr, %bh
+    cmp     %ah, %bh
+    je      addFloat
+    movb    SUB, %ah
+    cmp     %ah, %bh
+    je      subFloat
+    movb    MUL, %ah
+    cmp     %ah, %bh
+    je      mulFloat
+    movb    DIV, %ah
+    cmp     %ah, %bh
+    je      divFloat
+
+    pushl   $expr               # Must be a number
+    call    atof
+    addl    $4, %esp
+    jmp 1b
+
+    addFloat:
+        faddp
+        fstl   (%esp)
+        jmp     disp_answer
+
+    subFloat:
+        fsubrp
+        fstl   (%esp)
+        jmp     disp_answer
+
+    mulFloat:
+        fmulp
+        fstl    (%esp)
+        jmp     disp_answer
+
+    divFloat:
+        fdivrp
+        fstl   (%esp)
+
+    disp_answer:
+        pushl   $disp_float
+        call    printf
+        addl    $8, %esp
+        jmp     1b
+
+
+    notfound:
+    movl $1, %eax
+    movl $0, %ebx
+    int $0x80</code></pre>
+</div>
+<p>
+    tags:
+    
+    <a class="badge badge-info" href="/tag/Programming/">
+        Programming
+    </a>
+    
+    <a class="badge badge-info" href="/tag/Assembly/">
+        Assembly
+    </a>
+    
+</p>
+<p class="well">
+    <a href="mailto:andy@andyvanee.com?subject=Comments%20on%3A%20RPN Calculator - v0.02">
+        Email
+    </a>
+    your comments to me. I will try to respond to all comments either by revising the
+    post, or by responding personally. I promise not post or otherwise mishandle
+    your email address.
+</p>
+      </div>
+      <div class="span8 footer">
+        <div class="inside">
+          <p><a href="/">andyvanee.com</a> | <a href="https://github.com/Andyvanee/andyvanee.github.com/wiki">wiki</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" charset="utf-8" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/app.min.js"></script>
+</html>
