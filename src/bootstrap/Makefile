@@ -1,5 +1,5 @@
 BOOTSTRAP_LESS = './less/bootstrap.less'
-TARGET_BASE = '../../_site'
+TARGET_BASE = '../../build/assets'
 #
 # BUILD SIMPLE BOOTSTRAP DIRECTORY
 # lessc & uglifyjs are required

@@ -1,4 +1,4 @@
-TARGET_BASE = '../_site'
+TARGET_BASE = '../build/assets'
 BOOTSTRAP_CSS = ${TARGET_BASE}/css/bootstrap.min.css
 STYLESHEET = ${TARGET_BASE}/css/a.css
 TMP_STYLESHEET = ${TARGET_BASE}/css/tmp.css
