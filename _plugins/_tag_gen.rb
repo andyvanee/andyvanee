@@ -1,5 +1,7 @@
 module Jekyll
   class TagIndex < Page
+    attr_accessor :base
+
     def initialize(site, base, dir, tag)
       @site = site
       @base = base
@@ -27,7 +29,7 @@ module Jekyll
     def write_tag_index(site, dir, tag)
       index = TagIndex.new(site, site.source, dir, tag)
       index.render(site.layouts, site.site_payload)
-      index.write(dir)
+      index.write(index.base)
       site.pages << index
     end
   end
