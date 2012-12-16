@@ -29,7 +29,7 @@ module Jekyll
     def write_tag_index(site, dir, tag)
       index = TagIndex.new(site, site.source, dir, tag)
       index.render(site.layouts, site.site_payload)
-      index.write(index.base)
+      index.write(site.dest)
       site.pages << index
     end
   end
