@@ -1,6 +1,6 @@
-name: AndyVanee.com
-description: Thoughts on Programming, Metaphysics, and anything in between
-url: http://andyvanee.com
+name: 'andyvanee.com'
+description: 'Thoughts on Programming, Metaphysics, and anything in between'
+url:  'http://andyvanee.com'
 pygments:  true
 exclude:   src
 paginate:  16
