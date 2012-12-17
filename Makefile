@@ -18,6 +18,7 @@ copy-static:
 	@ mkdir -p public/css public/img
 	@ cp -r assets/img/* public/img
 	@ cp assets/favicon.ico ./public
+	@ cp README.md ./public 
 	@ echo andyvanee.com > ${SITE_BASE}/CNAME
 	@ echo 'url: http://andyvanee.com' > ${SITE_BASE}/_config.yml
 	@ echo 'gitdir: ../.git/modules/public' > ${SITE_BASE}/.git
