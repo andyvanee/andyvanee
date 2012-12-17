@@ -21,7 +21,6 @@ copy-static:
 	@ cp README.md ./public 
 	@ echo andyvanee.com > ${SITE_BASE}/CNAME
 	@ echo 'url: http://andyvanee.com' > ${SITE_BASE}/_config.yml
-	@ echo 'gitdir: ../.git/modules/public' > ${SITE_BASE}/.git
 
 build-jekyll:
 	@ jekyll
@@ -31,7 +30,7 @@ clean:
 	@ echo "Cleaning build/"
 
 distclean: clean
-	@ rm -rf public
+	@ rm -rf public/*
 	@ echo "Cleaning public/"
 
 # Asset Targets
