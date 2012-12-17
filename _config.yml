@@ -4,6 +4,6 @@ url:  'http://andyvanee.com'
 pygments:  true
 exclude: [src, Makefile, README.md]
 paginate:  16
-destination: build/pages
+destination: build/jekyll
 source: jekyll/
 plugins: jekyll/_plugins
