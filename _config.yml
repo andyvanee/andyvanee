@@ -2,8 +2,9 @@ name: 'andyvanee.com'
 description: 'Thoughts on Programming, Metaphysics, and anything in between'
 url:  'http://andyvanee.com'
 pygments:  true
-exclude: [src, Makefile, README.md]
+exclude: []
 paginate:  16
 destination: ./build/jekyll
 source:  ./jekyll
 plugins: ./jekyll/_plugins
+api: 'http://0.0.0.0:4567'

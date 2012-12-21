@@ -3,18 +3,18 @@ SITE_BASE = ./public
 default: public
 
 run: public
-	@ cd public && python -m SimpleHTTPServer 8000
+	@ bin/servelocal.sh
 
 public: combine copy-static
 
 combine: build-jekyll build-assets
-	@ echo Combining build directories into /public
+	# Combining build directories into /public
 	@ mkdir -p public
 	@ cp -r build/assets/* public/
 	@ cp -r build/jekyll/* public/
 
 copy-static:
-	@ echo Copying static resources
+	# Copying static resources
 	@ mkdir -p public/css public/img
 	@ cp -r assets/img/* public/img
 	@ cp assets/favicon.ico ./public
@@ -26,12 +26,12 @@ build-jekyll:
 	@ jekyll
 
 clean:
+	# Cleaning build/
 	@ rm -rf build
-	@ echo "Cleaning build/"
 
 distclean: clean
+	# Cleaning public/
 	@ rm -rf public/*
-	@ echo "Cleaning public/"
 
 # Asset Targets
 BOOTSTRAP_CSS = build/assets/css/bootstrap.min.css
