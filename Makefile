@@ -3,7 +3,7 @@ SITE_BASE = ./public
 default: public
 
 run: public
-	@ bin/servelocal.sh
+	@ cd server && bundle exec ruby myapp.rb -p 8999
 
 public: combine copy-static
 
@@ -18,7 +18,7 @@ copy-static:
 	@ mkdir -p public/css public/img
 	@ cp -r assets/img/* public/img
 	@ cp assets/favicon.ico ./public
-	@ cp README.md ./public 
+	@ cp README.md ./public
 	@ echo andyvanee.com > ${SITE_BASE}/CNAME
 	@ echo 'url: http://andyvanee.com' > ${SITE_BASE}/_config.yml
 
@@ -53,9 +53,9 @@ ${STYLESHEET}: assets/css/a.css
 	recess --compress ${TMP_STYLESHEET} > ${STYLESHEET}
 	rm ${TMP_STYLESHEET}
 
-${JSAPP}: assets/js/app.coffee
+${JSAPP}: assets/js/app.js
 	@ mkdir -p build/assets/js
-	coffee -p $? | uglifyjs > $@
+	uglifyjs $? > $@
 
 #
 # BUILD SIMPLE BOOTSTRAP DIRECTORY

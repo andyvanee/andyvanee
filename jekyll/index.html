@@ -7,7 +7,7 @@ title: Home
 
 {% for page in p.posts %}
 <div class="listed-post">
-  <div class='listed-post-title'><a href="{{ page.url }}">{{ page.title }}</a></div>
+  <div class='listed-post-title' id='{{page.id | replace_first: '/', '' | replace:'/','-' }}'><a href="{{ page.url }}">{{ page.title }}</a></div>
   <div class='listed-post-date'>{{ page.date | date:"%d-%b-%Y" }}</div>
 </div>
 {% endfor %}
@@ -21,7 +21,7 @@ title: Home
     {% assign prev_str = "&laquo;&laquo;" %}
 
     {% if prev > 1 %}
-    <li><a href="/page{{prev}}">{{prev_str}}</a></li>
+    <li><a href="/page{{prev}}/index.html">{{prev_str}}</a></li>
 
     {% elsif prev == 1 %}
     <li><a href="/">{{prev_str}}</a></li>
@@ -31,9 +31,9 @@ title: Home
 
     {% endif %}
 
-    <li class="active"><a href="{% if curr == 1 %}/{% else %}/page{{curr}}{%endif%}">{{curr}}</a></li>
+    <li class="active"><a href="{% if curr == 1 %}/{% else %}/page{{curr}}/index.html{%endif%}">{{curr}}</a></li>
 
-    {% if next %}<li><a href="/page{{next}}">{{next_str}}</a></li>
+    {% if next %}<li><a href="/page{{next}}/index.html">{{next_str}}</a></li>
 
     {% else %}
     <li class="disabled"><a>{{next_str}}</a></li>
