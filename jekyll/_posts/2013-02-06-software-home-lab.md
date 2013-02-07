@@ -24,8 +24,10 @@ The reason I think it's important is that there is a certain pathology that can 
 
 Code that can ship.
 
-Flamewars about code editors, MVC, TDD, IDE's or security mean very little in comparison with deliverables. No matter if they are contracted, personal or purely experimental, the focus needs to be on shipping code.
+Flamewars about code editors, MVC, TDD, IDE's or security mean very little in comparison with deliverables. Refactoring and obsessively polishing are equivalent to premature optimization. One person using your code will educate you just as much, or more, than reading 1000 posts on hacker news.
 
-When your code is out there in public, it represents a committment. So buy a domain name [DNSimple](https://dnsimple.com/). Signup with a web host that can host the kind of apps you want to run (gh-pages, S3, EC2, Rackspace, Heroku, ...).
+No matter what you're interests are, whether it be writing, music, art, photography, social work or accounting, your primary focus should always be on your deliverables. Put your work in public. It has never been easier.
+
+If your interest *is* code, get some out in public. When your code is out in public, it represents a committment. The academic debates and hypothetical questions go out the window and you experience the rubber meeting the road. So buy a domain name [DNSimple](https://dnsimple.com/). Signup with a web host that can host the kind of apps you want to run (gh-pages, S3, EC2, Rackspace, Heroku, ...).
 
 Then **ship some code.**
