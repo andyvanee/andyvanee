@@ -25,6 +25,10 @@ h1 span.subhead {
     width: 400px;
 }
 
+.post-single {
+    margin-bottom: 60px;
+}
+
 .post-single .date {
     float: right;
     font-size: 75%;
@@ -39,6 +43,10 @@ h1 span.subhead {
 }
 .footer a {
     color: #999;
+}
+
+.badge {
+    margin: 0 4px 0;
 }
 
 .gist { padding: 8px 0;}
