@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Global Day of Code Retreat
+tags: [Programming, TDD]
 ---
 
 This past weekend my co-worker, Jon, and I participated in the Global

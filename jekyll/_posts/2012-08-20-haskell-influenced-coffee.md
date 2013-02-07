@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Haskell Influenced Coffee
-tags: [Programming]
+tags: [Programming, JavaScript]
 ---
 
 I've been learning Haskell. It's been a very interesting experience to
