@@ -35,8 +35,7 @@
       <span class='nx'>res</span><span class='p'>.</span><span class='nx'>end</span> <span class='s'>&#39;ack!&#39;</span>
       <span class='k'>return</span>
     <span class='nx'>res</span><span class='p'>.</span><span class='nx'>end</span> <span class='nx'>data</span>
-</code></pre>
-</div>
+</code></pre></div>
 <p>Not bad, but those inline functions are essentially untestable and have a tendency to grow in ugly ways. I&#8217;d like to break it into it&#8217;s own named function, but I have a problem: my response handle will go out of scope so I can&#8217;t actually write my response. My Haskell-influenced solution uses a function-returning function and looks surprisingly like a Haskell type signature:</p>
 <div class='highlight'><pre><code class='coffeescript'><span class='nv'>handler = </span><span class='nf'>(req, res) -&gt;</span>
   <span class='nx'>fs</span><span class='p'>.</span><span class='nx'>readFile</span> <span class='s'>&#39;myfile.html&#39;</span><span class='p'>,</span> <span class='nx'>fileResponder</span><span class='p'>(</span><span class='nx'>res</span><span class='p'>)</span>
@@ -46,8 +45,7 @@
     <span class='nx'>res</span><span class='p'>.</span><span class='nx'>end</span> <span class='s'>&#39;ack!&#39;</span>
     <span class='k'>return</span>
   <span class='nx'>res</span><span class='p'>.</span><span class='nx'>end</span> <span class='nx'>data</span>
-</code></pre>
-</div>
+</code></pre></div>
 <p>So this is a function that returns a callback function (taking err,data) with the proper response writer in scope. Nice!</p>
 
 <p>And now, with a minimal mock of res, err and data, it would be nice and easy to test the output of the responder across many inputs.</p>
@@ -60,8 +58,7 @@
   <span class='k'>throw</span> <span class='s'>&#39;Argument 1 for pad must me a string&#39;</span> <span class='k'>if</span> <span class='k'>typeof</span> <span class='nx'>padding</span> <span class='o'>!=</span> <span class='s'>&#39;string&#39;</span>
   <span class='k'>throw</span> <span class='s'>&#39;Argument 2 for pad must be a number&#39;</span> <span class='k'>if</span> <span class='k'>typeof</span> <span class='nx'>len</span> <span class='o'>!=</span> <span class='s'>&#39;number&#39;</span>
   <span class='k'>if</span> <span class='nx'>@</span><span class='p'>.</span><span class='nx'>length</span> <span class='o'>&lt;</span> <span class='nx'>len</span> <span class='k'>then</span> <span class='p'>(</span><span class='nx'>padding</span> <span class='o'>+</span> <span class='nx'>@</span><span class='p'>).</span><span class='nx'>pad</span><span class='p'>(</span><span class='nx'>padding</span><span class='p'>,</span> <span class='nx'>len</span><span class='p'>)</span> <span class='k'>else</span> <span class='nx'>@</span>
-</code></pre>
-</div>
+</code></pre></div>
 <p>Now we can change &#8220;7&#8221; to &#8220;007&#8221;, just by doing <code>&quot;7&quot;.pad(&quot;0&quot;, 3)</code>. Sure, this could have been done just fine with a while or for loop. The thing I like about recursive solutions is that the edge conditions are clearer than in an iterative solution.</p>
 
 <h3 id='example_3__functional_decomposition'>Example #3 - Functional Decomposition</h3>
@@ -81,12 +78,10 @@
 <span class='c1'># Convert dashes to spaces</span>
 <span class='nv'>dashToSpace = </span><span class='nf'>(xs) -&gt;</span>
   <span class='nx'>xs</span><span class='p'>.</span><span class='nx'>replace</span><span class='p'>(</span> <span class='sr'>/-/g</span> <span class='p'>,</span> <span class='s'>&#39; &#39;</span><span class='p'>)</span>
-</code></pre>
-</div>
+</code></pre></div>
 <p>In the past, it&#8217;s quite possible that I wouldn&#8217;t have even created a single function for this, much less three. It&#8217;s only a couple string replacements which wouldn&#8217;t have cluttered up the calling code too much. As it turns out, I was able to use this inside a string interpolation which was much cleaner and more or less self-documenting.</p>
 <div class='highlight'><pre><code class='coffeescript'><span class='nv'>fileContents = </span><span class='s'>&quot;title: </span><span class='si'>#{</span><span class='nx'>dashToTitleCase</span> <span class='nx'>postTitle</span><span class='si'>}</span><span class='s'>&quot;</span>
-</code></pre>
-</div>
+</code></pre></div>
 </div>
 <p>
     tags:
@@ -100,10 +95,12 @@
     <a href="mailto:andy@andyvanee.com?subject=Comments%20on%3A%20Haskell Influenced Coffee">
         Email
     </a>
-    your comments to me. I will try to respond to all comments either by revising the
-    post, or by responding personally. I promise not post or otherwise mishandle
-    your email address.
+    your comments or
+    <a href="https://twitter.com/andyvanee">send me a tweet</a>.
+    I will try to respond to all comments either by revising the
+    post, or by responding personally. I promise not post or otherwise mishandle your email address:)
 </p>
+
       </div>
       <div class="span8 footer">
         <div class="inside">

@@ -7,6 +7,40 @@
 		<atom:link href="http://andyvanee.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>The Software Developers Home Lab</title>
+				<description>&lt;p&gt;This post caught my eye: &lt;a href='http://www.theregister.co.uk/2013/02/07/home_lab_career_saver/'&gt;Why you need a home lab to keep your job&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;Your boss won't pay for training, so your partner has to put up with servers at home&lt;/blockquote&gt;
+&lt;p&gt;What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware. It was the question of what exactly the &amp;#8216;Home Lab&amp;#8217; looks like for a web developer. I have a number of things cooking in my home lab but I&amp;#8217;m thinking I really should have more. These are non-paying projects, built for fun or necessesity or just to develop my skills with tools I don&amp;#8217;t use at work. Here&amp;#8217;s a rundown of a couple of them:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://www.dollhousespa.com'&gt;My wife&amp;#8217;s website&lt;/a&gt;. Wordpress for most, Django for gift certificates. Nginx on EC2.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='https://github.com/Andyvanee/andyvanee.github.com'&gt;This blog&lt;/a&gt;: Jekyll static site hosted on github&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://scrapbook.andyvanee.com'&gt;My scrapbook&lt;/a&gt;: home-brew static site generator in python, hosted on S3&lt;/li&gt;
+
+&lt;li&gt;A little Node app for sharing / publishing lists of links. (also on EC2, but no link at the moment :)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a number of notable omissions from this list, and the reason I&amp;#8217;ve omitted them is important (to me, anyway).&lt;/p&gt;
+
+&lt;p&gt;First, I didn&amp;#8217;t include the many throwaway projects &lt;a href='https://github.com/Andyvanee?tab=repositories'&gt;on github&lt;/a&gt; or the ones littering my hard drive. Second, I didn&amp;#8217;t include the tools I use, or the substantial time commitment that&amp;#8217;s involved in learning new tools and frameworks.&lt;/p&gt;
+
+&lt;p&gt;The reason I think it&amp;#8217;s important is that there is a certain pathology that can become nearly all-consuming when working in this field. The pathology is an obsession with methodologies, tools and frameworks at the expense of code that can ship.&lt;/p&gt;
+
+&lt;p&gt;Code that can ship.&lt;/p&gt;
+
+&lt;p&gt;Flamewars about code editors, MVC, TDD, IDE&amp;#8217;s or security mean very little in comparison with deliverables. No matter if they are contracted, personal or purely experimental, the focus needs to be on shipping code.&lt;/p&gt;
+
+&lt;p&gt;When your code is out there in public, it represents a committment. So buy a domain name &lt;a href='https://dnsimple.com/'&gt;DNSimple&lt;/a&gt;. Signup with a web host that can host the kind of apps you want to run (gh-pages, S3, EC2, Rackspace, Heroku, &amp;#8230;).&lt;/p&gt;
+
+&lt;p&gt;Then &lt;strong&gt;ship some code.&lt;/strong&gt;&lt;/p&gt;</description>
+				<pubDate>Wed, 06 Feb 2013 00:00:00 -0700</pubDate>
+				<link>http://andyvanee.com/2013/02/06/software-home-lab.html</link>
+				<guid isPermaLink="true">http://andyvanee.com/2013/02/06/software-home-lab.html</guid>
+			</item>
+		
+			<item>
 				<title>Haskell Influenced Coffee</title>
 				<description>&lt;p&gt;I&amp;#8217;ve been learning Haskell. It&amp;#8217;s been a very interesting experience to learn to think in the Haskell way, but I have been unsure whether it will actually have any practical benefit in my day to day work.&lt;/p&gt;
 
@@ -23,8 +57,7 @@
       &lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;end&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;ack!&amp;#39;&lt;/span&gt;
       &lt;span class='k'&gt;return&lt;/span&gt;
     &lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;end&lt;/span&gt; &lt;span class='nx'&gt;data&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Not bad, but those inline functions are essentially untestable and have a tendency to grow in ugly ways. I&amp;#8217;d like to break it into it&amp;#8217;s own named function, but I have a problem: my response handle will go out of scope so I can&amp;#8217;t actually write my response. My Haskell-influenced solution uses a function-returning function and looks surprisingly like a Haskell type signature:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='coffeescript'&gt;&lt;span class='nv'&gt;handler = &lt;/span&gt;&lt;span class='nf'&gt;(req, res) -&amp;gt;&lt;/span&gt;
   &lt;span class='nx'&gt;fs&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;readFile&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;myfile.html&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;fileResponder&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
@@ -34,8 +67,7 @@
     &lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;end&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;ack!&amp;#39;&lt;/span&gt;
     &lt;span class='k'&gt;return&lt;/span&gt;
   &lt;span class='nx'&gt;res&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;end&lt;/span&gt; &lt;span class='nx'&gt;data&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;So this is a function that returns a callback function (taking err,data) with the proper response writer in scope. Nice!&lt;/p&gt;
 
 &lt;p&gt;And now, with a minimal mock of res, err and data, it would be nice and easy to test the output of the responder across many inputs.&lt;/p&gt;
@@ -48,8 +80,7 @@
   &lt;span class='k'&gt;throw&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;Argument 1 for pad must me a string&amp;#39;&lt;/span&gt; &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='k'&gt;typeof&lt;/span&gt; &lt;span class='nx'&gt;padding&lt;/span&gt; &lt;span class='o'&gt;!=&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;string&amp;#39;&lt;/span&gt;
   &lt;span class='k'&gt;throw&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;Argument 2 for pad must be a number&amp;#39;&lt;/span&gt; &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='k'&gt;typeof&lt;/span&gt; &lt;span class='nx'&gt;len&lt;/span&gt; &lt;span class='o'&gt;!=&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;number&amp;#39;&lt;/span&gt;
   &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='nx'&gt;@&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;length&lt;/span&gt; &lt;span class='o'&gt;&amp;lt;&lt;/span&gt; &lt;span class='nx'&gt;len&lt;/span&gt; &lt;span class='k'&gt;then&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;padding&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='nx'&gt;@&lt;/span&gt;&lt;span class='p'&gt;).&lt;/span&gt;&lt;span class='nx'&gt;pad&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;padding&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;len&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='k'&gt;else&lt;/span&gt; &lt;span class='nx'&gt;@&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now we can change &amp;#8220;7&amp;#8221; to &amp;#8220;007&amp;#8221;, just by doing &lt;code&gt;&amp;quot;7&amp;quot;.pad(&amp;quot;0&amp;quot;, 3)&lt;/code&gt;. Sure, this could have been done just fine with a while or for loop. The thing I like about recursive solutions is that the edge conditions are clearer than in an iterative solution.&lt;/p&gt;
 
 &lt;h3 id='example_3__functional_decomposition'&gt;Example #3 - Functional Decomposition&lt;/h3&gt;
@@ -69,12 +100,10 @@
 &lt;span class='c1'&gt;# Convert dashes to spaces&lt;/span&gt;
 &lt;span class='nv'&gt;dashToSpace = &lt;/span&gt;&lt;span class='nf'&gt;(xs) -&amp;gt;&lt;/span&gt;
   &lt;span class='nx'&gt;xs&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;replace&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt; &lt;span class='sr'&gt;/-/g&lt;/span&gt; &lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In the past, it&amp;#8217;s quite possible that I wouldn&amp;#8217;t have even created a single function for this, much less three. It&amp;#8217;s only a couple string replacements which wouldn&amp;#8217;t have cluttered up the calling code too much. As it turns out, I was able to use this inside a string interpolation which was much cleaner and more or less self-documenting.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='coffeescript'&gt;&lt;span class='nv'&gt;fileContents = &lt;/span&gt;&lt;span class='s'&gt;&amp;quot;title: &lt;/span&gt;&lt;span class='si'&gt;#{&lt;/span&gt;&lt;span class='nx'&gt;dashToTitleCase&lt;/span&gt; &lt;span class='nx'&gt;postTitle&lt;/span&gt;&lt;span class='si'&gt;}&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 				<pubDate>Mon, 20 Aug 2012 00:00:00 -0600</pubDate>
 				<link>http://andyvanee.com/2012/08/20/haskell-influenced-coffee.html</link>
 				<guid isPermaLink="true">http://andyvanee.com/2012/08/20/haskell-influenced-coffee.html</guid>
@@ -225,34 +254,6 @@ false -&amp;gt; OtherMethodToCall()&lt;/code&gt;&lt;/pre&gt;
 				<pubDate>Fri, 04 Mar 2011 00:00:00 -0700</pubDate>
 				<link>http://andyvanee.com/2011/03/04/guru-graduate.html</link>
 				<guid isPermaLink="true">http://andyvanee.com/2011/03/04/guru-graduate.html</guid>
-			</item>
-		
-			<item>
-				<title>Automate The Itch - Part 1</title>
-				<description>&lt;p&gt;Small, single-purpose utility applications have a long lineage in computing history. They are the cornerstone of the UNIX philosophy, and are rampant on mobile platforms. They are the small building blocks in a larger task. These are apps that scratch an itch. They do things that could be done in another way, but with less time and effort.&lt;/p&gt;&lt;p&gt;Every Mac comes with a tool for building your own utility apps quickly and painlessly: Automator. These apps don't need to clutter your dock, but can sit in the contextual menu (right-click) whenever you need them. This series will show you how to build a few useful apps, and hopefully give you the tools to dream up your own.&lt;/p&gt;&lt;p&gt;The first part will deal with files and folders, then I'll dive into network tasks, and finally text. I may also throw in a bonus section on porting some command-line wizardry to Automator.&lt;/p&gt;&lt;h2&gt;Batch Renamer&lt;/h2&gt;&lt;p&gt;One of the most common, time consuming tasks is emailing files. You may want to rename them, compress them or convert them somehow. Automator can deal with almost any of these tasks. Say you have 1000 files named [DSC1020.jpg-DSC2020.jpg], and want them to be called [Vacation&lt;em&gt;0001.jpg - Vacation&lt;/em&gt;1001.jpg]. Here's how Automator can help.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Open Automator and make a new &quot;Service&quot;&lt;/li&gt;
-&lt;li&gt;Set the service to receive files or folders in any application.&lt;/li&gt;
-&lt;li&gt;Add a &quot;Rename Finder Items&quot; action. (Don't make new copies of the files)&lt;/li&gt;
-&lt;li&gt;Change &quot;Add Date &amp;amp; Time&quot; to &quot;Make Sequential&quot;.&lt;/li&gt;
-&lt;li&gt;In the actions &quot;Options&quot; pane, click &quot;Show this action when workflow runs&quot;, so you can tweak the settings each time you run it.&lt;/li&gt;
-&lt;/ol&gt;&lt;p&gt;Save it and it will show up whenever you right click any files or folders.&lt;/p&gt;&lt;h2&gt;Resize Images&lt;/h2&gt;&lt;p&gt;If you email photos a lot, your workflow may also include copying them and resizing them. Here's how that might look:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create a &quot;Service&quot; that receives &quot;image files&quot;, or just continue on from the previous workflow.&lt;/li&gt;
-&lt;li&gt;Add a &quot;Copy Finder Items&quot; action. Set it to copy to the Desktop, your Dropbox or wherever you want the new files.&lt;/li&gt;
-&lt;li&gt;Add a &quot;Scale Images&quot; action and set the scaling. 600-pixels is probably good for general usage. If you want to adjust this each time it's run, check the box &quot;Options &gt; Show this action when run&quot;&lt;br /&gt;
-4a. Optionally: add a &quot;Reveal Finder Items&quot; action to show you the files in Finder when it's complete. This one throws an error for me, even though it does the job perfectly, so it's up to you…&lt;br /&gt;
-4b. Or: add a &quot;New Mail Message&quot; action to automatically add those photos to a new message in Mail. If you're feeling lucky, you can also add a &quot;Send Outgoing Messages&quot; action to automatically send the prepared email.&lt;/li&gt;
-&lt;/ol&gt;&lt;h2&gt;Other Handy File Actions&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Use &quot;Sort Finder Items&quot; prior to a sequential rename, to organize them by date, kind or size. &lt;/li&gt;
-&lt;li&gt;Include &quot;Label Finder Items&quot; or &quot;Set Spotlight Comments&quot; to organize the files you run through a particular workflow.&lt;/li&gt;
-&lt;li&gt;&quot;Create Archive&quot; is useful if you want to zip the files before sending.&lt;/li&gt;
-&lt;li&gt;&quot;New Alias&quot; is a great one-action service that just takes the selected files or folders and makes a shortcut on the Desktop.&lt;/li&gt;
-&lt;li&gt;Use &quot;Choose From List&quot; whenever you need to confirm an action. You then have the option to &quot;Select None&quot; or pick and choose items before the workflow continues.&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;Bonus Points - Email Screen Recording&lt;/h2&gt;&lt;p&gt;Here's a much more esoteric, but potentially very useful workflow. This one captures a screen recording, and emails it to someone.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Make a new &quot;Application&quot;.&lt;/li&gt;
-&lt;li&gt;Add a &quot;New Screen Capture&quot; action.&lt;/li&gt;
-&lt;li&gt;Add a &quot;Start Capture&quot; action and check the box &quot;Wait for capture to complete&quot;  &lt;/li&gt;
-&lt;li&gt;Add a &quot;Ask For Finder Items&quot; action, and set it to start at &quot;Movies&quot;. This is where screen recordings are saved by default.&lt;/li&gt;
-&lt;li&gt;Add a &quot;New Mail Message&quot; action like before. The selected movie will get added to the body of the mail message.&lt;/li&gt;
-&lt;/ol&gt;&lt;p&gt;This starts the recording right away, if you haven't used screen recording in QuickTime you probably want to run it once manually to set up your levels. Instant tutorials!&lt;/p&gt;&lt;div class=&quot;blogger-post-footer&quot;&gt;&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;https://blogger.googleusercontent.com/tracker/3761776372224414205-3882461819875128016?l=amxor.blogspot.com&quot; width=&quot;1&quot; /&gt;&lt;/div&gt;</description>
-				<pubDate>Fri, 11 Feb 2011 00:00:00 -0700</pubDate>
-				<link>http://andyvanee.com/2011/02/11/automate-the-itch---part-1.html</link>
-				<guid isPermaLink="true">http://andyvanee.com/2011/02/11/automate-the-itch---part-1.html</guid>
 			</item>
 		
 	</channel>
