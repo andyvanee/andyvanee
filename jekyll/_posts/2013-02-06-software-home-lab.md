@@ -28,6 +28,10 @@ Flamewars about code editors, MVC, TDD, IDE's or security mean very little in co
 
 No matter what you're interests are, whether it be writing, music, art, photography, social work or accounting, your primary focus should always be on your deliverables. Put your work in public. It has never been easier.
 
-If your interest *is* code, get some out in public. When your code is out in public, it represents a committment. The academic debates and hypothetical questions go out the window and you experience the rubber meeting the road. So buy a domain name [DNSimple](https://dnsimple.com/). Signup with a web host that can host the kind of apps you want to run (gh-pages, S3, EC2, Rackspace, Heroku, ...).
+If your interest *is* code, get some out in public. When your code is out in public, it represents a committment. The academic debates and hypothetical questions go out the window and you experience the rubber meeting the road. So, if you're not already doing it:
 
-Then **ship some code.**
+- Buy a domain name: [DNSimple](https://dnsimple.com/)
+- Find a host: [gh-pages](http://pages.github.com), [S3, EC2](http://aws.amazon.com), [Rackspace](http://www.rackspace.com/cloud/servers/), [Heroku](http://www.heroku.com)
+- **Ship some code**
+
+If you're just getting into the field, you don't need permission or someone to tell you how and what needs to be done. If you already work in the field, your clients and/or boss doesn't want to pay for theoretical or untested solutions. You need to invest in your own education and future and show results before they will be convinced.
