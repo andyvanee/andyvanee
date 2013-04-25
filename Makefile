@@ -11,7 +11,7 @@ combine: build-jekyll build-assets
 	# Combining build directories into /build
 	@ mkdir -p build
 	@ cp -r tmp/assets/* build/
-	@ cp -r tmp/jekyll/* build/
+	@ cp -r tmp/src/* build/
 
 copy-static:
 	# Copying static resources
