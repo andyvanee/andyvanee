@@ -4,7 +4,7 @@ url:  'http://andyvanee.com'
 pygments:  true
 exclude: []
 paginate:  16
-destination: ./build/jekyll
+destination: ./tmp/jekyll
 source:  ./jekyll
 plugins: ./jekyll/_plugins
 api: 'http://0.0.0.0:4567'
