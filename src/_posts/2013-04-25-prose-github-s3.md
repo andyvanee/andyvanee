@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prose, Github and S3
-published: false
+
 ---
 
 In an effort to make the static site workflow a little less manual, I've created a little web-service to automate things a bit. Here's how it works:
