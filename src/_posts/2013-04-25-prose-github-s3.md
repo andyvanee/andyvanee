@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Prose, Github and S3
+published: false
 ---
 
 In an effort to make the static site workflow a little less manual, I've created a little web-service to automate things a bit. Here's how it works:
@@ -16,4 +17,4 @@ The build stage looks like this:
 
 Setting up the server was a bit difficult for a couple of reasons. My blog is pretty straightforward, but it did need a number of things installed on the server for a successful build: make, jekyll, uglifyjs, recess, pygments and s3cmd. Also, this all had to be run as the www-data user, which had a pretty minimal environment.
 
-Which is awesome, since it's completely automated. Code coming soon on [github](https://github.com/Andyvanee)...
+So far, it's awesome. Editing and publishing my blog as a static site on S3 is now completely automated. Code coming soon on [github](https://github.com/Andyvanee)...
