@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prose, Github and S3
-published: false
+published: true
 
 ---
 
