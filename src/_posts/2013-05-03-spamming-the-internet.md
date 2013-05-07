@@ -20,6 +20,8 @@ But humanity is not the only inhabitant of the web. My robot assistant will test
 
 So my question is: am I spamming the internet? Or is this the fourth stage of the internet? A stage where original, human produced content is just a small droplet in the ocean of automatically generated content.
 
+----
+
 #### Comments
 
 On May 7, 2013 7:07 AM, "Jack" wrote:
