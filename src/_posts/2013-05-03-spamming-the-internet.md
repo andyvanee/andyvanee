@@ -19,3 +19,14 @@ But it really got me thinking about what the next stage in the evolution of the 
 But humanity is not the only inhabitant of the web. My robot assistant will testify to that. My aggregator is gathering stuff for me to read and, as a side effect, publishing something that someone else may like to read too. No longer am I posting stuff that I want others to hear, or that I want others to engage with. I am farming out robots to post stuff purely for my own consumption.
 
 So my question is: am I spamming the internet? Or is this the fourth stage of the internet? A stage where original, human produced content is just a small droplet in the ocean of automatically generated content.
+
+#### Comments
+
+On May 7, 2013 7:07 AM, "Jack" wrote:
+> Funny story, I found this post from completely unrelated search terms hitting feedr.*.
+>
+> IMO you're fine, re-distributing content is pretty normal. You could always slap a robots.txt on feedr.
+>
+> Jack
+
+Good point. A robots.txt would effectively make it a non-issue. The problem with that is that I think I *do* want it available in search results. I just wish there was some human & machine friendly way of saying "hey, this is not original content, but feel free to bookmark and index it if you like".
