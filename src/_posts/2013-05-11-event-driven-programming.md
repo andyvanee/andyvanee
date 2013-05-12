@@ -35,3 +35,7 @@ Combine this with the fact that events bubble by default in JavaScript, and you 
 In comparison, classical inheritance (single or multiple) seems incredibly confining. It requires the library author to define stub methods that may be overridden and called at the appropriate time. It requires the end user to override library methods and call `super` at the appropriate time (or not). All this adds up to an uneasy coupling between your code and the library code.
 
 Most importantly, it defines a single code path. Classical inheritance provides an abstraction for a single code path to jump from parent class to child. Forking or spawning parallel tasks is as awkward as it ever was. With event-driven programming forking and aggregating is the norm.
+
+### Addendum
+
+I've created a repo for this. I think it might be useful to have some generic time-sequence type stuff to use as basic building blocks for frontend development. <https://github.com/Andyvanee/heartbeat>
