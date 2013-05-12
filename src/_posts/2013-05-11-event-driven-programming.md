@@ -18,8 +18,6 @@ Event driven programming has the potential to solve this completely. To illustra
 
 <http://jsfiddle.net/andyvanee/BBxw9/2/>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/andyvanee/BBxw9/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
 It's basically a couple of jQuery plugins to do time-sequence type stuff.
 
 `$.heartbeat [line 80]` just triggers a `beat` event however often you specify. It also implements event handlers for `pause` and `resume` events.
