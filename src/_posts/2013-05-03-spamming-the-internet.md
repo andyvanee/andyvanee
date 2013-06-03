@@ -25,7 +25,7 @@ So my question is: am I spamming the internet? Or is this the fourth stage of th
 #### Comments
 
 On May 7, 2013 7:07 AM, "Jack" wrote:
-> Funny story, I found this post from completely unrelated search terms hitting feedr.*.
+> Funny story, I found this post from completely unrelated search terms hitting feedr.
 >
 > IMO you're fine, re-distributing content is pretty normal. You could always slap a robots.txt on feedr.
 >

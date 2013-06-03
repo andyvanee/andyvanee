@@ -23,7 +23,7 @@ copy-static:
 	@ echo 'url: http://andyvanee.com' > ${SITE_BASE}/_config.yml
 
 build-jekyll:
-	@ jekyll
+	@ jekyll build
 
 clean:
 	# Cleaning tmp/
@@ -50,7 +50,7 @@ ${STYLESHEET}: assets/css/a.css
 	@ mkdir -p tmp/assets/css
 	cat $? > ${TMP_STYLESHEET}
 	pygmentize -S default -f html >> ${TMP_STYLESHEET}
-	recess --compress ${TMP_STYLESHEET} > ${STYLESHEET}
+	lessc --compress ${TMP_STYLESHEET} > ${STYLESHEET}
 	rm ${TMP_STYLESHEET}
 
 ${JSAPP}: assets/js/app.js
@@ -65,4 +65,4 @@ BOOTSTRAP_LESS = assets/bootstrap/less/bootstrap.less
 ${BOOTSTRAP_CSS}: ${BOOTSTRAP_LESS}
 	@ mkdir -p tmp/assets/img tmp/assets/css
 	cp assets/bootstrap/img/* tmp/assets/img
-	recess --compress ${BOOTSTRAP_LESS} > ${BOOTSTRAP_CSS}
+	lessc --compress ${BOOTSTRAP_LESS} > ${BOOTSTRAP_CSS}
