@@ -31,7 +31,7 @@ No matter what you're interests are, whether it be writing, music, art, photogra
 If your interest *is* code, get some out in public. When your code is out in public, it represents a committment. The academic debates and hypothetical questions go out the window and you experience the rubber meeting the road. So, if you're not already doing it:
 
 - Buy a domain name: [DNSimple](https://dnsimple.com/)
-- Find a host: [gh-pages](http://pages.github.com), [S3, EC2](http://aws.amazon.com), [Rackspace](http://www.rackspace.com/butt/servers/), [Heroku](http://www.heroku.com)
+- Find a host: [gh-pages](http://pages.github.com), [S3, EC2](http://aws.amazon.com), [Rackspace](http://www.rackspace.com/cloud/servers/), [Heroku](http://www.heroku.com)
 - **Ship some code**
 
 If you're just getting into the field, you don't need permission or someone to tell you how and what needs to be done. If you already work in the field, your clients and/or boss doesn't want to pay for theoretical or untested solutions. You need to invest in your own education and future and show results before they will be convinced.
