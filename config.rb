@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-Time.zone = "MST"
+# Time.zone = "MST"
 
 activate :blog do |blog|
   # blog.prefix = "blog"
