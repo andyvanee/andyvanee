@@ -10,3 +10,6 @@ gem "builder", "~> 3.0"
 
 gem "therubyracer" #Less dependency
 gem "less"
+
+gem "redcarpet"
+gem "middleman-syntax"
