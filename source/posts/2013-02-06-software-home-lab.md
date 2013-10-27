@@ -8,7 +8,7 @@ This post caught my eye:
 
 <blockquote>Your boss won't pay for training, so your partner has to put up with servers at home</blockquote>
 
-What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware. It was the question of what exactly the 'Home Lab' looks like for a web developer. I have a number of things cooking in my home lab but I'm thinking I really should have more. These are non-paying projects, built for fun or necessesity or just to develop my skills with tools I don't use at work. Here's a rundown of a couple of them:
+What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware. It was the question of what exactly the 'Home Lab' looks like for a web developer. I have a number of things cooking in my home lab but I'm thinking I really should have more. These are non-paying projects, built for fun or necessity or just to develop my skills with tools I don't use at work. Here's a rundown of a couple of them:
 
 - [My wife's website](http://www.dollhousespa.com). Wordpress for most, Django for gift certificates. Nginx on EC2.
 - [This blog](https://github.com/Andyvanee/andyvanee.github.com): Jekyll static site hosted on github
