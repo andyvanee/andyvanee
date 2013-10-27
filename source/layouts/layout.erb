@@ -29,6 +29,14 @@
         <%= yield %>
 
         <% if current_article %>
+          <% if current_article.tags.length > 0 %>
+            <div class="tags">
+              tags:
+              <% current_article.tags.each do |tag| %>
+                <span class="tag"><%= link_to tag, tag_path(tag) %></a></span>
+              <% end %>
+            </div>
+          <% end %>
           <div class="pagination">
             <% if current_article.next_article %>
               <span class="next">

@@ -6,7 +6,7 @@
 @ui-bg: #FFF;
 @ui-fg: mix(@ui-bg, black, 35%);
 @link-color: mix(@ui-fg, blue, 60%);
-@border-color: #E4E4D5;
+@border-color: #F1F1E5;
 
 body, html, div {
   box-sizing: border-box;
@@ -84,5 +84,15 @@ h1 {
 #comments {
   &,  ~ p, ~ blockquote {
     font-size: 0.8em;
+  }
+}
+
+.tags {
+  margin: 1em 0;
+  .tag {
+    padding: 3px 5px;
+    border-radius: 3px;
+    background-color: darken(@ui-bg, 13%);
+    font-size: 0.9em;
   }
 }
