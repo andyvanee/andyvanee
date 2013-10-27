@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+@ui-bg: #F8F8F5;
+@ui-fg: mix(@ui-bg, black, 35%);
+@link-color: mix(@ui-fg, blue, 60%);
+@border-color: #E4E4D5;
+
+
+body {
+  font-size: 19px;
+  line-height: 1.55em;
+  font-family: 'Rokkitt', Georgia, serif;
+  color: @ui-fg;
+  background-color: @ui-bg;
+  background-image: data-uri('retina_dust.png');
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  &:visited {
+    color: lighten(desaturate(@link-color, 30%), 15%);
+  }
+}
+
+.container {
+  width: 34em;
+  max-width: 90%;
+  margin: 0 auto 4em;
+}
+
+.date {
+  font-size: 0.8em;
+}
+
+.pagination {
+  padding: 1em 0;
+  // background-color: lighten(@border-color, 5%);
+  opacity: 0.9;
+  font-size: 0.9em;
+  border: 1px solid @border-color;
+  border-width: 1px 0;
+}
+
+.next, .prev, .page-no {
+  padding: 0 1em 0 0;
+}
+
+ul.article-list {
+  padding: 0;
+  list-style-type: none;
+  li {
+    padding: 0.5em 0;
+    border-top: 1px solid @border-color;
+  }
+}
+
+code {
+  font-family: courier, monospace;
+  padding: 2px 4px;
+  background-color: mix(@ui-bg, black, 94%);
+}
+
+h1 {
+  font-size: 1.3em;
+  a, a:visited {
+    color: darken(@ui-bg, 15%);
+    text-shadow: -1px 1px 2px white;
+  }
+}
+
+#comments {
+  &,  ~ p, ~ blockquote {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 21px;
+  }
+}

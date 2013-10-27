@@ -1,0 +1,17 @@
+box: wercker/ubuntu12.04-ruby2.0.0
+build:
+    steps:
+        # Execute the bundle install step, a step provided by wercker
+        - bundle-install
+        # Execute a custom script step.
+        - script:
+            name: middleman build
+            code: bundle exec middleman build --verbose
+deploy:
+    steps:
+        # Execute the s3sync deploy step, a step provided by wercker
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY
+            key_secret: $AWS_SECRET_KEY
+            bucket_url: $AWS_BUCKET_URL
+            source_dir: build/
