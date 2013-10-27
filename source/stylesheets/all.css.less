@@ -1,11 +1,19 @@
 //= require normalize
 @charset "utf-8";
 
-@ui-bg: #F8F8F5;
+@ui-bg: #FFF;
 @ui-fg: mix(@ui-bg, black, 35%);
 @link-color: mix(@ui-fg, blue, 60%);
 @border-color: #E4E4D5;
 
+body, html, div {
+  box-sizing: border-box;
+}
+
+@viewport{
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
 
 body {
   font-size: 21px;
@@ -14,6 +22,7 @@ body {
   color: @ui-fg;
   background-color: @ui-bg;
   background-image: data-uri('retina_dust.png');
+  margin: 0;
 }
 
 a {
@@ -26,8 +35,12 @@ a {
 
 .container {
   width: 34em;
-  max-width: 90%;
-  margin: 0 auto 4em;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1em 2em;
+  background-color: @ui-bg;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 800px darken(@ui-bg, 15%);
 }
 
 .date {
@@ -36,11 +49,10 @@ a {
 
 .pagination {
   padding: 1em 0;
-  // background-color: lighten(@border-color, 5%);
   opacity: 0.9;
   font-size: 0.9em;
   border: 1px solid @border-color;
-  border-width: 1px 0;
+  border-width: 1px 0 0;
 }
 
 .next, .prev, .page-no {
