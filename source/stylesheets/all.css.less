@@ -7,6 +7,7 @@
 @ui-fg: mix(@ui-bg, black, 35%);
 @link-color: mix(@ui-fg, blue, 60%);
 @border-color: #F1F1E5;
+@logo-color: #AEBDB6;
 
 body, html, div {
   box-sizing: border-box;
@@ -73,17 +74,30 @@ code {
   background-color: mix(@ui-bg, black, 94%);
 }
 
-h1 {
-  font-size: 1.3em;
+h1, .footer {
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 2.3px;
   a, a:visited {
-    color: #A9C9B9;
-    letter-spacing: 2.3px;
+    color: @logo-color;
   }
+}
+
+.footer {
+  p {
+    margin: 0;
+    font-size: 0.8em;
+  }
+}
+
+h1, .footer, .pagination {
+  text-align: center;
 }
 
 #comments {
   &,  ~ p, ~ blockquote {
     font-size: 0.8em;
+    line-height: 1.4em;
   }
 }
 

@@ -10,7 +10,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "andyvanee.com" %></title>
 
-    <link href="http://fonts.googleapis.com/css?family=Rokkitt:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Rokkitt:400,700" rel="stylesheet" type="text/css">
     <%= stylesheet_link_tag "all" %>
   </head>
 
@@ -54,6 +54,9 @@
             <% end %>
           </div>
         <% end %>
+      </div>
+      <div class="footer">
+        <p><a href="/">andyvanee.com</a></p>
       </div>
     </div><!-- .container -->
   </body>
