@@ -1,110 +1,101 @@
 ---
 title: Photo Archiving
 ---
-<p>Backups and Archives are two different things. Ideally you should have
+Backups and Archives are two different things. Ideally you should have
 a good archiving system, and your backup would be a redundant copy of
-that.</p>
+that.
 
-<p>In photography, a robust archiving system has between two and four copies of
-any file. These copies are:</p>
+In photography, a robust archiving system has between two and four copies of
+any file. These copies are:
 
-<ul>
-<li>Camera Card</li>
-<li>Working Copy</li>
-<li>Source</li>
-<li>Backup</li>
-</ul>
+- Camera Card
+- Working Copy
+- Source
+- Backup
 
-<p>In this case, Source and Backup are read-only copies that are exact
+In this case, Source and Backup are read-only copies that are exact
 duplicates of the file off the camera. The Backup copy should be on a
-seperate physical media and ideally in a seperate physical location.</p>
+seperate physical media and ideally in a seperate physical location.
 
-<p>The working copy is the one you edit, view and share. Once a file is
+The working copy is the one you edit, view and share. Once a file is
 edited, it is important to make a Source and Backup copy of them as
-well.</p>
+well.
 
-<p>It is good to view these copies as layers of mutability. </p>
+It is good to view these copies as layers of mutability.
 
-<p><b>Camera Card:</b> Changes the most. Every shooting session will create and
-erase content from the card. </p>
+**Camera Card:** Changes the most. Every shooting session will create and
+erase content from the card.
 
-<p><b>Working Copy:</b> Can change with each editing session and these files
-can be safely erased once backups are made.</p>
+**Working Copy:** Can change with each editing session and these files
+can be safely erased once backups are made.
 
-<p><b>Source Copy:</b> Should never change, it is the copy that is
+**Source Copy:** Should never change, it is the copy that is
 accessed for viewing and making working copies. Any Source copy that is
-deleted will be deleted forever.</p>
+deleted will be deleted forever.
 
-<p><b>Backup Copy:</b> A mirror image of your Source copy. It will only be accessed
-in the rare event that your source copies are compromised (HD failure, fire, theft, etc.).</p>
+**Backup Copy:** A mirror image of your Source copy. It will only be accessed
+in the rare event that your source copies are compromised (HD failure, fire, theft, etc.).
 
-<h3>Implementation</h3>
+### Implementation
 
-<p>The way to implement this structure will vary with the tools that you
+The way to implement this structure will vary with the tools that you
 are using. The first step might be to disable automatic importing when
 you connect your camera. A better solution when connecting your camera is
-to make source and backup copies immediately. </p>
+to make source and backup copies immediately.
 
-<p>If you are using DVD's as your Backup copy, it probably makes sense to
+If you are using DVD's as your Backup copy, it probably makes sense to
 use a USB thumb drive as an intermediate backup until you have enough
-to fill a DVD.</p>
+to fill a DVD.
 
-<p>It is important though to do regular integrity checks on your Backup
+It is important though to do regular integrity checks on your Backup
 copies. You need to make sure that they aren't compromised without
 you knowing. If you use an external hard drive, and are command-line
 savvy you might do "diff -r PictureSource/ PictureBackup/" to compare
 the entire contents of the two folders. If you are using DVD's you
 either have to trust the quality of your media, or do periodic checks
-of your media.</p>
+of your media.
 
-<ol>
-<li>Connect Camera.</li>
-<li>Make Source copy, check file count.</li>
-<li>Organize Source photos into events, deleting any <em>Absolute Garbage</em>.</li>
-<li>Make Backup copies, check file count.</li>
-<li>Make Working Copy from Source copy by importing into your editor of
-choice.</li>
-</ol>
+1.  Connect Camera.
+2.  Make Source copy, check file count.
+3.  Organize Source photos into events, deleting any _Absolute Garbage_.
+4.  Make Backup copies, check file count.
+5.  Make Working Copy from Source copy by importing into your editor of
+choice.
 
-<p>Resist the temptation to organize your Source folder too much. Use only
-large, time-based, linear chunks. </p>
+Resist the temptation to organize your Source folder too much. Use only
+large, time-based, linear chunks.
 
-<ul>
-<li>DO: Pete's Wedding, Reception, Saloman Bay Beach...</li>
-<li>DON'T: Flowers, Trees, Close-ups, Saloman Bay Beach...</li>
-</ul>
+- DO: Pete's Wedding, Reception, Saloman Bay Beach...
+- DON'T: Flowers, Trees, Close-ups, Saloman Bay Beach...
 
-<p>The attentive reader will notice that the beach name is both in the do
+The attentive reader will notice that the beach name is both in the do
 and don't list. This is because in the first, I've assumed that it was
 an afternoon of shooting at the beach. In the second it is a couple
-shots of that subject interspersed with shots of other subjects.</p>
+shots of that subject interspersed with shots of other subjects.
 
-<p>On a related note, don't rename your files. The filenames from your
-camera are a very good <em>shooting record</em> of your camera. If you want
-to attach descriptions and tags, do it in the file's metadata.</p>
+On a related note, don't rename your files. The filenames from your
+camera are a very good _shooting record_ of your camera. If you want
+to attach descriptions and tags, do it in the file's metadata.
 
-<p>Now you are ready to edit your files. A typical editing session might
-look like this.</p>
+Now you are ready to edit your files. A typical editing session might
+look like this.
 
-<ol>
-<li>Make a Working Copy from Source copy (if it's not already done).</li>
-<li>Edit the file(s).</li>
-<li>Make a new source copy next to the original (eg. DSC1255-edit1.jpg)</li>
-<li>Make a Backup of what has changed in the Source.</li>
-</ol>
+1.  Make a Working Copy from Source copy (if it's not already done).
+2.  Edit the file(s).
+3.  Make a new source copy next to the original (eg. DSC1255-edit1.jpg)
+4.  Make a Backup of what has changed in the Source.
 
-<p>If you are using DVD's, you probably want to make a new folder for any
+If you are using DVD's, you probably want to make a new folder for any
 edited files, because the original folder might already be burned to
-disc. Again, use the original name with a standard suffix (Pete's Wedding-edited).</p>
+disc. Again, use the original name with a standard suffix (Pete's Wedding-edited).
 
-<h3>Generalized Strategy</h3>
+### Generalized Strategy
 
-<p>Photos are actually quite easy to organize, compared to the myriad of
+Photos are actually quite easy to organize, compared to the myriad of
 other file types out there. But the systematic logic can be
-transferred to other types of files as well.</p>
+transferred to other types of files as well.
 
-<p>By being systematic, a lot of confusion can be avoided. It also makes
+By being systematic, a lot of confusion can be avoided. It also makes
 it possible to work toward automating the process entirely. But as the
 number of file types increases, so does the tendency to use different
-sorting methods or mixing methods.</p>
-<div class="blogger-post-footer"><img alt="" height="1" src="https://blogger.googleusercontent.com/tracker/3761776372224414205-4285408644096465940?l=amxor.blogspot.com" width="1" /></div>
+sorting methods or mixing methods.

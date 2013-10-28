@@ -1,7 +1,13 @@
 ---
 title: Hashtag Search
 ---
-<p>As a sideline to one of my bigger projects, I decided to build a little webapp that would search Twitter for a hashtag. Fairly basic, but it's got a few interesting little features:</p><ul><li>Name &amp; profile pics link to user's profile</li>
-<li>Inline URL's are converted to links</li>
-<li>'More' button loads more tweets via AJAX</li>
-</ul><p><a href="https://github.com/Andyvanee/HashtagSearch">Source on Github</a></p><p><a href="https://s3.amazonaws.com/andyvanee/HashtagSearch/index.html">Online Version</a></p><div class="blogger-post-footer"><img alt="" height="1" src="https://blogger.googleusercontent.com/tracker/3761776372224414205-6479586017102339478?l=amxor.blogspot.com" width="1" /></div>
+
+As a sideline to one of my bigger projects, I decided to build a little webapp that would search Twitter for a hashtag. Fairly basic, but it's got a few interesting little features:
+
+*   Name &amp; profile pics link to user's profile
+*   Inline URL's are converted to links
+*   'More' button loads more tweets via AJAX
+
+[Source on Github](https://github.com/Andyvanee/HashtagSearch)
+
+[Online Version](https://s3.amazonaws.com/andyvanee/HashtagSearch/index.html)
