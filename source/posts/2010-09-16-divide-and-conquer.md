@@ -1,5 +1,6 @@
 ---
 title: Divide And Conquer
+tags: GTD, Process
 ---
 
 School has started and I've been very busy with projects, but haven't

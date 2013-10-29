@@ -1,5 +1,6 @@
 ---
 title: Playing With OpenResty
+tags: Programming, Nginx, Lua
 ---
 
 [OpenResty](http://openresty.org/) is a bit of an enigma. I first heard about

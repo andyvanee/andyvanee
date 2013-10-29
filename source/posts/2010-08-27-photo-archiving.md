@@ -1,6 +1,8 @@
 ---
 title: Photo Archiving
+tags: Archiving
 ---
+
 Backups and Archives are two different things. Ideally you should have
 a good archiving system, and your backup would be a redundant copy of
 that.

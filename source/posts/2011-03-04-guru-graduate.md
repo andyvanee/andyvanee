@@ -1,5 +1,6 @@
 ---
 title: Guru Graduate!
+tags: Life
 ---
 
 Well, today was my last day at

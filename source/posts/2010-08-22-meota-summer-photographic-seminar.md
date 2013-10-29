@@ -1,8 +1,9 @@
 ---
 title: Meota Summer Photographic Seminar
-tags: [Photography]
+tags: Photography
 ---
-<p>Just finishing up the weekend photographic seminar at the lake. Got some good shots and some good practice at composition, lighting and rhythm.</p>
+
+Just finishing up the weekend photographic seminar at the lake. Got some good shots and some good practice at composition, lighting and rhythm.
 
 <a href="http://2.bp.blogspot.com/_ZApMPFF0N4c/THC7nF0P32I/AAAAAAAABFw/aYhGw9Dlc98/s1600/MeotaSmall5.jpg"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5508108624524730210" src="http://2.bp.blogspot.com/_ZApMPFF0N4c/THC7nF0P32I/AAAAAAAABFw/aYhGw9Dlc98/s320/MeotaSmall5.jpg" style="margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 240px; height: 320px;" /></a>
 <a href="http://1.bp.blogspot.com/_ZApMPFF0N4c/THC7micwEtI/AAAAAAAABFo/4X7Q3aoTpIU/s1600/MeotaSmall4.jpg"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5508108615030936274" src="http://1.bp.blogspot.com/_ZApMPFF0N4c/THC7micwEtI/AAAAAAAABFo/4X7Q3aoTpIU/s320/MeotaSmall4.jpg" style="margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 320px; height: 240px;" /></a>

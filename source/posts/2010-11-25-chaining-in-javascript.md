@@ -1,6 +1,6 @@
 ---
 title: Chaining in JavaScript
-tags: [Programming, JavaScript]
+tags: Programming, JavaScript
 ---
 
 It's been bugging me for a while that I didn't understand the method behind jQuery's function chaining. So I built the smallest functional version of it. I call it aQuery <em>(for andy, or awesome).</em></p><p>This is the calling code:

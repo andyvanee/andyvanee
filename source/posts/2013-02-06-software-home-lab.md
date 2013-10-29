@@ -1,6 +1,6 @@
 ---
 title: The Software Developers Home Lab
-tags: [Programming, HomeLab, GTD]
+tags: Programming, GTD
 ---
 
 This post caught my eye:

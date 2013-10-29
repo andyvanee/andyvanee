@@ -1,6 +1,6 @@
 ---
 title: RPN Calculator - v0.02
-tags: [Programming, Assembly]
+tags: Programming, Assembly
 ---
 
 *disclaimer: I copied this from my old blog. Not sure if it actually works:)*

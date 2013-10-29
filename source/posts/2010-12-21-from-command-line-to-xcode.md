@@ -1,5 +1,6 @@
 ---
 title: From Command-line to XCode
+tags: Programming, Process
 ---
 
 I'm a command-line guy at heart when it comes to programming. It seems much more organic to know what every project file is doing and how each one contributes to the whole. Which files might break things, which files are optional and which files can be refactored or optimized.

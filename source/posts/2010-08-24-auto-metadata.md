@@ -1,6 +1,6 @@
 ---
 title: Auto Metadata
-tags: [Photography, Archiving]
+tags: Photography, Archiving
 ---
 <p>One interesting part of the weekend photographic seminar I just got
 back from was the emphasis on metadata.</p>

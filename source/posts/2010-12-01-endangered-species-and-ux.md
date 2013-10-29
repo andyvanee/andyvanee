@@ -1,6 +1,6 @@
 ---
 title: Endangered Species and UX
-tags: [UX, Design]
+tags: UX, Design
 ---
 
 I've just picked up Gene Wolfe's collection of short stories, ["Endangered Species"](http://amzn.com/0765310333) for a second read. I stopped after the introduction to think about it for a while. It's that good.

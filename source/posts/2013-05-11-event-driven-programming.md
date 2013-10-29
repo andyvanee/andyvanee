@@ -1,9 +1,7 @@
 ---
 published: true
 title: Event Driven Programming
-tags:
-  - JavaScript
-  - Programming
+tags: JavaScript, Programming
 
 ---
 

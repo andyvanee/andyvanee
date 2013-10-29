@@ -1,6 +1,6 @@
 ---
 title: Global Day of Code Retreat
-tags: [Programming, TDD]
+tags: Programming, TDD, Life
 ---
 
 This past weekend my co-worker, Jon, and I participated in the Global

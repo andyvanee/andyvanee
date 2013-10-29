@@ -1,5 +1,6 @@
 ---
 title: Automate The Itch - Part 1
+tags: GTD
 ---
 
 Small, single-purpose utility applications have a long lineage in computing history. They are the cornerstone of the UNIX philosophy, and are rampant on mobile platforms. They are the small building blocks in a larger task. These are apps that scratch an itch. They do things that could be done in another way, but with less time and effort.

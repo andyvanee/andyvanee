@@ -1,6 +1,6 @@
 ---
 title: Global Virtual Collaboration
-tags: [Collaboration, Design]
+tags: Collaboration, Design
 ---
 
 I have a feeling that the current age could be described as the dawn of

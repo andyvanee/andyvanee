@@ -1,5 +1,6 @@
 ---
 title: Copy Path to Clipboard
+tags: GTD
 ---
 
 Finder makes it a bit difficult to get the full path to a file; like

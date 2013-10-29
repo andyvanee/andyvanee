@@ -1,6 +1,5 @@
 ---
 title: Call For Web Standard
-tags: [Programming]
 ---
 
 Developing native apps is a pain. Yes, you have the luxury of fixed screen dimensions and access to hardware features that may not be available elsewhere, but when you're done, you have an app that only works on one platform.

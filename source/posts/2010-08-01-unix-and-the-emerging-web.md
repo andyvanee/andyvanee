@@ -1,6 +1,6 @@
 ---
 title: UNIX and the Emerging Web
-tags: [Programming]
+tags: Programming
 ---
 <p>After reading "The Art Of UNIX Programming" again, it's got me thinking about the
 nature of the technological explosion that has happened since the

@@ -1,5 +1,4 @@
 ---
-published: true
 title: Spamming the Internet
 ---
 

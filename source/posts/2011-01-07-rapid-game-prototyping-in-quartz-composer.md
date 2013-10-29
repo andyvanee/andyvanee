@@ -1,5 +1,6 @@
 ---
 title: Rapid Game Prototyping in Quartz Composer
+tags: Process
 ---
 I am a Quartz Composer junky. I love tinkering with ideas and hacking together logic gates within this kind of visual programming environment.
 

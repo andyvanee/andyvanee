@@ -1,6 +1,6 @@
 ---
 title: Assembly Language For Mac
-tags: [Programming, Assembly]
+tags: Programming, Assembly
 ---
 
 I'm away from my Linux box and want to do some assembly
