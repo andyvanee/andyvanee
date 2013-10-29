@@ -1,6 +1,6 @@
 ---
 title: Writing Is Hard
-tags: Communication
+tags: Communication, Observations
 ---
 
 ...for a number of reasons.

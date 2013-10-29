@@ -1,6 +1,6 @@
 ---
 title: Taking Stock
-tags: Communication, Life
+tags: Observations, Life
 ---
 
 As I've given this blog a little refresh, it's caused me to look back

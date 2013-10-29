@@ -29,6 +29,10 @@ a {
   &:visited {
     color: lighten(desaturate(@link-color, 30%), 15%);
   }
+  &.external:after {
+    content: '\BB';
+    color: #CCC;
+  }
 }
 
 .container {

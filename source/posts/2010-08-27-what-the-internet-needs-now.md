@@ -1,6 +1,6 @@
 ---
 title: What The Internet Needs Now
-tags: Archiving
+tags: Archiving, Observations
 ---
 I've been blogging a fair bit lately about metadata, archiving and
 dealing with the masses of information that we produce and consume
