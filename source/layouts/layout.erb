@@ -11,13 +11,16 @@
     <title><%= current_page.data.title || "andyvanee.com" %></title>
 
     <link href="http://fonts.googleapis.com/css?family=Rokkitt:400,700" rel="stylesheet" type="text/css">
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="<%= site_subtitle %>" />
     <%= stylesheet_link_tag "all" %>
   </head>
 
   <body class="<%= page_classes %>">
     <div class="container">
       <div class="masthead">
-        <h1><a href="/">andyvanee.com</a></h1>
+        <h1>
+          <a href="/">andyvanee.com</a>
+        </h1>
       </div>
       <div class="main" role="main">
         <h2><%= current_page.data.title %></h2>

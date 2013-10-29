@@ -11,7 +11,7 @@ activate :blog do |blog|
   # blog.taglink = "tags/:tag.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
+  blog.summary_length = 140
   # blog.year_link = ":year.html"
   # blog.month_link = ":year/:month.html"
   # blog.day_link = ":year/:month/:day.html"
@@ -70,11 +70,20 @@ page "/feed.xml", :layout => false
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def author
+    "Andy VanEe"
+  end
+  def site_name
+    "andyvanee.com"
+  end
+  def site_subtitle
+    "Computer programming, philosophy and life"
+  end
+  def site_url
+    "http://andyvanee.com"
+  end
+end
 
 set :css_dir, 'stylesheets'
 
