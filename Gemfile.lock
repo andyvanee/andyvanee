@@ -17,9 +17,9 @@ GEM
       sass (~> 3.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.9.1)
+    ffi (1.9.3)
     fssm (0.2.10)
-    haml (4.0.3)
+    haml (4.0.4)
       tilt
     hike (1.2.3)
     i18n (0.6.5)
@@ -82,7 +82,7 @@ GEM
     rouge (0.3.10)
       thor
     sass (3.2.12)
-    sprockets (2.10.0)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
