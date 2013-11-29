@@ -42,5 +42,5 @@ We have a tendency to reference things by their abstract identity as well as
 their concrete state quite interchangeably, which can lead to confusion and
 these seeming paradoxes.
 
-So is reality actually stateful? Yes and no. For reality to be stateless mean
-When in doubt, I think stateless is a better model of the world.
+So is reality actually stateful? Yes and no. When in doubt, I think stateless
+is a better model of the world.
