@@ -1,6 +1,6 @@
 ---
 title: Chaotic Data
-tags: Observations
+tags: Observations, Data
 ---
 
 Data is chaotic. Our attempts to tame it are largely attempts at dehumanizing

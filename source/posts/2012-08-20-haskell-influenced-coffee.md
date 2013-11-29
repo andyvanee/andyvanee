@@ -1,6 +1,6 @@
 ---
 title: Haskell Influenced Coffee
-tags: Programming, JavaScript
+tags: Programming, JavaScript, Functional Programming
 ---
 
 I've been learning Haskell. It's been a very interesting experience to

@@ -1,6 +1,6 @@
 ---
 title: The World is Immutable
-tags:
+tags: Data, Functional Programming
 ---
 
 Interesting slide deck here called
