@@ -4,19 +4,20 @@
 @charset "utf-8";
 
 @ui-bg: #FFF;
-@ui-fg: mix(@ui-bg, black, 35%);
-@link-color: mix(@ui-fg, blue, 60%);
+@ui-fg: mix(@ui-bg, black, 30%);
+@link-color: mix(@ui-fg, #55E, 40%);
 @border-color: #F1F1E5;
 @logo-color: #AEBDB6;
 
 body, html, div {
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font-size: 21px;
+  font-size: 16px;
   line-height: 1.55em;
-  font-family: 'Rokkitt', Georgia, serif;
+  font-family: 'Helvetica Neue', 'Trebuchet MS';
   color: @ui-fg;
   background-color: @ui-bg;
   background-image: data-uri('retina_dust.png');
@@ -27,7 +28,7 @@ a {
   color: @link-color;
   text-decoration: none;
   &:visited {
-    color: lighten(desaturate(@link-color, 30%), 15%);
+    color: lighten(desaturate(@link-color, 10%), 3%);
   }
   &.external:after {
     content: '\BB';
@@ -36,7 +37,7 @@ a {
 }
 
 .container {
-  width: 34em;
+  width: 46em;
   max-width: 100%;
   margin: 0 auto;
   padding: 1em 4%;
@@ -60,8 +61,10 @@ a {
 }
 
 .summary, .read-more {
-  font-size: 0.9em;
-  p, blockquote { margin-top: 0; margin-bottom: 0; padding: 0 1em; }
+  // font-size: 0.9em;
+  margin: 0.75em 0 0;
+  // p, blockquote { margin: 0.5em 0; }
+  blockquote { margin: 0 2em; }
 }
 
 .next, .prev, .page-no {
@@ -71,17 +74,20 @@ a {
 ul.article-list {
   padding: 0;
   list-style-type: none;
-  li {
-    padding: 0.5em 0;
+
+  & > li {
+    padding: 1.6em 0;
     border-top: 1px solid @border-color;
   }
+
   .title {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
   }
 }
 
 code {
-  font-family: courier, monospace;
   padding: 2px 4px;
   background-color: mix(@ui-bg, black, 94%);
 }
@@ -102,13 +108,24 @@ h1, .footer {
   }
 }
 
+blockquote {
+  font-size: 1.4em;
+  font-weight: bold;
+  opacity: 0.5;
+  line-height: 1.2em;
+}
+
+strong {
+  letter-spacing: 0.05em;
+}
+
 h1, .footer, .pagination {
   text-align: center;
 }
 
 #comments {
   &,  ~ p, ~ blockquote {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 1.4em;
   }
 }

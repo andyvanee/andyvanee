@@ -9,8 +9,12 @@ per_page: 6
     <span class="title"><%= link_to article.title, article %></span>
     <span class="date"><%= article.date.strftime('%b %e') %></span>
     <div class="summary">
-      <%= article.summary %>
-      <p class="read-more"><%= link_to "read more", article %></p>
+      <% if article.body.length > 5000 %>
+        <%= article.summary %>
+        <p class="read-more"><%= link_to "read full article", article %></p>
+      <% else %>
+        <%= article.body %>
+      <% end %>
     </div>
   </li>
 <% end %>
