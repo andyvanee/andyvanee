@@ -1,5 +1,5 @@
 ---
-title: Accidental Cms
+title: Accidental CMS
 ---
 
 When I begun reading [this article called CMS Trap](http://hakunin.com/cms-
@@ -22,12 +22,14 @@ the database.
 
 I'd like to propose another. A technique that I've been using more and more:
 
-### Fake Models
+### Static Models
 
-In most cases, it's pretty easy to mimic the interface of your standard model
-classes. The rest of your code doesn't need to know where that data is coming
-from, and doesn't need to change if you decide it really needs to be database
-backed.
+These are models that look and behave just like your standard database-backed
+models, with the exception that they just store hard-coded values.
+
+It should be pretty easy to mimic the interface of your standard model classes.
+The rest of your code doesn't need to know where that data is coming from, and
+doesn't need to change if you decide it really needs to be database backed.
 
 Here's how it looks in DataMapper:
 
