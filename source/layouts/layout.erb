@@ -10,6 +10,8 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "andyvanee.com" %></title>
 
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+
     <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="<%= site_subtitle %>" />
     <%= stylesheet_link_tag "all" %>
   </head>
@@ -22,10 +24,10 @@
         </h1>
       </div>
       <div class="main" role="main">
-        <h2><%= current_page.data.title %></h2>
-
         <% if current_article %>
-          <div class="date"><%= current_article.date.strftime('%b %d, %Y')%></div>
+          <div class="post-single">
+            <h2><%= current_page.data.title %></h2>
+            <div class="date"><%= current_article.date.strftime('%b %d, %Y')%></div>
         <% end %>
 
         <%= yield %>
@@ -39,6 +41,9 @@
               <% end %>
             </div>
           <% end %>
+
+          </div> <!-- .post-single -->
+
           <div class="pagination">
             <% if current_article.next_article %>
               <span class="next">

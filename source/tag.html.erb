@@ -14,7 +14,17 @@ per_page: 12
 
 <ul class="article-list">
   <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+    <li>
+      <span class="title"><%= link_to article.title, article %></span>
+      <span class="date"><%= article.date.strftime('%b %e') %></span>
+
+      <% if article.body.length > 5000 %>
+        <%= article.summary %>
+        <p class="read-more"><%= link_to "read full article", article %></p>
+      <% else %>
+        <%= article.body %>
+      <% end %>
+    </li>
   <% end %>
 </ul>
 

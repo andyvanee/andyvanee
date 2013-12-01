@@ -4,9 +4,9 @@
 @charset "utf-8";
 
 @ui-bg: #FFF;
-@ui-fg: mix(@ui-bg, black, 30%);
+@ui-fg: mix(@ui-bg, black, 40%);
 @link-color: mix(@ui-fg, #55E, 40%);
-@border-color: #F1F1E5;
+@border-color: darken(#F1F1E5, 20%);
 @logo-color: #AEBDB6;
 
 body, html, div {
@@ -15,9 +15,10 @@ body, html, div {
 }
 
 body {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.55em;
   font-family: 'Helvetica Neue', 'Trebuchet MS';
+  font-family: 'Quattrocento', serif;
   color: @ui-fg;
   background-color: @ui-bg;
   background-image: data-uri('retina_dust.png');
@@ -40,12 +41,6 @@ a {
   width: 46em;
   max-width: 100%;
   margin: 0 auto;
-  padding: 1em 4%;
-  background-color: @ui-bg;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 800px darken(@ui-bg, 15%);
-  border: 1px solid darken(@ui-bg, 15%);
-  border-width: 0 1px;
 }
 
 .date {
@@ -56,8 +51,6 @@ a {
   padding: 1em 0;
   opacity: 0.9;
   font-size: 0.9em;
-  border: 1px solid @border-color;
-  border-width: 1px 0 0;
 }
 
 .summary, .read-more {
@@ -71,18 +64,28 @@ a {
   padding: 0 1em 0 0;
 }
 
+ul.article-list > li,
+.post-single {
+  padding: 3em 4%;
+  margin-bottom: 2em;
+  background-color: @ui-bg;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid darken(@ui-bg, 15%);
+  border-width: 1px;
+  border-bottom: 1px solid @border-color;
+}
+
+.post-single > h2 {
+  margin-top: 0;
+}
+
 ul.article-list {
   padding: 0;
   list-style-type: none;
 
-  & > li {
-    padding: 1.6em 0;
-    border-top: 1px solid @border-color;
-  }
-
   .title {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 0.05em;
   }
 }
@@ -110,9 +113,8 @@ h1, .footer {
 
 blockquote {
   font-size: 1.4em;
-  font-weight: bold;
-  opacity: 0.5;
-  line-height: 1.2em;
+  color: #BBB;
+  line-height: 1.4em;
 }
 
 strong {
