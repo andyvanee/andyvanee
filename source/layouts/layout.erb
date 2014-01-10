@@ -42,7 +42,11 @@
             </div>
           <% end %>
 
-          <a class="moot" href="https://moot.it/i/d3scribe/comments:<%= current_article.slug %>">Comments</a>
+          <a class="moot"
+             title="<%= current_article.data.title %>"
+             data-show_online="false"
+             data-upload="false"
+             href="https://moot.it/i/d3scribe/comments:<%= current_article.slug %>">Comments</a>
 
           </div> <!-- .post-single -->
 

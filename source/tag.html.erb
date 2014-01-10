@@ -24,7 +24,13 @@ per_page: 12
       <% else %>
         <%= article.body %>
       <% end %>
-      <a class="moot" href="https://moot.it/i/d3scribe/comments:<%= article.slug %>">Comments</a>
+
+      <a class="moot"
+         title="<%= article.title %>"
+         data-show_online="false"
+         data-upload="false"
+         href="https://moot.it/i/d3scribe/comments:<%= article.slug %>">Comments</a>
+
     </li>
   <% end %>
 </ul>
