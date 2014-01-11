@@ -1,5 +1,6 @@
 ---
 title: Accidental CMS
+tags: Programming
 ---
 
 When I begun reading [this article called CMS Trap](http://hakunin.com/cms-
