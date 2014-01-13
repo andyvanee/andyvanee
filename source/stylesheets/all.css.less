@@ -1,40 +1,60 @@
 //= require normalize
 //= require syntax
 
-@fg: #333;
-@fg2: lighten(@fg, 50%);
-@bg: #FFF;
+@fg: #626262;
+@fg2: lighten(@fg, 30%);
+@bg: #fafcfa;
 @link: #78B;
 @minimal: #E7E7E7;
-@font1: 'Roboto', sans-serif;
-@font2: 'Roboto', sans-serif;
-@heading-color: #6a6a6a;
+@font1: Courier, "Courier New", monospace;
+@font2: 'Helvetica Neue', sans-serif;
+@heading-color: #8a8780;
+@font-size: 16px;
 
 body, html {
   font-family: @font1;
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: @font-size;
   line-height: 1.7em;
   color: @fg;
   background-color: @bg;
+  letter-spacing: 0.02em;
+  word-spacing: -0.08em;
 }
 
 body {
-  width: 34em;
+  width: 48em;
   max-width: 100%;
   margin: 0 auto;
 }
 
-h1, h2, h3, h4 { color: @heading-color; }
+h1, h2, h3, h4, .title {
+  color: @heading-color;
+}
 
 .container {
-  padding: 0 2em;
+  padding: 0 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6, .title {
   font-family: @font2;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.5em;
+}
+
+p, pre, blockquote, h1, h2, h3, h4, .title {
+  margin-top: @font-size * 1.35;
+  margin-bottom: @font-size * 1.35;
+}
+
+p, blockquote {
+  text-align: left;
+}
+
+@media (min-width: 36em) {
+  p, blockquote {
+    text-align: justify;
+  }
 }
 
 a {
@@ -50,29 +70,29 @@ a {
     text-align: right;
     margin: 0 0 1em;
     padding: 3em 0;
-    background-color: @minimal;
     font-weight: 800;
     margin: 0 -2em;
     padding: 2em;
     font-size: 1em;
 
     a {
-      color: @bg;
+      color: mix(@bg, @fg, 84%);
       text-decoration: none;
       font-size: 2.2em;
     }
   }
 }
 
-.title {
+h2, .title {
   display: block;
   font-size: 2em;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: 3em;
+  margin-bottom: 0.1em;
 
   a {
     text-decoration: none;
-    color: lighten(@fg, 20%);
+    color: @heading-color;
   }
 }
 
