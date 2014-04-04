@@ -10,8 +10,15 @@ build:
 deploy:
     steps:
         # Execute the s3sync deploy step, a step provided by wercker
+        # Cache-Control is set to one week
         - s3sync:
             key_id: $AWS_ACCESS_KEY
             key_secret: $AWS_SECRET_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
+            opts: --acl-public --add-header=Cache-Control:max-age=432000
+        - script:
+            name: Manual modification of S3 options
+            code: |
+                s3cmd --help
+                echo "$AWS_ACCESS_KEY"
