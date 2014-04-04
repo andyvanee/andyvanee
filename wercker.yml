@@ -19,6 +19,7 @@ deploy:
             opts: --acl-public --add-header=Cache-Control:max-age=432000
         - script:
             name: Manual modification of S3 options
+            cwd: build/
             code: |
-                s3cmd --help
-                echo "$AWS_ACCESS_KEY"
+                ls
+                s3cmd put --acl-public --add-header=Cache-Control:max-age=86400 --verbose index.html s3://andyvanee.com/
