@@ -3,7 +3,7 @@ title: Accidental CMS
 tags: Programming
 ---
 
-When I begun reading [this article called CMS Trap](http://hakunin.com/cms-
+When I started reading [this article called CMS Trap](http://hakunin.com/cms-
 trap), I had no idea what the hell he was talking about. As I pushed through, I
 began saying 'yes' more and more, and by the time I was finished I had to go
 back and re-read it again because so much rang true.
