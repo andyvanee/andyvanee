@@ -83,6 +83,9 @@ helpers do
   def site_url
     "http://andyvanee.com"
   end
+  def summary_length
+    1200
+  end
 end
 
 set :css_dir, 'stylesheets'

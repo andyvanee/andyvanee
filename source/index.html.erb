@@ -1,27 +1,20 @@
 ---
 pageable: true
-per_page: 6
+per_page: 9
 ---
 
 <ul class="article-list">
 <% page_articles.each_with_index do |article, i| %>
   <li>
-    <span class="title"><%= link_to article.title, article %></span>
+    <h2><%= link_to article.title, article %></h2>
     <span class="date"><%= article.date.strftime('%b %d, %Y')%></span>
     <div class="summary">
-      <% if article.body.length > 5000 %>
+      <% if article.body.length > summary_length %>
         <%= article.summary %>
-        <p class="read-more"><%= link_to "read full article", article %></p>
+        <p class="read-more"><%= link_to "read article", article %></p>
       <% else %>
         <%= article.body %>
       <% end %>
-
-      <a class="moot"
-         title="<%= article.title %>"
-         data-show_online="false"
-         data-upload="false"
-         href="https://moot.it/i/d3scribe/comments:<%= article.slug %>">Comments</a>
-
     </div>
   </li>
 <% end %>

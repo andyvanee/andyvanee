@@ -2,7 +2,7 @@
 pageable: true
 per_page: 12
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
+<h3>Articles tagged '<%= tagname %>'</h3>
 
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -15,22 +15,15 @@ per_page: 12
 <ul class="article-list">
   <% page_articles.each_with_index do |article, i| %>
     <li>
-      <span class="title"><%= link_to article.title, article %></span>
+      <h2><%= link_to article.title, article %></h2>
       <span class="date"><%= article.date.strftime('%b %d, %Y')%></span>
 
-      <% if article.body.length > 5000 %>
+      <% if article.body.length > summary_length %>
         <%= article.summary %>
         <p class="read-more"><%= link_to "read full article", article %></p>
       <% else %>
         <%= article.body %>
       <% end %>
-
-      <a class="moot"
-         title="<%= article.title %>"
-         data-show_online="false"
-         data-upload="false"
-         href="https://moot.it/i/d3scribe/comments:<%= article.slug %>">Comments</a>
-
     </li>
   <% end %>
 </ul>

@@ -1,19 +1,20 @@
 //= require normalize
 //= require syntax
 
-@fg: #626262;
-@fg2: lighten(@fg, 30%);
-@bg: #fefefb;
+@fg: #333;
+@fg2: lighten(@fg, 40%);
+@bg: #fff;
 @link: #78B;
-@minimal: #E7E7E7;
+@minimal: #bbb;
 @font1: Courier, "Courier New", monospace;
 @font2: 'Helvetica Neue', sans-serif;
-@heading-color: #8a8780;
+@heading-color: #7c7d8c;
 @font-size: 16px;
+@masthead-bg: #efeddf;
 
 body, html {
-  font-family: @font1;
-  font-weight: 500;
+  font-family: @font2;
+  font-weight: 400;
   font-size: @font-size;
   line-height: 1.7em;
   color: @fg;
@@ -23,8 +24,9 @@ body, html {
 }
 
 body {
-  width: 48em;
+  width: 42em;
   max-width: 100%;
+  min-width: 380px;
   margin: 0 auto;
 }
 
@@ -68,31 +70,49 @@ a {
   }
 }
 
+.read-more a, .prev, .next {
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: mix(@bg, @link, 90%);
+  border-radius: 3px;
+  border: 1px solid mix(@bg, @link, 80%);
+  margin-right: 1em;
+}
+
+.page-no {
+  margin-right: 1em;
+}
+
 .masthead {
+  padding: 2em 0;
+  margin-top: -9px;
+  background-color: @masthead-bg;
+  border-radius: 9px;
+  border: 1px solid darken(@masthead-bg, 10%);
+
   h1 {
     letter-spacing: -0.01em;
-    text-align: right;
-    margin: 0 0 1em;
+    text-align: center;
+    margin: 0;
     padding: 3em 0;
     font-weight: 800;
-    margin: 0 -2em;
     padding: 2em;
     font-size: 1em;
-
-    a {
-      color: mix(@bg, @fg, 84%);
-      text-decoration: none;
-      font-size: 2.2em;
-    }
+  }
+  a {
+    color: @heading-color;
+    text-decoration: none;
+    font-size: 2.2em;
   }
 }
 
-h2, .title {
+h2 {
   display: block;
   font-size: 2em;
   font-weight: 700;
   margin-top: 3em;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.5em;
 
   a {
     text-decoration: none;
@@ -106,7 +126,7 @@ h2, .title {
   padding: 0.4em 0;
   line-height: 1em;
   color: @fg2;
-  border: 1px solid @fg2;
+  border: 1px solid lighten(@fg2, 30%);
   border-width: 1px 0;
 }
 
@@ -115,5 +135,16 @@ h2, .title {
   padding: 0;
   & > li {
     margin: 0;
+  }
+}
+
+.footer {
+  margin: 2em 0 0;
+  padding: 0;
+  border-top: 1px solid darken(@masthead-bg, 10%);
+  font-size: 1.2em;
+  a {
+    text-decoration: none;
+    color: @heading-color;
   }
 }
