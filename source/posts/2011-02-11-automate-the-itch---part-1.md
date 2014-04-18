@@ -9,7 +9,7 @@ Every Mac comes with a tool for building your own utility apps quickly and painl
 
 The first part will deal with files and folders, then I'll dive into network tasks, and finally text. I may also throw in a bonus section on porting some command-line wizardry to Automator.
 
-## Batch Renamer
+### Batch Renamer
 
 One of the most common, time consuming tasks is emailing files. You may want to rename them, compress them or convert them somehow. Automator can deal with almost any of these tasks. Say you have 1000 files named [DSC1020.jpg-DSC2020.jpg], and want them to be called [Vacation_0001.jpg - Vacation_1001.jpg]. Here's how Automator can help.
 
@@ -21,7 +21,7 @@ One of the most common, time consuming tasks is emailing files. You may want to 
 
 Save it and it will show up whenever you right click any files or folders.
 
-## Resize Images
+### Resize Images
 
 If you email photos a lot, your workflow may also include copying them and resizing them. Here's how that might look:
 
@@ -33,14 +33,14 @@ If you email photos a lot, your workflow may also include copying them and resiz
 
     4b. Or: add a "New Mail Message" action to automatically add those photos to a new message in Mail. If you're feeling lucky, you can also add a "Send Outgoing Messages" action to automatically send the prepared email.
 
-## Other Handy File Actions
+### Other Handy File Actions
 
 *   Use "Sort Finder Items" prior to a sequential rename, to organize them by date, kind or size.*   Include "Label Finder Items" or "Set Spotlight Comments" to organize the files you run through a particular workflow.
 *   "Create Archive" is useful if you want to zip the files before sending.
 *   "New Alias" is a great one-action service that just takes the selected files or folders and makes a shortcut on the Desktop.
 *   Use "Choose From List" whenever you need to confirm an action. You then have the option to "Select None" or pick and choose items before the workflow continues.
 
-## Bonus Points - Email Screen Recording
+### Bonus Points - Email Screen Recording
 
 Here's a much more esoteric, but potentially very useful workflow. This one captures a screen recording, and emails it to someone.
 

@@ -1,5 +1,5 @@
 ---
-title: Sandbox your external scripts!
+title: Sandbox your external scripts
 tags: Programming, JavaScript
 ---
 

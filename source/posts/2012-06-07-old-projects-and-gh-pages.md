@@ -9,7 +9,7 @@ awesome for a simple blog like this.
 And in the spirit of embracing Github Pages, I've made gh-pages branches for a
 couple of my dusty old projects that would work as static pages.
 
-## Skratch
+### Skratch
 
 [The App](http://andyvanee.com/skratch/)
 [The Code](https://github.com/Andyvanee/skratch/tree/master/js)
@@ -20,7 +20,7 @@ localStorage for drawings and a pretty sweet color picker. The drawing code
 works pretty well too, some pretty funky stuff happening in skratch-tools.js in
 the pencilDraw and penmove functions.
 
-## Alien Quest
+### Alien Quest
 
 [The App](http://andyvanee.com/AlienQuest/)
 [The Code](https://github.com/Andyvanee/AlienQuest)
