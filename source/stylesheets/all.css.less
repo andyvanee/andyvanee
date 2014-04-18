@@ -6,14 +6,18 @@
 @bg: #fff;
 @link: #78B;
 @minimal: #bbb;
-@font1: Courier, "Courier New", monospace;
-@font2: 'Helvetica Neue', sans-serif;
-@heading-color: #7c7d8c;
+
+@body-font: 'Helvetica Neue', sans-serif;
 @font-size: 16px;
+
+@heading-font: 'Helvetica Neue', sans-serif;
+@heading-color: #7c7d8c;
 @masthead-bg: #efeddf;
 
+@body-width: 42em;
+
 body, html {
-  font-family: @font2;
+  font-family: @body-font;
   font-weight: 400;
   font-size: @font-size;
   line-height: 1.7em;
@@ -24,18 +28,18 @@ body, html {
 }
 
 body {
-  width: 42em;
+  width: @body-width;
   max-width: 100%;
   min-width: 380px;
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, .title {
-  color: @heading-color;
-}
-
 img {
   max-width: 100%;
+}
+
+b, strong {
+  opacity: 0.8;
 }
 
 .container {
@@ -43,24 +47,29 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6, .title {
-  font-family: @font2;
-  font-weight: 900;
+  color: @heading-color;
+  font-family: @heading-font;
   line-height: 1.5em;
 }
 
-p, pre, blockquote, h1, h2, h3, h4, .title {
+h2, .title {
+  font-weight: 900;
+}
+
+h3, h4, h5, h6 {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+p, pre, blockquote {
   margin-top: @font-size * 1.35;
   margin-bottom: @font-size * 1.35;
 }
 
 p, blockquote {
   text-align: left;
-}
-
-@media (min-width: 36em) {
-  p, blockquote {
-    text-align: justify;
-  }
 }
 
 a {
@@ -70,13 +79,13 @@ a {
   }
 }
 
-.read-more a, .prev, .next {
+.read-more a, .prev a, .next a {
   text-decoration: none;
   display: inline-block;
   padding: 3px 5px;
-  background-color: mix(@bg, @link, 90%);
+  background-color: mix(white, black, 98%);
   border-radius: 3px;
-  border: 1px solid mix(@bg, @link, 80%);
+  border: 1px solid mix(white, black, 91%);
   margin-right: 1em;
 }
 
@@ -85,32 +94,32 @@ a {
 }
 
 .masthead {
-  padding: 2em 0;
-  margin-top: -9px;
-  background-color: @masthead-bg;
-  border-radius: 9px;
   border: 1px solid darken(@masthead-bg, 10%);
+  text-align: right;
+  border-width: 0 0 1px;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   h1 {
     letter-spacing: -0.01em;
-    text-align: center;
     margin: 0;
-    padding: 3em 0;
-    font-weight: 800;
-    padding: 2em;
-    font-size: 1em;
+    font-size: 1.4em;
+    font-weight: 300;
   }
   a {
+    display: block;
+    padding: 0.65em 0;
     color: @heading-color;
     text-decoration: none;
-    font-size: 2.2em;
   }
 }
 
 h2 {
   display: block;
   font-size: 2em;
-  font-weight: 700;
   margin-top: 3em;
   margin-bottom: 0.5em;
 

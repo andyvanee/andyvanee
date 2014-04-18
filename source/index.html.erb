@@ -25,17 +25,12 @@ per_page: 9
     <% if num_pages > 1 %>
       <% if prev_page %>
         <span class="prev"><%= link_to '&laquo; Newer', prev_page %></span>
-      <% else %>
-        <span class="prev">&laquo; Newer</span>
       <% end %>
-
       <span class="page-no">Page <%= page_number %> of <%= num_pages %></span>
     <% end %>
 
     <% if next_page %>
       <span class="next"><%= link_to 'Older &raquo;', next_page %></span>
-    <% else %>
-      <span class="next">Older &raquo;</span>
     <% end %>
   </div>
 <% end %>

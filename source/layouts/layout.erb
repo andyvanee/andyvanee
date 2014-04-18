@@ -54,15 +54,11 @@
               <span class="next">
                 <%= link_to '&laquo; Newer', current_article.next_article %>
               </span>
-            <% else %>
-              <span class="next">&laquo; Newer</span>
             <% end %>
             <% if current_article.previous_article %>
               <span class="prev">
                 <%= link_to 'Older &raquo;', current_article.previous_article %>
               </span>
-            <% else %>
-              <span class="prev">Older &raquo;</span>
             <% end %>
           </div>
         <% end %>
