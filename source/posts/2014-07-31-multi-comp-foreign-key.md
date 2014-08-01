@@ -12,12 +12,12 @@ but I've made it generic. Here are some sample entries:
 
 Directories:
 
-- id: 1, name: home
-- id: 2, name: example
+    id: 1, name: home
+    id: 2, name: example
 
 Files:
 
-- a_dir_id: 1, filename: 'test', content: 'some content'
+    a_dir_id: 1, filename: 'test', content: 'some content'
 
 Looking at this, it seemed fairly basic. The catch was that the
 directory id and filename would have to be a composite primary key, which I
