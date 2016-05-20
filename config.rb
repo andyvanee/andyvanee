@@ -75,7 +75,7 @@ helpers do
     "Andy VanEe"
   end
   def site_name
-    "andyvanee.com"
+    "andyvanee"
   end
   def site_subtitle
     "Computer programming, philosophy and life"
