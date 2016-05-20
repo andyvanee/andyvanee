@@ -17,14 +17,14 @@
 
   <body class="<%= page_classes %>">
     <div class="container">
-      <div class="masthead">
+      <div class="masthead column">
         <h1>
           <a href="/">andyvanee.com</a>
         </h1>
       </div>
-      <div class="main" role="main">
+      <div class="main row" role="main">
         <% if current_article %>
-          <div class="post-single">
+          <div class="post-single column column-3-2">
             <h2><%= current_page.data.title %></h2>
             <div class="date"><%= current_article.date.strftime('%b %d, %Y')%></div>
         <% end %>
@@ -41,30 +41,23 @@
             </div>
           <% end %>
 
-          <a class="moot"
-             title="<%= current_article.data.title %>"
-             data-show_online="false"
-             data-upload="false"
-             href="https://moot.it/i/d3scribe/comments:<%= current_article.slug %>">Comments</a>
-
           </div> <!-- .post-single -->
 
-          <div class="pagination">
-            <% if current_article.next_article %>
-              <span class="next">
-                <%= link_to '&laquo; Newer', current_article.next_article %>
-              </span>
-            <% end %>
-            <% if current_article.previous_article %>
-              <span class="prev">
-                <%= link_to 'Older &raquo;', current_article.previous_article %>
-              </span>
-            <% end %>
+          <div class="pagination row">
+            <div class="column column-1">
+              <% if current_article.next_article %>
+                <span class="next">
+                  <%= link_to '&laquo; Newer', current_article.next_article %>
+                </span>
+              <% end %>
+              <% if current_article.previous_article %>
+                <span class="prev">
+                  <%= link_to 'Older &raquo;', current_article.previous_article %>
+                </span>
+              <% end %>
+            </div>
           </div>
         <% end %>
-      </div>
-      <div class="footer">
-        <p><a href="/">andyvanee.com</a></p>
       </div>
     </div><!-- .container -->
     <%= javascript_include_tag "all" %>

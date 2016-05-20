@@ -2,25 +2,27 @@
 pageable: true
 per_page: 12
 ---
-<h3>Articles tagged '<%= tagname %>'</h3>
+<div class="column column-1">
+  <h3>Articles tagged '<%= tagname %>'</h3>
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+  <% if paginate && num_pages > 1 %>
+    <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
+    <% if prev_page %>
+      <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
-<ul class="article-list">
+<ul class="article-list column column-1 column-gutterless">
   <% page_articles.each_with_index do |article, i| %>
-    <li>
+    <li class="column column-3">
       <h2><%= link_to article.title, article %></h2>
-      <span class="date"><%= article.date.strftime('%b %d, %Y')%></span>
+      <div class="date"><%= article.date.strftime('%b %d, %Y')%></div>
 
       <% if article.body.length > summary_length %>
         <%= article.summary %>
-        <p class="read-more"><%= link_to "read full article", article %></p>
+        <p class="read-more"><%= link_to "Read More", article %></p>
       <% else %>
         <%= article.body %>
       <% end %>
@@ -28,8 +30,10 @@ per_page: 12
   <% end %>
 </ul>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
+<div class="column column-1">
+  <% if paginate %>
+    <% if next_page %>
+      <p><%= link_to 'Next page', next_page %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>

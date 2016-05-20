@@ -3,15 +3,15 @@ pageable: true
 per_page: 9
 ---
 
-<ul class="article-list">
+<ul class="article-list column column-1 column-gutterless">
 <% page_articles.each_with_index do |article, i| %>
-  <li>
+  <li class="column column-3">
     <h2><%= link_to article.title, article %></h2>
-    <span class="date"><%= article.date.strftime('%b %d, %Y')%></span>
+    <div class="date"><%= article.date.strftime('%b %d, %Y')%></div>
     <div class="summary">
       <% if article.body.length > summary_length %>
-        <%= article.summary %>
-        <p class="read-more"><%= link_to "read article", article %></p>
+        <%= strip_tags article.summary %>
+        <p class="read-more"><%= link_to "Read More", article %></p>
       <% else %>
         <%= article.body %>
       <% end %>
@@ -21,7 +21,7 @@ per_page: 9
 </ul>
 
 <% if paginate %>
-  <div class="pagination">
+  <div class="pagination column column-1">
     <% if num_pages > 1 %>
       <% if prev_page %>
         <span class="prev"><%= link_to '&laquo; Newer', prev_page %></span>

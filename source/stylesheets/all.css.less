@@ -1,159 +1,44 @@
 //= require normalize
+//= require minotaur
 //= require syntax
-
-@fg: #333;
-@fg2: lighten(@fg, 40%);
-@bg: #fff;
-@link: #78B;
-@minimal: #bbb;
-
-@body-font: 'Helvetica Neue', sans-serif;
-@font-size: 16px;
-
-@heading-font: 'Helvetica Neue', sans-serif;
-@heading-color: #7c7d8c;
-@masthead-bg: #efeddf;
-
-@body-width: 42em;
-
-body, html {
-  font-family: @body-font;
-  font-weight: 400;
-  font-size: @font-size;
-  line-height: 1.7em;
-  color: @fg;
-  background-color: @bg;
-  letter-spacing: 0.02em;
-  word-spacing: -0.08em;
-}
-
-body {
-  width: @body-width;
-  max-width: 100%;
-  min-width: 380px;
-  margin: 0 auto;
-}
-
-img {
-  max-width: 100%;
-}
-
-b, strong {
-  opacity: 0.8;
-}
-
-.container {
-  padding: 0 1.4em;
-}
-
-h1, h2, h3, h4, h5, h6, .title {
-  color: @heading-color;
-  font-family: @heading-font;
-  line-height: 1.5em;
-}
-
-h2, .title {
-  font-weight: 900;
-}
-
-h3, h4, h5, h6 {
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-p, pre, blockquote {
-  margin-top: @font-size * 1.35;
-  margin-bottom: @font-size * 1.35;
-}
-
-p, blockquote {
-  text-align: left;
-}
-
-a {
-  color: @link;
-  &:hover {
-    color: lighten(@link, 10%);
+@media (min-width: 74em) {
+  .column-3-2 {
+    float: left;
+    width: 66.666%;
   }
-}
-
-.read-more a, .prev a, .next a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 3px 5px;
-  background-color: mix(white, black, 98%);
-  border-radius: 3px;
-  border: 1px solid mix(white, black, 91%);
-  margin-right: 1em;
-}
-
-.page-no {
-  margin-right: 1em;
-}
-
-.masthead {
-  border: 1px solid darken(@masthead-bg, 10%);
-  text-align: right;
-  border-width: 0 0 1px;
-  opacity: 0.9;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  h1 {
-    letter-spacing: -0.01em;
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: 300;
-  }
-  a {
-    display: block;
-    padding: 0.65em 0;
-    color: @heading-color;
-    text-decoration: none;
-  }
-}
-
-h2 {
-  display: block;
-  font-size: 2em;
-  margin-top: 3em;
-  margin-bottom: 0.5em;
-
-  a {
-    text-decoration: none;
-    color: @heading-color;
-  }
-}
-
-.date {
-  display: block;
-  font-size: 0.8em;
-  padding: 0.4em 0;
-  line-height: 1em;
-  color: @fg2;
-  border: 1px solid lighten(@fg2, 30%);
-  border-width: 1px 0;
 }
 
 .article-list {
+  padding-left: 0;
   list-style-type: none;
-  padding: 0;
-  & > li {
-    margin: 0;
+  h2 {
+    font-size: 1.8em;
+    line-height: 1.1;
+    a {
+      color: #333;
+    }
   }
 }
 
-.footer {
-  margin: 2em 0 0;
-  padding: 0;
-  border-top: 1px solid darken(@masthead-bg, 10%);
+body {
+  margin-bottom: 3em;
+}
+
+.date {
+  margin: -1em 0 0.5em;
+  opacity: 0.6;
+}
+
+blockquote {
   font-size: 1.2em;
-  a {
-    text-decoration: none;
-    color: @heading-color;
+  line-height: 1.5em;
+  border-left: 3px solid #ddd;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+.pagination {
+  .next, .prev {
+    margin-right: 1em;
   }
 }
