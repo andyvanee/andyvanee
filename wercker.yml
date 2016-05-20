@@ -16,10 +16,4 @@ deploy:
             key_secret: $AWS_SECRET_KEY
             bucket_url: $AWS_BUCKET_URL
             source_dir: build/
-            opts: --acl-public --add-header=Cache-Control:max-age=432000
-        - script:
-            name: Manual modification of S3 options
-            cwd: build/
-            code: |
-                ls
-                s3cmd put --acl-public --add-header=Cache-Control:max-age=86400 --verbose index.html $AWS_BUCKET_URL
+            opts: --acl-public --add-header=Cache-Control:max-age=86400
