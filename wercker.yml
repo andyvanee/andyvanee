@@ -1,4 +1,4 @@
-box: wercker/ubuntu12.04-ruby2.0.0
+box: wercker/ruby@1.0.0
 build:
     steps:
         # Execute the bundle install step, a step provided by wercker
