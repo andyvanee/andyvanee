@@ -2,7 +2,7 @@ box: wercker/ubuntu12.04-ruby2.0.0
 build:
     steps:
         # Execute the bundle install step, a step provided by wercker
-        - bundle-install
+        - wercker/bundle-install@2.0.1
         # Execute a custom script step.
         - script:
             name: middleman build
