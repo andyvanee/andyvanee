@@ -1,6 +1,6 @@
 ---
 title: Deconstruct 2017 - Stronger Communities
-date: 2017-04-22 02:48 UTC
+date: 2017-04-21 21:30
 ---
 
 [Deconstruct 2017](http://deconstructconf.com/) is over, and I'm still
