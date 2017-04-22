@@ -5,10 +5,164 @@
   <id>http://andyvanee.com</id>
   <link href="http://andyvanee.com"/>
   <link href="http://andyvanee.com/feed.xml" rel="self"/>
-  <updated>2017-04-21T14:30:00-07:00</updated>
+  <updated>2017-04-21T15:50:00-07:00</updated>
   <author>
     <name>Andy VanEe</name>
   </author>
+  <entry>
+    <title>Can I fire myself?</title>
+    <link rel="alternate" href="http://andyvanee.com/2017/04/21/can-i-fire-myself.html"/>
+    <id>http://andyvanee.com/2017/04/21/can-i-fire-myself.html</id>
+    <published>2017-04-21T15:50:00-07:00</published>
+    <updated>2017-04-21T22:49:59-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <summary type="html">&lt;p&gt;I’ve been trying to live by the following axiom for a while now:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Be kind to your future self&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This idea was ringing in my head as I posted the previous blog post. As a
+developer, I am extremely bad...&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;I&amp;rsquo;ve been trying to live by the following axiom for a while now:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Be kind to your future self&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This idea was ringing in my head as I posted the previous blog post. As a
+developer, I am extremely bad at this some times. I often say &amp;ldquo;Why would I use
+service X when there are A, B and C open source projects that do it so much
+better?!?!&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s why: maintaining software is terrible.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s fantastic when it&amp;rsquo;s fresh and clean, but open source software is not
+optimizing for your future self. Breaking compatibility is often necessary for
+one reason or another. These reasons matter to maintainers, I get that. But the
+same reasons don&amp;rsquo;t really matter to your future self.&lt;/p&gt;
+
+&lt;p&gt;To drive home the point, I want to post an annotated command-line session of
+exactly what was required to post a single article on my blog.&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t posted in a year, so I was assuming that stuff would be broken. That&amp;rsquo;s
+a given. And I&amp;rsquo;m not actually that suprised by how long it took. But it does
+impact how I view my software choices in the future.&lt;/p&gt;
+
+&lt;p&gt;It may appear that I&amp;rsquo;m picking on Middleman or Ruby or whatever. I&amp;rsquo;m not. This
+is a ubiquitous problem across the board for any developer that has many
+projects that they only sporadically maintain.&lt;/p&gt;
+
+&lt;p&gt;Okay, let&amp;rsquo;s see what we&amp;rsquo;ve got.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;cd andyvanee.github.com
+ruby version
+rbenv version
+rbenv global 2.2.0
+bundle
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Oh yeah, an older ruby version. One of these should work.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;rbenv versions
+rbenv global 2.3.3
+bundle update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hmm, I&amp;rsquo;ve gone from middleman-core (3.3.10) to middleman-core (4.2.1). Is that
+going to be a problem?&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;bundle exec middleman build --verbose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Yup - &lt;a href="https://github.com/middleman/middleman-sprockets/blob/master/docs/upgrade-3-to-4.md"&gt;absolutely a problem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s generate a blank site to see what we&amp;rsquo;ve got:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;be middleman init blank
+mv blank ..
+ll config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For some reason I have an uncommitted config directory and a Dockerfile in
+there. They don&amp;rsquo;t seem important.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;subl source/posts/2017-04-21-deconstruct-2017-stronger-communities.md
+git add source/posts/2017-04-21-deconstruct-2017-stronger-communities.md
+git add Gemfile*
+git add config source/feed.xml.builder wercker.yml
+git reset config
+git commit -m 'New post, update middleman and gems, probably break everything'
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now I just push because I knew that I had a wercker bot to build the thing.
+Maybe it will magically still build even though it&amp;rsquo;s not working on my
+machine&amp;hellip; Nope.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s dig more into the blank generated project to see what&amp;rsquo;s changed.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;subl ../../blank
+cd build
+git mv source/layouts/layout.erb source/
+git mv source/stylesheets/all.css.less source/stylesheets/all.css.scss
+git commit -am 'Get styles working'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;LESS moved out of sprockets, which is why the styling was broken. Luckily, my
+styles were minimal and the LESS file was also valid SCSS. Win!&lt;/p&gt;
+
+&lt;p&gt;But I still have zero posts showing up on my home page, so it doesn&amp;rsquo;t really
+qualify as a blog anymore. I see that the new files seem to all have a
+&lt;code&gt;.html.markdown&lt;/code&gt; extension. Maybe that&amp;rsquo;s the problem?&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;cd source/posts
+for old in *.md; do mv $old `basename $old .md`.html.md; done
+ll
+for old in *.markdown; do mv $old `basename $old .markdown`.html.md; done
+ls -1 source/posts | grep .html.html
+ls -1 source/posts | grep -v .html.md
+git add --all source
+git add config.rb
+git commit -m 'Posts actually rendering and permalinked correctly'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I now have posts!&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;be middleman build
+git commit -m 'Re-add summary'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I now have a properly rendering blog! I now look into why my deploys are failing.
+I conclude that I have no idea why my build is failing, and Wercker was bought
+by Oracle, so screw that. Let&amp;rsquo;s switch to github pages.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;rm -rf build
+git rm wercker.yml
+be middleman build --help
+be middleman build --build-dir=docs
+cd docs
+server
+cd ..
+touch Makefile
+git add Makefile
+git commit -m 'Build to docs directory and add Makefile'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cool, we&amp;rsquo;re building to a docs directory because github pages supports that
+now and building to a separate branch always seemed like a hacky pain in the
+ass.&lt;/p&gt;
+
+&lt;p&gt;But wait! Turns out User and Organization pages don&amp;rsquo;t actually support that, so
+we&amp;rsquo;ve got to switch to make it a project. Okay.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git remote rm origin
+git remote add origin git@github.com:andyvanee/andyvanee.git
+git push --set-upstream origin master
+touch source/CNAME
+cat &amp;gt; source/CNAME
+git pull
+make
+cat docs/CNAME
+git add source
+git add docs
+git status
+git commit -m 'Add CNAME to build'
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now I start rummaging around the github pages docs for how to set up my DNS
+records. Then I log in to switch them.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;dig andyvanee.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And I&amp;rsquo;ve finally posted to my blog again after nearly a year. If you are a
+developer, none of this should seem unfamiliar, but I think we should all be
+taking a hard look through our command line and browser history and ask:
+Am I being kind to my future self?&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Deconstruct 2017 - Stronger Communities</title>
     <link rel="alternate" href="http://andyvanee.com/2017/04/21/deconstruct-2017-stronger-communities.html"/>
@@ -309,69 +463,6 @@ and implement your own application.&lt;/p&gt;
 &lt;p&gt;Another, more subtle, influence on the structure of your application is the community at large. PHP and JavaScript have famously bad sample code and libraries almost universally. I truly believe that good applications can be built in either, if used appropriately and in the right context. Rails tutorials can be equally bad: encouraging fat views, fat controllers or fat models. The truth is that if your app is fat anywhere - that part is unhealthy. There is no silver bullet.&lt;/p&gt;
 
 &lt;p&gt;Good structure is hard - and it&amp;rsquo;s worth considering the merits of all approaches, but at the end of the day you need to learn what&amp;rsquo;s right for your application. The rest is just dogma.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Sandbox your external scripts</title>
-    <link rel="alternate" href="http://andyvanee.com/2014/03/29/sandbox-your-external-scripts.html"/>
-    <id>http://andyvanee.com/2014/03/29/sandbox-your-external-scripts.html</id>
-    <published>2014-03-28T17:00:00-07:00</published>
-    <updated>2015-03-27T00:32:23-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <summary type="html">&lt;p&gt;Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due...&lt;/p&gt;</summary>
-    <content type="html">&lt;p&gt;Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion. The best solution is to completely sandbox your external scripts like social media widgets. Fonts could use similar treatment.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s two waterfalls to compare:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/u/20801198/andyvanee.com/network-fail.png" alt="Network Fail" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/u/20801198/andyvanee.com/network-nice-fail.png" alt="Network Soft Fail" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Below is the gist of the code.&lt;/p&gt;
-
-&lt;p&gt;What it does is put all the HTML that contains possibly blocking scripts into an unknown script tag type (which the browser just skips) and then injects this after the page is loaded. There&amp;rsquo;s a bit of gymnastics to make it possible to embed script tags within a script tags, but I think the result is worth it.&lt;/p&gt;
-&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"async-scripts"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Social widgets will go here...&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"script-sandbox"&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"text/html-template"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"my-toolbar"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"https://twitter.com/andyvanee"&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"twitter-follow-button"&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;show&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"false"&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"60px"&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;align&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"left"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nx"&gt;Follow&lt;/span&gt; &lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="nd"&gt;andyvanee&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="sr"&gt;/a&lt;/span&gt;&lt;span class="err"&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"https://twitter.com/share"&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"twitter-share-button"&lt;/span&gt; &lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;via&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"andyvanee"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nx"&gt;Tweet&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="sr"&gt;/a&lt;/span&gt;&lt;span class="err"&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;
-        &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;js&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;fjs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sr"&gt;/^http:/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;)?&lt;/span&gt;&lt;span class="s1"&gt;'http'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;'https'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;&lt;span class="nx"&gt;js&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="nx"&gt;js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;'://platform.twitter.com/widgets.js'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nx"&gt;fjs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parentNode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertBefore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;js&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;fjs&lt;/span&gt;&lt;span class="p"&gt;);}}(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'script'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'twitter-wjs'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;
-
-    &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;rest&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;your&lt;/span&gt; &lt;span class="nx"&gt;widgets&lt;/span&gt; &lt;span class="nx"&gt;here&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
-  &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="sr"&gt;/div&lt;/span&gt;&lt;span class="err"&gt;&amp;gt;
-&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-  &lt;span class="nx"&gt;jQuery&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;sandbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"#script-sandbox"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/--#/g&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'&amp;lt;'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/#--/g&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'&amp;gt;'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"#async-scripts"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;share_html&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-  &lt;span class="p"&gt;});&lt;/span&gt;  
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href="https://gist.github.com/Andyvanee/9849384"&gt;View on gist.github.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve used various methods with similar results before, but what I like about this one is that you can just block off an entire chunk of HTML and defer loading it until a later point.&lt;/p&gt;
-
-&lt;p&gt;One final hint: you can simulate a network timeout really easily by adjusting the external url to specifying a blocked port. Change &lt;a href="https://twitter.com/share"&gt;https://twitter.com/share&lt;/a&gt; to &lt;a rel="nofollow" href="https://twitter.com:81/share"&gt;https://twitter.com:81/share&lt;/a&gt; to see how your page is affected by timeout errors.&lt;/p&gt;
-
-&lt;p&gt;Happy Hacking!&lt;/p&gt;
-
-&lt;style type="text/css"&gt;
-    pre {
-        white-space: pre;
-        word-wrap: normal;
-        overflow-y: scroll;        
-    }
-&lt;/style&gt;
 </content>
   </entry>
 </feed>
