@@ -14,7 +14,7 @@ My first reaction is to feel the instinctive tension build among the 20-30 year
 old single white males... which is a large percentage of the audience.
 
 "I haven't done anything wrong. Stop looking at me like I did something wrong!
-"Why are you accusing me, I'm innocent!!!
+Why are you accusing me, I'm innocent!!!"
 
 I get it. I understand this reaction. It was my reaction at one point.
 
