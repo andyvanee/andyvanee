@@ -3,6 +3,9 @@ title: Deconstruct 2017 - Stronger Communities
 date: 2017-04-21 21:30
 ---
 
+![Deconstruct 2017 Badge](/images/deconstruct-badge-2017.jpg "Deconstruct 2017 Badge")
+
+
 [Deconstruct 2017](http://deconstructconf.com/) is over, and I'm still
 processing a lot of what I heard, but I did want to get a few notes down while
 the ideas are fresh.
