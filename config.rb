@@ -5,9 +5,9 @@
 # Time.zone = "MST"
 
 activate :blog do |blog|
-  blog.prefix = "posts"
+  # blog.prefix = "posts"
   # blog.prefix = "blog"
-  # blog.permalink = ":year/:month/:day/:title.html"
+  blog.permalink = ":year/:month/:day/:title.html"
   blog.sources = "/posts/:year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   # blog.layout = "layout"
