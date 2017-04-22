@@ -13,6 +13,12 @@
     <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="<%= site_subtitle %>" />
     <%= stylesheet_link_tag "all" %>
     <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="<%= current_page.data.title || "andyvanee.com" %>" />
+    <% if current_article && current_article.data.thumbnail_image %>
+      <meta property="og:image" content="http://andyvanee.com/<%= current_article.data.thumbnail_image %>" />
+    <% end %>
   </head>
 
   <body class="<%= page_classes %>">

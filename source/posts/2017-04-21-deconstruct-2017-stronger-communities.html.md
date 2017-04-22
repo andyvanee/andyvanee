@@ -1,6 +1,7 @@
 ---
 title: Deconstruct 2017 - Stronger Communities
 date: 2017-04-21 21:30
+thumbnail_image: /images/deconstruct-badge-2017.jpg
 ---
 
 ![Deconstruct 2017 Badge](/images/deconstruct-badge-2017.jpg "Deconstruct 2017 Badge")
