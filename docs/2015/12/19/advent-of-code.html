@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Advent of Code</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2015 x2015_12 x2015_12_19 x2015_12_19_advent-of-code">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>Advent of Code</h2>
+            <div class="date">Dec 19, 2015</div>
+
+        <p>I&rsquo;ve really been enjoying working my way through the code challenges at
+<a href="http://adventofcode.com/">http://adventofcode.com/</a>.</p>
+
+<p>My solutions are here: <a href="https://github.com/andyvanee/adventofcode">https://github.com/andyvanee/adventofcode</a></p>
+
+<p>I&rsquo;m now on day 8, and the examples have ranged from
+<a href="https://github.com/andyvanee/adventofcode/blob/master/bin/day_1">very easy</a> to
+<a href="https://github.com/andyvanee/adventofcode/blob/master/lib/bt.rb">pretty involved</a>,
+but none have been devilishly complicated or tricky.</p>
+
+<p>Here&rsquo;s my favorite part:</p>
+
+<p>Each exercise has a second step, which is only visible after solving step 1.
+Knowing that you will have to refactor or extend deal the code you wrote in step
+one is much more like real-world coding.</p>
+
+<p>I think this kind of exercise is important at any level of programming
+experience. For me, it was some confirmation that I actually have made progress
+in my code. I&rsquo;m sure my solutions much more modular and well tested than I would
+have produced a few years ago.</p>
+
+<p><a href="https://github.com/andyvanee/adventofcode/blob/master/spec/fire_hazard_spec.rb">https://github.com/andyvanee/adventofcode/blob/master/spec/fire_hazard_spec.rb</a></p>
+
+<p>Day 7 was a highlight for me, as I&rsquo;ve never actually written a parser/evaluator
+for a custom minilanguage. I&rsquo;ve read the theory a few times, and had some
+experience with ad-hoc embedded DSL&rsquo;s, but this was my first end-to-end
+implementation of something like this. My solution is in the <code>BT</code> module here:</p>
+
+<p><a href="https://github.com/andyvanee/adventofcode/tree/master/lib">https://github.com/andyvanee/adventofcode/tree/master/lib</a></p>
+
+<p>Although it could use some cleanup and documentation about what&rsquo;s actually going
+on, I was pretty happy with the performance and functionality - especially with
+the addition of memoization of partial results here: 
+<a href="https://github.com/andyvanee/adventofcode/blob/master/lib/bt/evaluator.rb">https://github.com/andyvanee/adventofcode/blob/master/lib/bt/evaluator.rb</a></p>
+
+<p>A big thumbs up to <a href="http://was.tl/">http://was.tl/</a> for this project!</p>
+
+
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2016/05/19/converting-co2.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2014/07/31/multi-comp-foreign-key.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

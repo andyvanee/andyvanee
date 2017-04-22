@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Rapid Game Prototyping in Quartz Composer</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2011 x2011_01 x2011_01_07 x2011_01_07_rapid-game-prototyping-in-quartz-composer">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>Rapid Game Prototyping in Quartz Composer</h2>
+            <div class="date">Jan 07, 2011</div>
+
+        <p>I am a Quartz Composer junky. I love tinkering with ideas and hacking together logic gates within this kind of visual programming environment.</p>
+
+<p>I think this it&rsquo;s the best way to teach core CS techniques that are often obscured in text-based code. Things like logic gates, the value of modularity, and application structure start to really make sense when you lay them out visually. It&rsquo;s like a UML diagram that functions and evaluates in real-time.</p>
+
+<p>As an example, I will use a game-idea I had, and how I quickly mocked it up in Quartz Composer. It&rsquo;s called &ldquo;Stellar Debris&rdquo;, and the point of the prototype is to demonstrate vertical parallax motion in a 2D game (like the background scrolling in Canabalt).</p>
+
+<p>The storyline is that your character is a flying robot(spaceship?) that takes off from the surface and must make it through the layer of orbiting debris in a post-apocalyptic earth. The controls are very basic, click to takeoff, mouse back and forth to move and click to shoot.</p>
+
+<p>Here&rsquo;s the start screen. The graphics are very rudimentary (prototype remember!).
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_ZApMPFF0N4c/TSdxTfHERcI/AAAAAAAABH4/JyBV3W7qbzU/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.01.50%2BPM.png"><img src="http://3.bp.blogspot.com/_ZApMPFF0N4c/TSdxTfHERcI/AAAAAAAABH4/JyBV3W7qbzU/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.01.50%2BPM.png" alt="Screen%2bshot%2b2011 01 07%2bat%2b1.01.50%2bpm" /></a></div></p>
+
+<p>Once you click, the character takes off and you can control his motion and fire bullets.
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_ZApMPFF0N4c/TSdx3k7Fa_I/AAAAAAAABIA/QgbL0WU524Y/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.03.45%2BPM.png"><img src="http://1.bp.blogspot.com/_ZApMPFF0N4c/TSdx3k7Fa_I/AAAAAAAABIA/QgbL0WU524Y/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.03.45%2BPM.png" alt="Screen%2bshot%2b2011 01 07%2bat%2b1.03.45%2bpm" /></a></div></p>
+
+<p>You&rsquo;ll notice the foreground has scrolled off screen already and there are blocks to shoot. The background scrolls much slower, and the sky doesn&rsquo;t scroll at all. It also gets darker as you ascend into the atmosphere.
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_ZApMPFF0N4c/TSd0bTyu6kI/AAAAAAAABII/kSi4zXp1yM0/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.14.41%2BPM.png"><img src="http://1.bp.blogspot.com/_ZApMPFF0N4c/TSd0bTyu6kI/AAAAAAAABII/kSi4zXp1yM0/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.14.41%2BPM.png" alt="Screen%2bshot%2b2011 01 07%2bat%2b1.14.41%2bpm" /></a></div></p>
+
+<h3>Game Logic</h3>
+
+<p>I don&rsquo;t think I would want to build an entire game in Quartz Composer. But having a mockup like this is great for prototyping because most of the game logic is there in a clear modular structure, which makes it a great starting point for porting it to your programming language of choice. Here&rsquo;s a look at the patches involved in making this &ldquo;game&rdquo; happen.
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/_ZApMPFF0N4c/TSd15vRWBJI/AAAAAAAABIQ/HkUsEsywbV4/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.18.04%2BPM.png"><img src="http://2.bp.blogspot.com/_ZApMPFF0N4c/TSd15vRWBJI/AAAAAAAABIQ/HkUsEsywbV4/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.18.04%2BPM.png" alt="Screen%2bshot%2b2011 01 07%2bat%2b1.18.04%2bpm" /></a></div></p>
+
+<p>Rather than coding blindly, many of the logic bits required for gameplay are already in place. Things like &ldquo;the bullet needs to know the character&rsquo;s position at the time of firing&rdquo; or &ldquo;each 2D layer needs to know the absolute position and multiply it by some factor&rdquo; or even &ldquo;the clouds look good enough as a blurred semi-opaque sprite&rdquo;.</p>
+
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/process.html">Process</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2011/02/07/automator-services.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2010/12/21/from-command-line-to-xcode.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

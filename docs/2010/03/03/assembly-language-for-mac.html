@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Assembly Language For Mac</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2010 x2010_03 x2010_03_03 x2010_03_03_assembly-language-for-mac">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>Assembly Language For Mac</h2>
+            <div class="date">Mar 03, 2010</div>
+
+        <p>I&rsquo;m away from my Linux box and want to do some assembly
+programming. Mac installs GCC with the developer tools, but there are
+enough differences that I haven&rsquo;t bothered to work through them until
+now. Here&rsquo;s <a href="http://shorestreet.com/node/21">a decent tutorial</a>,
+although it focuses on PPC assembly and I&rsquo;m using an Intel Mac. The
+thing that frightened me about the Mac assembler was the default
+output of gcc -S. There is some strange optimizations and flags in the
+resulting assembly code. The key, as the tutorial points out, is in
+the compiler options. Here&rsquo;s what I used on the ubiquitous &ldquo;Hello
+World&rdquo; program:</p>
+<pre class="highlight plaintext"><code>gcc -S -fno-PIC -O2 -Wall -o hello.s hello.c
+</code></pre>
+<p>And here&rsquo;s the assembly code it spit out:</p>
+<pre class="highlight plaintext"><code>.cstring
+LC0:
+   .ascii "Hello World!%d\12\0"
+   .text
+   .align 4,0x90
+
+.globl _main
+   _main:
+   pushl   %ebp
+   movl    %esp, %ebp
+   subl    $24, %esp
+   movl    $12, 4(%esp)
+   movl    $LC0, (%esp)
+   call    _printf
+   xorl    %eax, %eax
+   leave
+   ret
+   .subsections_via_symbols
+</code></pre>
+<p>This is more familiar territory, the only differences being the
+<code>.cstring</code> directive instead of <code>.section .text</code>, the leading underscore
+on printf, and the <code>.subsections_via_symbols</code> directive. The general
+naming of sections is outlined on the Mac Assembler Reference, and the
+<code>.subsections_via_symbols</code> explanation is interesting. I&rsquo;m already used
+to using many labels in my code; does this mean that the named
+sections would be ripped out because they are not &ldquo;called&rdquo; by any
+other code? I tested this out in the previous example, just adding a
+second call to <code>_printf</code> in a labelled section and the code worked just
+fine. It seems that labels don&rsquo;t count, they have to be declared
+sections like <code>.globl</code>, <code>.section</code> or whatever. That seems fair, I haven&rsquo;t
+yet made a habit of calling sections that are supposed to flow
+naturally into other sections. Maybe there is some instance where this
+might be a useful optimization? I will be looking into Position
+Independent Code(PIC) a bit more, it seems that it&rsquo;s similar in theory
+to how the latest Linux kernel runs code at randomized memory
+locations to prevent hardcoded attacks, but I don&rsquo;t know if that&rsquo;s the
+extent of it.</p>
+
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
+                <span class="tag"><a href="/tags/assembly.html">Assembly</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2010/08/01/unix-and-the-emerging-web.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2010/02/03/rpn-calculator-v002.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

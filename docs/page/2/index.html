@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>andyvanee.com</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="page page_2 page_2_index">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+
+        <ul class="article-list column column-1 column-gutterless">
+  <li class="column column-3">
+    <h2><a href="/2013/10/29/udacity-cs212.html">Udacity CS-212</a></h2>
+    <div class="date">Oct 29, 2013</div>
+    <div class="summary">
+        <p>Peter Norvig is a big name in computer programming. I stumbled across some of
+his code and was struck by how he could often accomplish in 4 lines of code
+things that might take me pages.</p>
+
+<p>A bit more searching led me to a course taught by Peter on Udacity
+<a href="https://www.udacity.com/course/cs212">Design of Computer Programs</a></p>
+
+<p>There were a number of places where I was absolutely blown away. Almost always
+it was a case of me over-engineering the problem (usually with unneccesary OOP)
+where his simple data types and list comprehensions nailed it.</p>
+
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/10/28/taking-stock.html">Taking Stock</a></h2>
+    <div class="date">Oct 28, 2013</div>
+    <div class="summary">
+        As I’ve given this blog a little refresh, it’s caused me to look back
+on what I’ve written so far and think about what I want to write in the
+future.
+
+My first reaction was embarrassment at some of...
+        <p class="read-more"><a href="/2013/10/28/taking-stock.html">Read More</a></p>
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/10/28/playing-with-openresty.html">Playing With OpenResty</a></h2>
+    <div class="date">Oct 28, 2013</div>
+    <div class="summary">
+        OpenResty is a bit of an enigma. I first heard about
+the project a few months back when reading about some benchmarks of various
+web application platforms. OpenResty was WAY ahead of all the others...
+        <p class="read-more"><a href="/2013/10/28/playing-with-openresty.html">Read More</a></p>
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/10/27/new-layout.html">New Layout</a></h2>
+    <div class="date">Oct 27, 2013</div>
+    <div class="summary">
+        <p>This blog is now compiled with <a href="http://middlemanapp.com">Middleman</a> and deployed with <a href="http://wercker.com/">Wercker</a> (still deploying to <a href="http://aws.amazon.com/s3/">S3</a>). I&rsquo;ve updated the look/feel as well, mostly taking stuff away to make it really clean &amp; simple.</p>
+
+<p>I think this will be a nice setup :)</p>
+
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/05/11/event-driven-programming.html">Event Driven Programming</a></h2>
+    <div class="date">May 11, 2013</div>
+    <div class="summary">
+        I haven’t been doing a lot of JavaScript lately, but every time I do i try to explore the idea of doing everything event driven.
+
+
+“I want the world to be made of hooks” -Andrew Plotkin
+
+
+This quote...
+        <p class="read-more"><a href="/2013/05/11/event-driven-programming.html">Read More</a></p>
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/05/03/spamming-the-internet.html">Spamming the Internet</a></h2>
+    <div class="date">May 03, 2013</div>
+    <div class="summary">
+        When Google announced that Reader was to be no more, I, like many other geeks took things into my own hands. I was, until recently, a daily user of Reader. There are only a handful of RSS feeds that...
+        <p class="read-more"><a href="/2013/05/03/spamming-the-internet.html">Read More</a></p>
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/04/27/writing-is-hard.html">Writing Is Hard</a></h2>
+    <div class="date">Apr 27, 2013</div>
+    <div class="summary">
+        …for a number of reasons.
+
+One reason, which is often addressed, is the challenge of effectively
+communicating your ideas. This is partly technical, but has more to do with
+how effectively you communicate...
+        <p class="read-more"><a href="/2013/04/27/writing-is-hard.html">Read More</a></p>
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/04/25/prose-github-s3.html">Prose, Github and S3</a></h2>
+    <div class="date">Apr 25, 2013</div>
+    <div class="summary">
+        <p>In an effort to make the static site workflow a little less manual, I&rsquo;ve created a little web-service to automate things a bit. Here&rsquo;s how it works:</p>
+
+<ol>
+<li>Edit posts/pages/layouts etc with <a href="http://prose.io/">prose.io</a></li>
+<li>Github web-hook hits my service, triggering a build.</li>
+</ol>
+
+<p>The build stage looks like this:</p>
+
+<ol>
+<li>git pull (or clone if need be)</li>
+<li>make</li>
+<li>s3cmd sync</li>
+</ol>
+
+<p>Setting up the server was a bit difficult for a couple of reasons. My blog is pretty straightforward, but it did need a number of things installed on the server for a successful build: make, jekyll, uglifyjs, recess, pygments and s3cmd. Also, this all had to be run as the www-data user, which had a pretty minimal environment.</p>
+
+<p>So far, it&rsquo;s awesome. Editing and publishing my blog as a static site on S3 is now completely automated. Code coming soon on <a href="https://github.com/Andyvanee">github</a>&hellip;</p>
+
+    </div>
+  </li>
+  <li class="column column-3">
+    <h2><a href="/2013/02/06/software-home-lab.html">The Software Developers Home Lab</a></h2>
+    <div class="date">Feb 06, 2013</div>
+    <div class="summary">
+        This post caught my eye:
+Why you need a home lab to keep your job.
+
+Your boss won’t pay for training, so your partner has to put up with servers at home
+
+What intrigued me, as a web developer, was not...
+        <p class="read-more"><a href="/2013/02/06/software-home-lab.html">Read More</a></p>
+    </div>
+  </li>
+</ul>
+
+  <div class="pagination column column-1">
+        <span class="prev"><a href="/">&laquo; Newer</a></span>
+      <span class="page-no">Page 2 of 5</span>
+
+      <span class="next"><a href="/page/3/">Older &raquo;</a></span>
+  </div>
+
+
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

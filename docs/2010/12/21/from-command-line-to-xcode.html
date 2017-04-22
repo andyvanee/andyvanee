@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>From Command-line to XCode</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2010 x2010_12 x2010_12_21 x2010_12_21_from-command-line-to-xcode">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>From Command-line to XCode</h2>
+            <div class="date">Dec 21, 2010</div>
+
+        <p>I&rsquo;m a command-line guy at heart when it comes to programming. It seems much more organic to know what every project file is doing and how each one contributes to the whole. Which files might break things, which files are optional and which files can be refactored or optimized.</p>
+
+<p>&ldquo;The Pragmatic Programmer&rdquo; challenged this notion. They recommend diversity. If you only know and IDE, try command-line and if you know command-line, try an IDE. At first I was skeptical of this advice. I&rsquo;ve come to know my command-line toolset fairly well, and IDE&rsquo;s feel like they add too much baggage and inflexibility. I&rsquo;ve built Xcode projects before, and there is a lot of behind the scenes voodoo attached to the projects.</p>
+
+<p>But, after pushing through my initial concerns, I&rsquo;ve come to really enjoy using Xcode for my projects. Here are some command-line programmer concerns, and how to alleviate them in Xcode. Some may be obvious to those who are at home in their IDE, but they weren&rsquo;t to me.</p>
+
+<ul>
+<li>  Problem: I&rsquo;m going to have to fill my project folder with unnecessary Xcode-specific files.</li>
+<li><p>Solution: Make a workspace (eg. Documents &gt; Web_development.xcworkspace). Add your project folders to this workspace(without copying the files).</p></li>
+<li><p>Problem: My project is unique, won&rsquo;t I have to use the command line anyway?</p></li>
+<li><p>Solution: This is where command-line knowledge really pays off. Just create a new &ldquo;Scheme&rdquo; and you can run scripts pre/post Build pre/post Run. For a simple HTML site, I just set Safari.app as the executable and my index.html file as the argument. The build scheme is your hook into all the command-line utilities at your disposal.</p></li>
+<li><p>Problem: I prefer editing with [vim, emacs, &hellip;].</p>
+
+<p>Solution: Well, I can&rsquo;t really help you there. Personally, I like Vim, but I&rsquo;m not a total fanboy. I&rsquo;m quite happy using the standard OSX keybindings, with a few tweaks for one&rsquo;s I use a lot. Find &amp; Replace works well. Split view and file navigation work well, and syntax-highlighting is fully configurable and works with every file I&rsquo;ve thrown at it.</p></li>
+<li><p>Problem: I can&rsquo;t manage my git(svn, whatever) repositories from there.</p></li>
+<li><p>Solution: This was my own ignorance. I use git for all my projects, and Xcode support for git is actually pretty awesome. It automatically knows if a file is in a git repo, and puts an M beside the file if it&rsquo;s been modified.</p></li>
+</ul>
+
+<p>All in all, I&rsquo;ve really enjoyed programming in Xcode. It does take a small investment of time and imagination to build custom projects, but I think it&rsquo;s worth it.</p>
+
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
+                <span class="tag"><a href="/tags/process.html">Process</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2011/01/07/rapid-game-prototyping-in-quartz-composer.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2010/12/01/endangered-species-and-ux.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

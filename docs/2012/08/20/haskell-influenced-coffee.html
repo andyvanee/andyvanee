@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Haskell Influenced Coffee</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2012 x2012_08 x2012_08_20 x2012_08_20_haskell-influenced-coffee">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>Haskell Influenced Coffee</h2>
+            <div class="date">Aug 20, 2012</div>
+
+        <p>I&rsquo;ve been learning Haskell. It&rsquo;s been a very interesting experience to
+learn to think in the Haskell way, but I have been unsure whether it will
+actually have any practical benefit in my day to day work.</p>
+
+<p>Then I switched modes and wrote a little CoffeeScript. The lessons I had
+been struggling with Haskell suddenly became so clear when applied to
+CoffeeScript (and JavaScript, by extension). Here&rsquo;s a few examples of
+what I&rsquo;m talking about&hellip;</p>
+
+<h3>Example #1 - Callbacks with scope</h3>
+
+<p>Asynchronous execution is pretty fundamental in modern JavaScript, and
+callbacks are the way this is usually managed. Sometimes it makes sense
+to pass small inline anonymous functions in these cases, but other times
+you want to break the callback into it&rsquo;s own named function. The problem
+that can arise with this is that your function might lose things it
+previously had in scope.</p>
+
+<p>Take this example of reading a file asynchronously with node (inside
+a request):</p>
+<pre class="highlight coffeescript"><code><span class="nx">handler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">fs</span><span class="p">.</span><span class="na">readFile</span> <span class="s">'myfile.html'</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="k">if</span> <span class="nx">err</span>
+      <span class="nx">res</span><span class="p">.</span><span class="na">end</span> <span class="s">'ack!'</span>
+      <span class="k">return</span>
+    <span class="nx">res</span><span class="p">.</span><span class="na">end</span> <span class="nx">data</span>
+</code></pre>
+<p>Not bad, but those inline functions are essentially untestable and have
+a tendency to grow in ugly ways. I&rsquo;d like to break it into it&rsquo;s own
+named function, but I have a problem: my response handle will go out of
+scope so I can&rsquo;t actually write my response. My Haskell-influenced
+solution uses a function-returning function and looks surprisingly
+like a Haskell type signature:</p>
+<pre class="highlight coffeescript"><code><span class="nx">handler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">fs</span><span class="p">.</span><span class="na">readFile</span> <span class="s">'myfile.html'</span><span class="p">,</span> <span class="nx">fileResponder</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+
+<span class="nx">fileResponder</span> <span class="o">=</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="k">if</span> <span class="nx">err</span>
+    <span class="nx">res</span><span class="p">.</span><span class="na">end</span> <span class="s">'ack!'</span>
+    <span class="k">return</span>
+  <span class="nx">res</span><span class="p">.</span><span class="na">end</span> <span class="nx">data</span>
+</code></pre>
+<p>So this is a function that returns a callback function (taking err,data)
+with the proper response writer in scope. Nice!</p>
+
+<p>And now, with a minimal mock of res, err and data, it would be nice
+and easy to test the output of the responder across many inputs.</p>
+
+<h3>Example #2 - Loving Recursion</h3>
+
+<p>This one is a bit more of a gray area for me. Recursion can be slower and
+harder to understand for some. I&rsquo;ve found that I naturally tend to solve
+things recursively more since using Haskell. Here&rsquo;s a simple example that
+pads a string with another string up to a certain length. I didn&rsquo;t even
+think, &ldquo;I should do this recursively&rdquo;, it just came naturally.</p>
+<pre class="highlight coffeescript"><code><span class="c1"># Pad a string to len using padding</span>
+<span class="nb">String</span><span class="p">.</span><span class="na">prototype</span><span class="p">.</span><span class="na">pad</span> <span class="o">=</span> <span class="p">(</span><span class="nx">padding</span><span class="p">,</span> <span class="nx">len</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="k">throw</span> <span class="s">'Argument 1 for pad must me a string'</span> <span class="k">if</span> <span class="k">typeof</span> <span class="nx">padding</span> <span class="o">!=</span> <span class="s">'string'</span>
+  <span class="k">throw</span> <span class="s">'Argument 2 for pad must be a number'</span> <span class="k">if</span> <span class="k">typeof</span> <span class="nx">len</span> <span class="o">!=</span> <span class="s">'number'</span>
+  <span class="k">if</span> <span class="err">@</span><span class="p">.</span><span class="na">length</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="k">then</span> <span class="p">(</span><span class="nx">padding</span> <span class="o">+</span> <span class="err">@</span><span class="p">).</span><span class="na">pad</span><span class="p">(</span><span class="nx">padding</span><span class="p">,</span> <span class="nx">len</span><span class="p">)</span> <span class="k">else</span> <span class="err">@</span>
+</code></pre>
+<p>Now we can change &ldquo;7&rdquo; to &ldquo;007&rdquo;, just by doing <code>&quot;7&quot;.pad(&quot;0&quot;, 3)</code>. Sure, this
+could have been done just fine with a while or for loop. The thing I like
+about recursive solutions is that the edge conditions are clearer than in
+an iterative solution.</p>
+
+<h3>Example #3 - Functional Decomposition</h3>
+
+<p>One definite influence of writing Haskell is the size of functions I&rsquo;ve
+been writing. Each function is only a couple lines long and does a single
+thing. Here&rsquo;s an excerpt of some filename processing I did:</p>
+<pre class="highlight coffeescript"><code><span class="c1"># Convert dashed, lowercase title to proper title</span>
+<span class="nx">dashToTitleCase</span> <span class="o">=</span> <span class="p">(</span><span class="nx">title</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">properCase</span> <span class="nx">dashToSpace</span> <span class="nx">title</span>
+
+<span class="c1"># Capitalize each space-separated word in the string</span>
+<span class="nx">properCase</span> <span class="o">=</span> <span class="p">(</span><span class="nx">xs</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">xs</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span>
+    <span class="sr">/\w\S*/g</span><span class="p">,</span>
+    <span class="p">(</span><span class="nx">xs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nx">xs</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">toUpperCase</span><span class="p">()</span> <span class="o">+</span> <span class="nx">xs</span><span class="p">.</span><span class="na">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="na">toLowerCase</span><span class="p">()</span>
+  <span class="p">)</span>
+
+<span class="c1"># Convert dashes to spaces</span>
+<span class="nx">dashToSpace</span> <span class="o">=</span> <span class="p">(</span><span class="nx">xs</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="nx">xs</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span> <span class="sr">/-/g</span> <span class="p">,</span> <span class="s">' '</span><span class="p">)</span>
+</code></pre>
+<p>In the past, it&rsquo;s quite possible that I wouldn&rsquo;t have even created a
+single function for this, much less three. It&rsquo;s only a couple string
+replacements which wouldn&rsquo;t have cluttered up the calling code too much.
+As it turns out, I was able to use this inside a string interpolation
+which was much cleaner and more or less self-documenting.</p>
+<pre class="highlight coffeescript"><code><span class="nx">fileContents</span> <span class="o">=</span> <span class="s">"title: </span><span class="si">#{</span><span class="nx">dashToTitleCase</span> <span class="nx">postTitle</span><span class="si">}</span><span class="s">"</span>
+</code></pre>
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
+                <span class="tag"><a href="/tags/javascript.html">JavaScript</a></a></span>
+                <span class="tag"><a href="/tags/functional-programming.html">Functional Programming</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2013/02/06/software-home-lab.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2012/08/08/global-virtual-collaboration.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

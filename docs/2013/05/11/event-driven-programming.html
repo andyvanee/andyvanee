@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Event Driven Programming</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2013 x2013_05 x2013_05_11 x2013_05_11_event-driven-programming">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>Event Driven Programming</h2>
+            <div class="date">May 11, 2013</div>
+
+        <p>I haven&rsquo;t been doing a lot of JavaScript lately, but every time I do i try to explore the idea of doing everything <strong>event driven</strong>.</p>
+
+<blockquote>
+<p>&ldquo;I want the world to be made of hooks&rdquo; -<a href="http://www.eblong.com/zarf/home.html">Andrew Plotkin</a></p>
+</blockquote>
+
+<p>This quote probably means nothing to non-programmers, but to a programmer it speaks volumes. We all cringe at taking apart other&rsquo;s code just to enable some functionality that they didn&rsquo;t think of enabling. Sometimes our hands are completely tied and we <strong>cannot</strong> modify the code we really wish we could. Sometimes it means forking code when we would really rather not.</p>
+
+<p>Event driven programming has the potential to solve this completely. To illustrate why I&rsquo;m so in love with this approach, here&rsquo;s some code:</p>
+
+<p><a href="http://jsfiddle.net/andyvanee/BBxw9/2/">http://jsfiddle.net/andyvanee/BBxw9/2/</a></p>
+
+<p>It&rsquo;s basically a couple of jQuery plugins to do time-sequence type stuff.</p>
+
+<p><code>$.heartbeat [line 80]</code> just triggers a <code>beat</code> event however often you specify. It also implements event handlers for <code>pause</code> and <code>resume</code> events.</p>
+
+<p><code>$.stepper [line 122]</code> builds on top of this (without any awkward inheritance) and increments a counter every heartbeat. It adds the <code>reset</code> and <code>set:increment</code> events to control how the counter behaves.</p>
+
+<p><code>$.looper [line 158]</code> builds on top of this and resets the counter whenever it reaches a threshold. It doesn&rsquo;t add any events but <em>inherits all the events of it&rsquo;s sub-components</em>, including <code>reset</code> which may be more interesting in this context. Notice I&rsquo;m using the <code>reset</code> event <code>[line 38]</code> to randomize the color of the target.</p>
+
+<p>The important point is that these plugins define <strong>no methods</strong>, only events. And because they&rsquo;re events we can call them, or listen for them, from anywhere. This is the most clear, open and powerful implementation of hooks that I can imagine.</p>
+
+<p>Combine this with the fact that events bubble by default in JavaScript, and you can go one step further and aggregate these events (logging or global manipulation) with no extra code inside the plugin (see line 47-73).</p>
+
+<p>In comparison, classical inheritance (single or multiple) seems incredibly confining. It requires the library author to define stub methods that may be overridden and called at the appropriate time. It requires the end user to override library methods and call <code>super</code> at the appropriate time (or not). All this adds up to an uneasy coupling between your code and the library code.</p>
+
+<p>Most importantly, it defines a single code path. Classical inheritance provides an abstraction for a single code path to jump from parent class to child. Forking or spawning parallel tasks is as awkward as it ever was. With event-driven programming forking and aggregating is the norm.</p>
+
+<h3>Addendum</h3>
+
+<p>I&rsquo;ve created a repo for this. I think it might be useful to have some generic time-sequence type stuff to use as basic building blocks for frontend development. <a href="https://github.com/Andyvanee/heartbeat">https://github.com/Andyvanee/heartbeat</a></p>
+
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/javascript.html">JavaScript</a></a></span>
+                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2013/10/27/new-layout.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2013/05/03/spamming-the-internet.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

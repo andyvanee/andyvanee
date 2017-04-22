@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The World is Immutable</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2013 x2013_11 x2013_11_28 x2013_11_28_the-world-is-immutable">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>The World is Immutable</h2>
+            <div class="date">Nov 28, 2013</div>
+
+        <p>Interesting slide deck here called
+<a href="https://docs.google.com/presentation/d/15-7qFy6URdE7Owi2LitkQI_OHBu1AFWPUwHxgBc-O4E/edit#slide=id.g177bd4cb5_0173">Clojure: The JFDI language</a></p>
+
+<p>I haven&rsquo;t done any Clojure programming, but I have done some lisp (sbcl) and
+Haskell, so this off-the-cuff remark caught my attention:</p>
+
+<blockquote>
+<p>Reality: The world is stateful, but mostly stateless programming is quite
+practical.</p>
+</blockquote>
+
+<p>Although I understand the sentiment, I think it&rsquo;s important to outline how
+this is a matter of perspective. I&rsquo;m not terribly concerned about the
+performance of stateless data structures or how they enable concurrency, or
+any technical factor.</p>
+
+<p>Stateless data just makes sense, even if it takes a while :)</p>
+
+<p>If I meet you again in 5 years, I am no longer the same person. To act like
+there is no difference is an identity error, and is what stateless programming
+avoids. A stateless program could recognize what has changed, if it held a
+reference to who I was 5 years ago. To a <strong>stateful</strong> program, nothing has
+changed as far as it knows, since all it retains is a reference to my abstract
+identity.</p>
+
+<p>It&rsquo;s actually a bit counter-intuitive, but consider the case of the average
+SQL database. By supporting write in place, the database is stateful, yet it
+is really ill suited to reasoning about state. Every previous state is lost.
+Contrast this with stateless data storage (git, svn, datomic), where it is
+easy to reason about state, because the current state is the sum of all the
+previous states.</p>
+
+<p>If I paint my house is it the same house or a different house? Yes and yes,
+depending on your perspective. If someone builds an exact replica of my house
+is it the same house or a different house? Yes, and yes. Are you the same
+person you were 5 years ago? Yes and no.</p>
+
+<p>We have a tendency to reference things by their abstract identity as well as
+their concrete state quite interchangeably, which can lead to confusion and
+these seeming paradoxes.</p>
+
+<p>So is reality actually stateful? Yes and no. When in doubt, I think stateless
+is a better model of the world.</p>
+
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/data.html">Data</a></a></span>
+                <span class="tag"><a href="/tags/functional-programming.html">Functional Programming</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2013/11/29/accidental-cms.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2013/10/29/udacity-cs212.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

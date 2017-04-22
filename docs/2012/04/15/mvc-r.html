@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>MVC-r The pattern you already use</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2012 x2012_04 x2012_04_15 x2012_04_15_mvc-r">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>MVC-r The pattern you already use</h2>
+            <div class="date">Apr 15, 2012</div>
+
+        <p><em>The pattern you already use</em></p>
+
+<p>MVC has long been the defacto standard for building web and desktop applications. There are many variations on the theme, but I think the acronym is missing one component that is already an important part of any MVC application&hellip;</p>
+
+<h3>Resources</h3>
+
+<p>Call them assets, static files or whatever. A large portion of every application is the stuff that never changes. The reason it&rsquo;s missing from the acronym is most likely that developers want to differentiate dynamic code from immutable resources. The real work happens in the code, whereas resources are dumb entities; not really the concern of our smart code.</p>
+
+<p>Aaron Swartz: Bake, Dont Fry: <a href="http://www.aaronsw.com/weblog/000404">http://www.aaronsw.com/weblog/000404</a></p>
+
+<p>The problem with this approach is that the lines between static and dynamic resources has become unclear. Most of what was traditionally static content on the web is now generated dynamically and hosted statically (less, coffeescript, markdown, etc), and much of what is now completely dynamic should probably be handled the same way.</p>
+
+<p>Todays web frameworks do not cater to this type of thinking. The trend is to pull more and more of the content into the realm of the application server and away from the static server. The problem with this is that static servers are <strong>really good</strong> at what they do. Application servers are less robust for a number of reasons, the main one being <strong>your code</strong>. No developer wants to hear this, but it&rsquo;s simply the truth. Your code (and mine) has bugs. No matter how much testing goes into the application, it will never be as stable as a static resource.</p>
+
+<p>My suggestion, and the goal of my acronym MVC-r, is to move as much as humanly possible into the realm of compiled static resources. &lsquo;MVC&rsquo; is capitalized because it&rsquo;s big. It takes time, performs serious tasks, and is generally hard work. &lsquo;r&rsquo; is lowercase and seperated by a dash because it&rsquo;s lean, stable and won&rsquo;t keep you up at night thinking about edge cases.</p>
+
+<p>The architecture of this system means that the application should be seperated into discreet components. The average POST request should trigger content generation, query/submit to the database, and generate a compiled resource. The average GET request to the application should return custom data fragments. Everything else should be handled by the static content server.</p>
+
+
+            <div class="tags">
+              tags:
+                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
+            </div>
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2012/06/07/old-projects-and-gh-pages.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2012/03/13/copy-path-to-clipboard.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

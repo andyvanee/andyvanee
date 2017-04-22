@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=500">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Automator Services</title>
+
+    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
+    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
+  </head>
+
+  <body class="x2011 x2011_02 x2011_02_07 x2011_02_07_automator-services">
+    <div class="container">
+      <div class="masthead column">
+        <h1>
+          <a href="/">andyvanee</a>
+        </h1>
+      </div>
+      <div class="main row" role="main">
+          <div class="post-single column column-3-2">
+            <h2>Automator Services</h2>
+            <div class="date">Feb 07, 2011</div>
+
+        <p>I keep discovering new uses for Automator.</p>
+
+<p>I&rsquo;m not sure when the &ldquo;Services&rdquo; option became available, but it&rsquo;s worth checking out. I had previously wrote a text-to-markdown action, which converted the clipboard contents from markdown to HTML. This was convenient, but it involved copying, running the app and then pasting. The script did this:
+<code>pbpaste | Markdown.pl | pbcopy</code></p>
+
+<p>With services this becomes much simpler. It&rsquo;s now in the contextual(right-click) menu for any application that deals with text, and I also set up the keyboard shortcut CMD-ALT-SHIFT-M. It replaces the selected markdown text with the HTML. The action is even simpler; just a single command:
+<code>/usr/local/bin/Markdown.pl</code></p>
+
+<p>If you&rsquo;ve installed the markdown script somewhere else, you&rsquo;ll have to set the appropriate path. And here&rsquo;s a screenshot of how the input is configured.
+<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/_ZApMPFF0N4c/TVBCPDdJyOI/AAAAAAAABIg/ltDR1LKfQkk/s1600/Screen%2Bshot%2B2011-02-07%2Bat%2B11.45.40%2BAM.png"><img src="http://4.bp.blogspot.com/_ZApMPFF0N4c/TVBCPDdJyOI/AAAAAAAABIg/ltDR1LKfQkk/s320/Screen%2Bshot%2B2011-02-07%2Bat%2B11.45.40%2BAM.png" alt="Screen%2bshot%2b2011 02 07%2bat%2b11.45.40%2bam" /></a></div></p>
+
+<h3>Search and Replace</h3>
+
+<p>Almost any shell command can be wired into OSX this way. If the command needs special arguments for each run, just check the box: Options &gt; Show this action when the workflow runs. I did this for Sed search and replace action. Here&rsquo;s the workflow script:
+<code>sed s/old/new/g</code></p>
+
+<p>On each run you want to change old and new with what you&rsquo;re searching and replacing, but it doesn&rsquo;t have to end there. You can change the command on the fly to anything that deals with text transformation. <code>sed /^$/d</code> deletes any empty lines. <code>grep andyvanee</code> filters out any lines not containing &lsquo;andyvanee&rsquo;.</p>
+
+<h3>View Command Output</h3>
+
+<p>For text commands where you don&rsquo;t want to replace the text, just see the results of some command, uncheck the &lsquo;Replaces Selected Text&rsquo; box and add a &ldquo;Choose From List&rdquo; action, or maybe &ldquo;New TextEdit Document&rdquo; to view the results. For good measure, add a &ldquo;Copy to Clipboard&rdquo; action at the end, just in case you want to do something with the output of the command.</p>
+
+<p>This is probably more useful for grep type commands, so I saved this one as &ldquo;Grep Text&rdquo; and the previous as &ldquo;Sed Text&rdquo;, although either can be used for a wide range of commands.</p>
+
+
+
+          </div> <!-- .post-single -->
+
+          <div class="pagination row">
+            <div class="column column-1">
+                <span class="next">
+                  <a href="/2011/02/09/hashtag-search.html">&laquo; Newer</a>
+                </span>
+                <span class="prev">
+                  <a href="/2011/01/07/rapid-game-prototyping-in-quartz-composer.html">Older &raquo;</a>
+                </span>
+            </div>
+          </div>
+      </div>
+    </div><!-- .container -->
+    <script src="/javascripts/all.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41421022-1', 'andyvanee.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
