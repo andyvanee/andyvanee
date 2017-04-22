@@ -5,6 +5,7 @@
 # Time.zone = "MST"
 
 activate :blog do |blog|
+  blog.prefix = "posts"
   # blog.prefix = "blog"
   # blog.permalink = ":year/:month/:day/:title.html"
   blog.sources = "/posts/:year-:month-:day-:title.html"
@@ -21,8 +22,8 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/:num"
+  blog.per_page = 9
+  blog.page_link = "page/:num"
 end
 
 page "/feed.xml", :layout => false
