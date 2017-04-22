@@ -1,6 +1,10 @@
 //= require normalize
 //= require minotaur
 //= require syntax
+body {
+  font-size: 16.5px;
+}
+
 @media (min-width: 74em) {
   .column-3-2 {
     float: left;
