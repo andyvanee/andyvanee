@@ -1,6 +1,7 @@
 ---
 title: Can I fire myself?
 date: 2017-04-21 22:50
+published: false
 ---
 
 I've been trying to live by the following axiom for a while now:
