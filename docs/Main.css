@@ -1,0 +1,120 @@
+body,
+html {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.45;
+    background-color: #fafafa;
+    color: #555;
+}
+
+main {
+    margin: 1em auto;
+    max-width: 768px;
+    padding: 1vw;
+}
+
+@media (min-width: 74em) {
+    main {
+        max-width: 74em;
+    }
+    .articles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+article {
+    max-width: 42em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    margin: 1rem 0;
+    line-height: 1.1;
+    color: #333;
+    font-weight: 500;
+}
+
+a {
+    color: #f13;
+    text-decoration: none;
+}
+
+h2 a {
+    color: inherit;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0 0 3rem;
+}
+header h1 a {
+    color: #d8364d;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.articles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.articles li {
+    overflow: hidden;
+}
+
+.articles h2 {
+    font-size: 1.8em;
+    line-height: 1.1;
+}
+
+main > footer {
+    margin: 3rem 0;
+}
+
+.page-number {
+    display: inline-block;
+}
+
+.next,
+.prev {
+    display: inline-block;
+}
+.next {
+    margin-left: 0.5rem;
+}
+.prev {
+    margin-right: 0.5rem;
+}
+
+time {
+    display: block;
+    margin: -1em 0 0.5em;
+    opacity: 0.6;
+}
+
+pre {
+    padding: 0.5em 1em;
+    background-color: #f8f8f8;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+blockquote {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    border-left: 3px solid #ddd;
+    margin-left: 0;
+    padding-left: 1em;
+}

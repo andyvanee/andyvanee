@@ -1,36 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <title>Prose, Github and S3</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+    <h1><a href="/">andyvanee</a></h1>
+</header>
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=500">
-
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Prose, Github and S3</title>
-
-    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
-    <link href="/stylesheets/all.css" rel="stylesheet" />
-    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:title" content="Prose, Github and S3" />
-  </head>
-
-  <body class="x2013 x2013_04 x2013_04_25 x2013_04_25_prose-github-s3">
-    <div class="container">
-      <div class="masthead column">
-        <h1>
-          <a href="/">andyvanee</a>
-        </h1>
-      </div>
-      <div class="main row" role="main">
-          <div class="post-single column column-3-2">
-            <h2>Prose, Github and S3</h2>
-            <div class="date">Apr 25, 2013</div>
-
-        <p>In an effort to make the static site workflow a little less manual, I&rsquo;ve created a little web-service to automate things a bit. Here&rsquo;s how it works:</p>
+            <article>
+                <h1>Prose, Github and S3</h1>
+                <time>April 25, 2013</time>
+                <p>In an effort to make the static site workflow a little less manual, I&rsquo;ve created a little web-service to automate things a bit. Here&rsquo;s how it works:</p>
 
 <ol>
 <li>Edit posts/pages/layouts etc with <a href="http://prose.io/">prose.io</a></li>
@@ -49,30 +34,27 @@
 
 <p>So far, it&rsquo;s awesome. Editing and publishing my blog as a static site on S3 is now completely automated. Code coming soon on <a href="https://github.com/Andyvanee">github</a>&hellip;</p>
 
-
-
-          </div> <!-- .post-single -->
-
-          <div class="pagination row">
-            <div class="column column-1">
-                <span class="next">
-                  <a href="/2013/04/27/writing-is-hard.html">&laquo; Newer</a>
-                </span>
-                <span class="prev">
-                  <a href="/2013/02/06/software-home-lab.html">Older &raquo;</a>
-                </span>
-            </div>
-          </div>
-      </div>
-    </div><!-- .container -->
-    <script src="/javascripts/all.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41421022-1', 'andyvanee.com');
-      ga('send', 'pageview');
-    </script>
-  </body>
+            </article>
+            <footer>
+                <div>
+                    
+                    Newer: <a href="https://www.andyvanee.com/2013/04/27/writing-is-hard.html">Writing Is Hard</a>
+                    
+                </div>
+                <div>
+                    
+                    Older: <a href="https://www.andyvanee.com/2013/02/06/software-home-lab.html">The Software Developers Home Lab</a>
+                    
+                </div>
+            </footer>
+        </main>
+        <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-41421022-1', 'andyvanee.com');
+ga('send', 'pageview');
+</script>
+    </body>
 </html>

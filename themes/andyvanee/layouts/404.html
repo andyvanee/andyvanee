@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            {{ partial "header.html" . }}
+            <p>Page not found</p>
+        </main>
+        {{ partial "analytics.html" . }}
+    </body>
+</html>

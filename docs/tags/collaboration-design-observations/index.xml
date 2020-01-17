@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Collaboration, Design, Observations on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/collaboration-design-observations/</link>
+    <description>Recent content in Collaboration, Design, Observations on andyvanee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Aug 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.andyvanee.com/tags/collaboration-design-observations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Global Virtual Collaboration</title>
+      <link>https://www.andyvanee.com/2012/08/08/global-virtual-collaboration.html</link>
+      <pubDate>Wed, 08 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2012/08/08/global-virtual-collaboration.html</guid>
+      <description>I have a feeling that the current age could be described as the dawn of the open-source model. It&amp;rsquo;s not just software that can benefit from a workflow that is distributed, versioned and collaborative.</description>
+    </item>
+    
+  </channel>
+</rss>

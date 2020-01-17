@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GTD on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/gtd/</link>
+    <description>Recent content in GTD on andyvanee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Mar 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.andyvanee.com/tags/gtd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Copy Path to Clipboard</title>
+      <link>https://www.andyvanee.com/2012/03/13/copy-path-to-clipboard.html</link>
+      <pubDate>Tue, 13 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2012/03/13/copy-path-to-clipboard.html</guid>
+      <description>Finder makes it a bit difficult to get the full path to a file; like when you&amp;rsquo;re pasting it into config files or Terminal.
+So here&amp;rsquo;s a little script that makes it this easy: Browse in Finder, right click a file or folder and choose &amp;lsquo;Copy Path to Clipboard&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>Automate The Itch - Part 1</title>
+      <link>https://www.andyvanee.com/2011/02/11/automate-the-itch-part-1.html</link>
+      <pubDate>Fri, 11 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2011/02/11/automate-the-itch-part-1.html</guid>
+      <description>Small, single-purpose utility applications have a long lineage in computing history. They are the cornerstone of the UNIX philosophy, and are rampant on mobile platforms. They are the small building blocks in a larger task.</description>
+    </item>
+    
+  </channel>
+</rss>

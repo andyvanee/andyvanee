@@ -1,36 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <title>Sandbox your external scripts</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+    <h1><a href="/">andyvanee</a></h1>
+</header>
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=500">
-
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Sandbox your external scripts</title>
-
-    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
-    <link href="/stylesheets/all.css" rel="stylesheet" />
-    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:title" content="Sandbox your external scripts" />
-  </head>
-
-  <body class="x2014 x2014_03 x2014_03_29 x2014_03_29_sandbox-your-external-scripts">
-    <div class="container">
-      <div class="masthead column">
-        <h1>
-          <a href="/">andyvanee</a>
-        </h1>
-      </div>
-      <div class="main row" role="main">
-          <div class="post-single column column-3-2">
-            <h2>Sandbox your external scripts</h2>
-            <div class="date">Mar 29, 2014</div>
-
-        <p>Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion. The best solution is to completely sandbox your external scripts like social media widgets. Fonts could use similar treatment.</p>
+            <article>
+                <h1>Sandbox your external scripts</h1>
+                <time>March 29, 2014</time>
+                <p>Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion. The best solution is to completely sandbox your external scripts like social media widgets. Fonts could use similar treatment.</p>
 
 <p>Here&rsquo;s two waterfalls to compare:</p>
 
@@ -41,36 +26,38 @@
 <p>Below is the gist of the code.</p>
 
 <p>What it does is put all the HTML that contains possibly blocking scripts into an unknown script tag type (which the browser just skips) and then injects this after the page is loaded. There&rsquo;s a bit of gymnastics to make it possible to embed script tags within a script tags, but I think the result is worth it.</p>
-<pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"async-scripts"</span><span class="nt">&gt;</span>Social widgets will go here...<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;script </span><span class="na">id=</span><span class="s">"script-sandbox"</span> <span class="na">type=</span><span class="s">"text/html-template"</span><span class="nt">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"my-toolbar"</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"https://twitter.com/andyvanee"</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"twitter-follow-button"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">show</span><span class="o">-</span><span class="nx">count</span><span class="o">=</span><span class="s2">"false"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">width</span><span class="o">=</span><span class="s2">"60px"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">align</span><span class="o">=</span><span class="s2">"left"</span><span class="o">&gt;</span>
-        <span class="nx">Follow</span> <span class="p">@</span><span class="nd">andyvanee</span>
-    <span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"https://twitter.com/share"</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"twitter-share-button"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">via</span><span class="o">=</span><span class="s2">"andyvanee"</span><span class="o">&gt;</span>
-        <span class="nx">Tweet</span>
-    <span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
-</span>    <span class="o">--</span><span class="err">#</span><span class="nx">script</span><span class="err">#</span><span class="o">--</span>
-        <span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">id</span><span class="p">){</span><span class="kd">var</span> <span class="nx">js</span><span class="p">,</span><span class="nx">fjs</span><span class="o">=</span><span class="nx">d</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="nx">p</span><span class="o">=</span><span class="sr">/^http:/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">location</span><span class="p">)?</span><span class="s1">'http'</span><span class="p">:</span><span class="s1">'https'</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">d</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">)){</span><span class="nx">js</span><span class="o">=</span><span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span><span class="nx">js</span><span class="p">.</span><span class="nx">id</span><span class="o">=</span><span class="nx">id</span><span class="p">;</span><span class="nx">js</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="nx">p</span><span class="o">+</span><span class="s1">'://platform.twitter.com/widgets.js'</span><span class="p">;</span><span class="nx">fjs</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">js</span><span class="p">,</span><span class="nx">fjs</span><span class="p">);}}(</span><span class="nb">document</span><span class="p">,</span> <span class="s1">'script'</span><span class="p">,</span> <span class="s1">'twitter-wjs'</span><span class="p">);</span>
-    <span class="o">--</span><span class="err">#</span><span class="o">/</span><span class="nx">script</span><span class="err">#</span><span class="o">--</span>
+<pre><code class="language-html">&lt;div id=&quot;async-scripts&quot;&gt;Social widgets will go here...&lt;/div&gt;
 
-    <span class="p">...</span> <span class="nx">the</span> <span class="nx">rest</span> <span class="nx">of</span> <span class="nx">your</span> <span class="nx">widgets</span> <span class="nx">here</span> <span class="p">...</span>
-  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span><span class="nt">&lt;/script&gt;</span>
+&lt;script id=&quot;script-sandbox&quot; type=&quot;text/html-template&quot;&gt;
+  &lt;div class=&quot;my-toolbar&quot;&gt;
+    &lt;a href=&quot;https://twitter.com/andyvanee&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;false&quot; data-width=&quot;60px&quot; data-align=&quot;left&quot;&gt;
+        Follow @andyvanee
+    &lt;/a&gt;
+    &lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;andyvanee&quot;&gt;
+        Tweet
+    &lt;/a&gt;
+    --#script#--
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    --#/script#--
 
-<span class="nt">&lt;script&gt;</span>
-  <span class="nx">jQuery</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">sandbox</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#script-sandbox"</span><span class="p">).</span><span class="nx">html</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/--#/g</span><span class="p">,</span> <span class="s1">'&lt;'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/#--/g</span><span class="p">,</span> <span class="s1">'&gt;'</span><span class="p">);</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s2">"#async-scripts"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">share_html</span><span class="p">));</span>
-  <span class="p">});</span>  
-<span class="nt">&lt;/script&gt;</span>
+    ... the rest of your widgets here ...
+  &lt;/div&gt;
+&lt;/script&gt;
+
+&lt;script&gt;
+  jQuery(function($){
+    var sandbox = $(&quot;#script-sandbox&quot;).html().replace(/--#/g, '&lt;').replace(/#--/g, '&gt;');
+    $(&quot;#async-scripts&quot;).append($(share_html));
+  });  
+&lt;/script&gt;
 </code></pre>
+
 <p><a href="https://gist.github.com/Andyvanee/9849384">View on gist.github.com</a></p>
 
 <p>I&rsquo;ve used various methods with similar results before, but what I like about this one is that you can just block off an entire chunk of HTML and defer loading it until a later point.</p>
 
-<p>One final hint: you can simulate a network timeout really easily by adjusting the external url to specifying a blocked port. Change <a href="https://twitter.com/share">https://twitter.com/share</a> to <a rel="nofollow" href="https://twitter.com:81/share">https://twitter.com:81/share</a> to see how your page is affected by timeout errors.</p>
+<p>One final hint: you can simulate a network timeout really easily by adjusting the external url to specifying a blocked port. Change <a href="https://twitter.com/share">https://twitter.com/share</a> to <a rel="nofollow" href="https://twitter.com:81/share"><a href="https://twitter.com:81/share">https://twitter.com:81/share</a></a> to see how your page is affected by timeout errors.</p>
 
 <p>Happy Hacking!</p>
 
@@ -82,35 +69,27 @@
     }
 </style>
 
-
-            <div class="tags">
-              tags:
-                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
-                <span class="tag"><a href="/tags/javascript.html">JavaScript</a></a></span>
-            </div>
-
-          </div> <!-- .post-single -->
-
-          <div class="pagination row">
-            <div class="column column-1">
-                <span class="next">
-                  <a href="/2014/04/20/the-case-against-frameworks.html">&laquo; Newer</a>
-                </span>
-                <span class="prev">
-                  <a href="/2014/01/11/reevaluating-online-universities.html">Older &raquo;</a>
-                </span>
-            </div>
-          </div>
-      </div>
-    </div><!-- .container -->
-    <script src="/javascripts/all.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41421022-1', 'andyvanee.com');
-      ga('send', 'pageview');
-    </script>
-  </body>
+            </article>
+            <footer>
+                <div>
+                    
+                    Newer: <a href="https://www.andyvanee.com/2014/04/20/the-case-against-frameworks.html">The Case Against Frameworks</a>
+                    
+                </div>
+                <div>
+                    
+                    Older: <a href="https://www.andyvanee.com/2014/01/11/reevaluating-online-universities.html">Re-evaluating Online Universities</a>
+                    
+                </div>
+            </footer>
+        </main>
+        <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-41421022-1', 'andyvanee.com');
+ga('send', 'pageview');
+</script>
+    </body>
 </html>

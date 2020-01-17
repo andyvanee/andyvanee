@@ -1,0 +1,8 @@
+baseURL = "https://www.andyvanee.com/"
+languageCode = "en-us"
+title = "andyvanee"
+theme = "andyvanee"
+summaryLength = 30
+publishDir = "docs"
+[permalinks]
+posts = "/:year/:month/:day/:title"

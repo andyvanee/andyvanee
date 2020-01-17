@@ -1,36 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <title>The Case Against Frameworks</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+    <h1><a href="/">andyvanee</a></h1>
+</header>
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=500">
+            <article>
+                <h1>The Case Against Frameworks</h1>
+                <time>April 20, 2014</time>
+                
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Case Against Frameworks</title>
-
-    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
-    <link href="/stylesheets/all.css" rel="stylesheet" />
-    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:title" content="The Case Against Frameworks" />
-  </head>
-
-  <body class="x2014 x2014_04 x2014_04_20 x2014_04_20_the-case-against-frameworks">
-    <div class="container">
-      <div class="masthead column">
-        <h1>
-          <a href="/">andyvanee</a>
-        </h1>
-      </div>
-      <div class="main row" role="main">
-          <div class="post-single column column-3-2">
-            <h2>The Case Against Frameworks</h2>
-            <div class="date">Apr 20, 2014</div>
-
-        <p>This may come across  as a rant, but I&rsquo;m hoping I can keep this as objective as possible: I don&rsquo;t like frameworks.</p>
+<p>This may come across  as a rant, but I&rsquo;m hoping I can keep this as objective as possible: I don&rsquo;t like frameworks.</p>
 
 <p>I&rsquo;m going to use a broad definition of frameworks defined like this:</p>
 
@@ -43,7 +30,7 @@ and implement your own application.</p>
 
 <p>The other reason I&rsquo;m defining it this way is that I really have nothing against using 3rd party code. There is a wealth of people that are amassing a collective wisdom far beyond what you can accomplish on your own. By all means - <strong>make use of that</strong>. I want to highlight the pitfalls of this reliance.</p>
 
-<h3>Symbiotic Coupling</h3>
+<h3 id="symbiotic-coupling">Symbiotic Coupling</h3>
 
 <p>In the best case, a library or framework is perfectly aligned with your own objectives. The authors wrote it to solve your problem exactly. They have thoroughly documented  the use cases, tested all the common and edge cases and they are responsive to community feedback. This is a true symbiotic relationship - and it is the most powerful force multiplier a developer has at their disposal.</p>
 
@@ -53,7 +40,7 @@ and implement your own application.</p>
 
 <p>This is a social contract. You need to get a sense if the developers and community will be allies or adversaries in the long run. Read the mailing lists. Skim the open and closed issues. Get a feel for the commit history.</p>
 
-<h3>SLOC</h3>
+<h3 id="sloc">SLOC</h3>
 
 <p>Another consideration is how many significant lines of code this library adds to your project. I would argue (somewhat hypocritically) that a responsible developer must read and have a basic understanding of every one of those lines.</p>
 
@@ -63,7 +50,7 @@ and implement your own application.</p>
 
 <p>The second cost lies in the unseen mass of code that you are not actually using. The vast majority of major security vulnerabilities in tools, libraries and frameworks are in features that the average developer isn&rsquo;t even aware of. I&rsquo;m not saying that a responsible developer will identify those bugs at a glance, but it will give you a good feel for the surface area of the code. <strong>Beware large surface areas</strong>. Even if you&rsquo;re only using a small corner, you may be dragging in a lot more maintenance headaches than you realize.</p>
 
-<h3>Structure</h3>
+<h3 id="structure">Structure</h3>
 
 <p>My final point is that 3rd party code will always affect how you structure your application. This can happen in a number of different ways and I&rsquo;ll only skim a few.</p>
 
@@ -75,30 +62,27 @@ and implement your own application.</p>
 
 <p>Good structure is hard - and it&rsquo;s worth considering the merits of all approaches, but at the end of the day you need to learn what&rsquo;s right for your application. The rest is just dogma.</p>
 
-
-
-          </div> <!-- .post-single -->
-
-          <div class="pagination row">
-            <div class="column column-1">
-                <span class="next">
-                  <a href="/2014/07/31/multi-comp-foreign-key.html">&laquo; Newer</a>
-                </span>
-                <span class="prev">
-                  <a href="/2014/03/29/sandbox-your-external-scripts.html">Older &raquo;</a>
-                </span>
-            </div>
-          </div>
-      </div>
-    </div><!-- .container -->
-    <script src="/javascripts/all.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41421022-1', 'andyvanee.com');
-      ga('send', 'pageview');
-    </script>
-  </body>
+            </article>
+            <footer>
+                <div>
+                    
+                    Newer: <a href="https://www.andyvanee.com/2014/07/31/multi-comp-foreign-key.html">Multiple Foreign Keys</a>
+                    
+                </div>
+                <div>
+                    
+                    Older: <a href="https://www.andyvanee.com/2014/03/29/sandbox-your-external-scripts.html">Sandbox your external scripts</a>
+                    
+                </div>
+            </footer>
+        </main>
+        <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-41421022-1', 'andyvanee.com');
+ga('send', 'pageview');
+</script>
+    </body>
 </html>

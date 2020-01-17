@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data, Functional Programming on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/data-functional-programming/</link>
+    <description>Recent content in Data, Functional Programming on andyvanee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.andyvanee.com/tags/data-functional-programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The World is Immutable</title>
+      <link>https://www.andyvanee.com/2013/11/28/the-world-is-immutable.html</link>
+      <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2013/11/28/the-world-is-immutable.html</guid>
+      <description>Interesting slide deck here called Clojure: The JFDI language
+I haven&amp;rsquo;t done any Clojure programming, but I have done some lisp (sbcl) and Haskell, so this off-the-cuff remark caught my attention:</description>
+    </item>
+    
+  </channel>
+</rss>

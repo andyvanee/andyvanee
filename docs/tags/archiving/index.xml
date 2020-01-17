@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archiving on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/archiving/</link>
+    <description>Recent content in Archiving on andyvanee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jun 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.andyvanee.com/tags/archiving/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Digital Archiving</title>
+      <link>https://www.andyvanee.com/2012/06/16/digital-archiving.html</link>
+      <pubDate>Sat, 16 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2012/06/16/digital-archiving.html</guid>
+      <description>Librarians Helping Their Communities with Personal Digital Archiving</description>
+    </item>
+    
+    <item>
+      <title>Photo Archiving</title>
+      <link>https://www.andyvanee.com/2010/08/27/photo-archiving.html</link>
+      <pubDate>Fri, 27 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2010/08/27/photo-archiving.html</guid>
+      <description>Backups and Archives are two different things. Ideally you should have a good archiving system, and your backup would be a redundant copy of that.
+In photography, a robust archiving system has between two and four copies of any file.</description>
+    </item>
+    
+  </channel>
+</rss>

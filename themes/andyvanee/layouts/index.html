@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            {{ partial "header.html" . }}
+            <ul class="articles">
+                {{ range .Paginator.Pages }}
+                <li>
+                    <header>
+                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <time>{{ .Date.Format "January 2, 2006" }}</time>
+                    </header>
+                    <section>
+                        <p>{{ .Summary | plainify | htmlUnescape }}...</p>
+                    </section>
+                    <footer>
+                        <a class="entry-link" href="{{ .Permalink }}">
+                            Read More
+                        </a>
+                    </footer>
+                </li>
+                {{ end }}
+            </ul>
+            {{ if gt .Paginator.TotalPages 1 }}
+                {{ partial "footer.html" . }}
+            {{ end }}
+        </main>
+        {{ partial "analytics.html" . }}
+    </body>
+</html>

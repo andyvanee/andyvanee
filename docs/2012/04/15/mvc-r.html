@@ -1,40 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <title>MVC-r The pattern you already use</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+    <h1><a href="/">andyvanee</a></h1>
+</header>
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=500">
+            <article>
+                <h1>MVC-r The pattern you already use</h1>
+                <time>April 15, 2012</time>
+                
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>MVC-r The pattern you already use</title>
-
-    <link href="http://andyvanee.com/feed.xml" rel="alternate" type="application/rss+xml" title="Computer programming, philosophy and life" />
-    <link href="/stylesheets/all.css" rel="stylesheet" />
-    <meta name="google-site-verification" content="s26OWDKfDLzh9MT2cHAINISCx9kOQLBQpf4mDD84gvc" />
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:title" content="MVC-r The pattern you already use" />
-  </head>
-
-  <body class="x2012 x2012_04 x2012_04_15 x2012_04_15_mvc-r">
-    <div class="container">
-      <div class="masthead column">
-        <h1>
-          <a href="/">andyvanee</a>
-        </h1>
-      </div>
-      <div class="main row" role="main">
-          <div class="post-single column column-3-2">
-            <h2>MVC-r The pattern you already use</h2>
-            <div class="date">Apr 15, 2012</div>
-
-        <p><em>The pattern you already use</em></p>
+<p><em>The pattern you already use</em></p>
 
 <p>MVC has long been the defacto standard for building web and desktop applications. There are many variations on the theme, but I think the acronym is missing one component that is already an important part of any MVC application&hellip;</p>
 
-<h3>Resources</h3>
+<h3 id="resources">Resources</h3>
 
 <p>Call them assets, static files or whatever. A large portion of every application is the stuff that never changes. The reason it&rsquo;s missing from the acronym is most likely that developers want to differentiate dynamic code from immutable resources. The real work happens in the code, whereas resources are dumb entities; not really the concern of our smart code.</p>
 
@@ -48,34 +35,27 @@
 
 <p>The architecture of this system means that the application should be seperated into discreet components. The average POST request should trigger content generation, query/submit to the database, and generate a compiled resource. The average GET request to the application should return custom data fragments. Everything else should be handled by the static content server.</p>
 
-
-            <div class="tags">
-              tags:
-                <span class="tag"><a href="/tags/programming.html">Programming</a></a></span>
-            </div>
-
-          </div> <!-- .post-single -->
-
-          <div class="pagination row">
-            <div class="column column-1">
-                <span class="next">
-                  <a href="/2012/06/07/old-projects-and-gh-pages.html">&laquo; Newer</a>
-                </span>
-                <span class="prev">
-                  <a href="/2012/03/13/copy-path-to-clipboard.html">Older &raquo;</a>
-                </span>
-            </div>
-          </div>
-      </div>
-    </div><!-- .container -->
-    <script src="/javascripts/all.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41421022-1', 'andyvanee.com');
-      ga('send', 'pageview');
-    </script>
-  </body>
+            </article>
+            <footer>
+                <div>
+                    
+                    Newer: <a href="https://www.andyvanee.com/2012/06/07/old-projects-and-gh-pages.html">Old Projects onto Github Pages</a>
+                    
+                </div>
+                <div>
+                    
+                    Older: <a href="https://www.andyvanee.com/2012/03/13/copy-path-to-clipboard.html">Copy Path to Clipboard</a>
+                    
+                </div>
+            </footer>
+        </main>
+        <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-41421022-1', 'andyvanee.com');
+ga('send', 'pageview');
+</script>
+    </body>
 </html>

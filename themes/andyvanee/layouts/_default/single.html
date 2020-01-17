@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.Title}}</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            {{ partial "header.html" . }}
+            <article>
+                <h1>{{.Title}}</h1>
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
+                {{.Content}}
+            </article>
+            <footer>
+                <div>
+                    {{with .Next}}
+                    Newer: <a href="{{.Permalink}}">{{.Title}}</a>
+                    {{end}}
+                </div>
+                <div>
+                    {{with .Prev}}
+                    Older: <a href="{{.Permalink}}">{{.Title}}</a>
+                    {{end}}
+                </div>
+            </footer>
+        </main>
+        {{ partial "analytics.html" . }}
+    </body>
+</html>

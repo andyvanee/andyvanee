@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming, Education, Python on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/programming-education-python/</link>
+    <description>Recent content in Programming, Education, Python on andyvanee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.andyvanee.com/tags/programming-education-python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Udacity CS-212</title>
+      <link>https://www.andyvanee.com/2013/10/29/udacity-cs212.html</link>
+      <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2013/10/29/udacity-cs212.html</guid>
+      <description>Peter Norvig is a big name in computer programming. I stumbled across some of his code and was struck by how he could often accomplish in 4 lines of code things that might take me pages.</description>
+    </item>
+    
+  </channel>
+</rss>

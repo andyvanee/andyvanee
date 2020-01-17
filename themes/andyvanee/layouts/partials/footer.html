@@ -1,0 +1,19 @@
+<footer>
+    {{ if .Paginator.HasPrev }}
+    <a class="prev" href="{{ .Paginator.Prev.URL }}">
+        « Newer
+    </a>
+    {{ end }}
+
+    <div class="page-number">
+        <span>Page</span>
+        <span>{{ .Paginator.PageNumber }}</span>
+        of
+        <span>{{ .Paginator.TotalPages }}</span>
+    </div>
+    {{ if .Paginator.HasNext }}
+    <a class="next" href="{{ .Paginator.Next.URL }}">
+        Older »
+    </a>
+    {{ end }}
+</footer>

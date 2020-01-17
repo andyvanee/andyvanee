@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming, GTD on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/programming-gtd/</link>
+    <description>Recent content in Programming, GTD on andyvanee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Feb 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.andyvanee.com/tags/programming-gtd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Software Developers Home Lab</title>
+      <link>https://www.andyvanee.com/2013/02/06/software-home-lab.html</link>
+      <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.andyvanee.com/2013/02/06/software-home-lab.html</guid>
+      <description>This post caught my eye: Why you need a home lab to keep your job.
+Your boss won&#39;t pay for training, so your partner has to put up with servers at home What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware.</description>
+    </item>
+    
+  </channel>
+</rss>
