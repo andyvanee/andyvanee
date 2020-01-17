@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="/Main.css" />
         <script type="module" src="/App.js"></script>
+        {{ with .OutputFormats.Get "rss" -}}
+            {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
     </head>
     <body>
         <main>
