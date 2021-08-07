@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photography, Archiving on andyvanee</title>
@@ -6,19 +6,14 @@
     <description>Recent content in Photography, Archiving on andyvanee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Aug 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.andyvanee.com/tags/photography-archiving/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 24 Aug 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/photography-archiving/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Auto Metadata</title>
       <link>https://www.andyvanee.com/2010/08/24/auto-metadata.html</link>
       <pubDate>Tue, 24 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2010/08/24/auto-metadata.html</guid>
-      <description>One interesting part of the weekend photographic seminar I just got back from was the emphasis on metadata.
-It&#39;s important to take great photos, but it&#39;s just as important to know how you got those results.</description>
+      <description></description>
     </item>
     
   </channel>

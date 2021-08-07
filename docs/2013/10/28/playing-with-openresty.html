@@ -18,38 +18,29 @@
                 <p><a href="http://openresty.org/">OpenResty</a> is a bit of an enigma. I first heard about
 the project a few months back when reading about some benchmarks of various
 web application platforms. OpenResty was WAY ahead of all the others.</p>
-
 <p>The basic idea is that OpenResty is just Lua code embedded directly into the
 nginx server. I had to try it out for myself.</p>
-
 <p>I was pretty ambitious for my first explorations with OpenResty. I&rsquo;ve had
 this project in the back of my mind for a bit, and I thought it would be
 perfect for OpenResty. The idea is this:</p>
-
 <p>Makefile-style dependency driven programming with the &ldquo;files&rdquo; living in
 Redis. You write the source &ldquo;files&rdquo; to Redis as well as documents that outline
 what dependencies will create a target file. This way, you can request a
 file from the server that doesn&rsquo;t exist, but the server knows how to build it.
 Some minimal templating will be built in as well.</p>
-
 <p>I haven&rsquo;t got too far with it, but thought I&rsquo;d share a bit of how it is going.</p>
-
 <p>First off, Lua can be pretty bizarre. There are a number of key ideas for
 programming Lua that I need to get more comfortable with to do any serious
 work. Also the package management is mostly non-existant.</p>
-
 <p>Second, since I couldn&rsquo;t really figure out how to test my Lua code properly
 I&rsquo;ve just done totally decoupled testing with Python hitting the server over
 HTTP. This has actually worked really well.</p>
-
 <p>Third, the Lua code can be suspended and resumed at random by nginx. This can
 wreak havoc with code that is not written with this in mind.</p>
-
 <p>And finally, it&rsquo;s actually quite fun! It feels quite primitive, but the syntax
 is not bad and the performance is incredible. Rather than writing code for
 a process that&rsquo;s running independently of the server, it&rsquo;s like you are writing
 code directly in the server.</p>
-
 <p>Fun stuff!</p>
 
             </article>

@@ -15,30 +15,19 @@
             <article>
                 <h1>Automator Services</h1>
                 <time>February 7, 2011</time>
-                
-
-<p>I keep discovering new uses for Automator.</p>
-
+                <p>I keep discovering new uses for Automator.</p>
 <p>I&rsquo;m not sure when the &ldquo;Services&rdquo; option became available, but it&rsquo;s worth checking out. I had previously wrote a text-to-markdown action, which converted the clipboard contents from markdown to HTML. This was convenient, but it involved copying, running the app and then pasting. The script did this:
 <code>pbpaste | Markdown.pl | pbcopy</code></p>
-
 <p>With services this becomes much simpler. It&rsquo;s now in the contextual(right-click) menu for any application that deals with text, and I also set up the keyboard shortcut CMD-ALT-SHIFT-M. It replaces the selected markdown text with the HTML. The action is even simpler; just a single command:
 <code>/usr/local/bin/Markdown.pl</code></p>
-
-<p>If you&rsquo;ve installed the markdown script somewhere else, you&rsquo;ll have to set the appropriate path. And here&rsquo;s a screenshot of how the input is configured.
-<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/_ZApMPFF0N4c/TVBCPDdJyOI/AAAAAAAABIg/ltDR1LKfQkk/s1600/Screen%2Bshot%2B2011-02-07%2Bat%2B11.45.40%2BAM.png"><img src="http://4.bp.blogspot.com/_ZApMPFF0N4c/TVBCPDdJyOI/AAAAAAAABIg/ltDR1LKfQkk/s320/Screen%2Bshot%2B2011-02-07%2Bat%2B11.45.40%2BAM.png" alt="" /></a></div></p>
-
+<p>If you&rsquo;ve installed the markdown script somewhere else, you&rsquo;ll have to set the appropriate path. And here&rsquo;s a screenshot of how the input is configured.</p>
+<!-- raw HTML omitted -->
 <h3 id="search-and-replace">Search and Replace</h3>
-
 <p>Almost any shell command can be wired into OSX this way. If the command needs special arguments for each run, just check the box: Options &gt; Show this action when the workflow runs. I did this for Sed search and replace action. Here&rsquo;s the workflow script:
 <code>sed s/old/new/g</code></p>
-
 <p>On each run you want to change old and new with what you&rsquo;re searching and replacing, but it doesn&rsquo;t have to end there. You can change the command on the fly to anything that deals with text transformation. <code>sed /^$/d</code> deletes any empty lines. <code>grep andyvanee</code> filters out any lines not containing &lsquo;andyvanee&rsquo;.</p>
-
 <h3 id="view-command-output">View Command Output</h3>
-
 <p>For text commands where you don&rsquo;t want to replace the text, just see the results of some command, uncheck the &lsquo;Replaces Selected Text&rsquo; box and add a &ldquo;Choose From List&rdquo; action, or maybe &ldquo;New TextEdit Document&rdquo; to view the results. For good measure, add a &ldquo;Copy to Clipboard&rdquo; action at the end, just in case you want to do something with the output of the command.</p>
-
 <p>This is probably more useful for grep type commands, so I saved this one as &ldquo;Grep Text&rdquo; and the previous as &ldquo;Sed Text&rdquo;, although either can be used for a wide range of commands.</p>
 
             </article>

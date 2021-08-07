@@ -15,38 +15,22 @@
             <article>
                 <h1>Event Driven Programming</h1>
                 <time>May 11, 2013</time>
-                
-
-<p>I haven&rsquo;t been doing a lot of JavaScript lately, but every time I do i try to explore the idea of doing everything <strong>event driven</strong>.</p>
-
+                <p>I haven&rsquo;t been doing a lot of JavaScript lately, but every time I do i try to explore the idea of doing everything <strong>event driven</strong>.</p>
 <blockquote>
 <p>&ldquo;I want the world to be made of hooks&rdquo; -<a href="http://www.eblong.com/zarf/home.html">Andrew Plotkin</a></p>
 </blockquote>
-
 <p>This quote probably means nothing to non-programmers, but to a programmer it speaks volumes. We all cringe at taking apart other&rsquo;s code just to enable some functionality that they didn&rsquo;t think of enabling. Sometimes our hands are completely tied and we <strong>cannot</strong> modify the code we really wish we could. Sometimes it means forking code when we would really rather not.</p>
-
 <p>Event driven programming has the potential to solve this completely. To illustrate why I&rsquo;m so in love with this approach, here&rsquo;s some code:</p>
-
 <p><a href="http://jsfiddle.net/andyvanee/BBxw9/2/">http://jsfiddle.net/andyvanee/BBxw9/2/</a></p>
-
 <p>It&rsquo;s basically a couple of jQuery plugins to do time-sequence type stuff.</p>
-
 <p><code>$.heartbeat [line 80]</code> just triggers a <code>beat</code> event however often you specify. It also implements event handlers for <code>pause</code> and <code>resume</code> events.</p>
-
 <p><code>$.stepper [line 122]</code> builds on top of this (without any awkward inheritance) and increments a counter every heartbeat. It adds the <code>reset</code> and <code>set:increment</code> events to control how the counter behaves.</p>
-
 <p><code>$.looper [line 158]</code> builds on top of this and resets the counter whenever it reaches a threshold. It doesn&rsquo;t add any events but <em>inherits all the events of it&rsquo;s sub-components</em>, including <code>reset</code> which may be more interesting in this context. Notice I&rsquo;m using the <code>reset</code> event <code>[line 38]</code> to randomize the color of the target.</p>
-
 <p>The important point is that these plugins define <strong>no methods</strong>, only events. And because they&rsquo;re events we can call them, or listen for them, from anywhere. This is the most clear, open and powerful implementation of hooks that I can imagine.</p>
-
 <p>Combine this with the fact that events bubble by default in JavaScript, and you can go one step further and aggregate these events (logging or global manipulation) with no extra code inside the plugin (see line 47-73).</p>
-
 <p>In comparison, classical inheritance (single or multiple) seems incredibly confining. It requires the library author to define stub methods that may be overridden and called at the appropriate time. It requires the end user to override library methods and call <code>super</code> at the appropriate time (or not). All this adds up to an uneasy coupling between your code and the library code.</p>
-
 <p>Most importantly, it defines a single code path. Classical inheritance provides an abstraction for a single code path to jump from parent class to child. Forking or spawning parallel tasks is as awkward as it ever was. With event-driven programming forking and aggregating is the norm.</p>
-
 <h3 id="addendum">Addendum</h3>
-
 <p>I&rsquo;ve created a repo for this. I think it might be useful to have some generic time-sequence type stuff to use as basic building blocks for frontend development. <a href="https://github.com/Andyvanee/heartbeat">https://github.com/Andyvanee/heartbeat</a></p>
 
             </article>

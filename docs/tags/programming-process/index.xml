@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming, Process on andyvanee</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Programming, Process on andyvanee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Dec 2010 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.andyvanee.com/tags/programming-process/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 21 Dec 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-process/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Command-line to XCode</title>
       <link>https://www.andyvanee.com/2010/12/21/from-command-line-to-xcode.html</link>

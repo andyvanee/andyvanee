@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>andyvanee</title>
@@ -6,10 +6,15 @@
     <description>Recent content on andyvanee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jan 2020 00:04:51 -0700</lastBuildDate>
-    
-	<atom:link href="https://www.andyvanee.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 30 Mar 2020 22:38:08 -0600</lastBuildDate><atom:link href="https://www.andyvanee.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t Panic</title>
+      <link>https://www.andyvanee.com/2020/03/30/dont-panic/</link>
+      <pubDate>Mon, 30 Mar 2020 22:38:08 -0600</pubDate>
+      
+      <guid>https://www.andyvanee.com/2020/03/30/dont-panic/</guid>
+      <description>&amp;ldquo;DON&amp;rsquo;T PANIC&amp;rdquo; - are the words printed in bold letters across the cover of The Hitchiker&amp;rsquo;s Guide To The Galaxy. I don&amp;rsquo;t think there could be any better motto for our time.</description>
+    </item>
     
     <item>
       <title>Event Driven Web</title>
@@ -37,7 +42,7 @@ It came up a few times that the software community needs to do better in terms o
       <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2016/05/19/converting-co2.html</guid>
-      <description>I had an idea as I was driving today. It seems so obvious that I&amp;rsquo;m sure it has some fundamental flaw. Either that, or someone is already working on it.</description>
+      <description>I had an idea as I was driving today. It seems so obvious that I&amp;rsquo;m sure it has some fundamental flaw. Either that, or someone is already working on it. I&amp;rsquo;m writing this only in the hopes that a Chemist or Biologist can explain to me how I&amp;rsquo;m wrong and why I&amp;rsquo;m wrong.</description>
     </item>
     
     <item>
@@ -96,7 +101,7 @@ To compensate for a high dropout rate, Udacity has made a shift to focusing on c
       <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2013/11/29/accidental-cms.html</guid>
-      <description>When I started reading this article called CMS Trap, I had no idea what the hell he was talking about. As I pushed through, I began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go back and re-read it again because so much rang true.</description>
+      <description>When I started reading [this article called CMS Trap](http://hakunin.com/cms- trap), I had no idea what the hell he was talking about. As I pushed through, I began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go back and re-read it again because so much rang true.</description>
     </item>
     
     <item>
@@ -191,7 +196,7 @@ One reason, which is often addressed, is the challenge of effectively communicat
       
       <guid>https://www.andyvanee.com/2013/02/06/software-home-lab.html</guid>
       <description>This post caught my eye: Why you need a home lab to keep your job.
-Your boss won&#39;t pay for training, so your partner has to put up with servers at home What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware.</description>
+What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware.</description>
     </item>
     
     <item>
@@ -280,10 +285,10 @@ Neither of which are exactly new to me, but in my day-to-day work there are only
     
     <item>
       <title>Automate The Itch - Part 1</title>
-      <link>https://www.andyvanee.com/2011/02/11/automate-the-itch-part-1.html</link>
+      <link>https://www.andyvanee.com/2011/02/11/automate-the-itch---part-1.html</link>
       <pubDate>Fri, 11 Feb 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://www.andyvanee.com/2011/02/11/automate-the-itch-part-1.html</guid>
+      <guid>https://www.andyvanee.com/2011/02/11/automate-the-itch---part-1.html</guid>
       <description>Small, single-purpose utility applications have a long lineage in computing history. They are the cornerstone of the UNIX philosophy, and are rampant on mobile platforms. They are the small building blocks in a larger task.</description>
     </item>
     
@@ -387,8 +392,7 @@ It all comes from an idea that has been alternatively percolating and distilling
       <pubDate>Tue, 24 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2010/08/24/auto-metadata.html</guid>
-      <description>One interesting part of the weekend photographic seminar I just got back from was the emphasis on metadata.
-It&#39;s important to take great photos, but it&#39;s just as important to know how you got those results.</description>
+      <description></description>
     </item>
     
     <item>
@@ -407,7 +411,7 @@ It&#39;s important to take great photos, but it&#39;s just as important to know 
       
       <guid>https://www.andyvanee.com/2010/08/11/chaotic-data.html</guid>
       <description>Data is chaotic. Our attempts to tame it are largely attempts at dehumanizing ourselves. Here&amp;rsquo;s a transcript of a piece of cardboard on my Grandfathers wall:
-------------------------- | | | WALLET LIST | | ------ | | EARS | | CANE | | WATCH | | | | SWIM | | | |_________________________|  Even by typing it here, I am imposing a fair bit more order than the original had.</description>
+------------------------- | | | WALLET LIST | | ------ | | EARS | | CANE | | WATCH | | | | SWIM | | | |_________________________| Even by typing it here, I am imposing a fair bit more order than the original had.</description>
     </item>
     
     <item>
@@ -416,7 +420,7 @@ It&#39;s important to take great photos, but it&#39;s just as important to know 
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2010/08/09/champions-of-order.html</guid>
-      <description>Software Engineers assume that your data can be ordered logically. This assumption is built in to the file system. They assume that it&#39;s an easy task, but that it&#39;s best left to the user.</description>
+      <description></description>
     </item>
     
     <item>
@@ -425,7 +429,7 @@ It&#39;s important to take great photos, but it&#39;s just as important to know 
       <pubDate>Sun, 01 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2010/08/01/unix-and-the-emerging-web.html</guid>
-      <description>After reading &#34;The Art Of UNIX Programming&#34; again, it&#39;s got me thinking about the nature of the technological explosion that has happened since the quaint days of mainframes and text-based consoles.</description>
+      <description></description>
     </item>
     
     <item>

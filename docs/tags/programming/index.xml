@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on andyvanee</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Programming on andyvanee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.andyvanee.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 11 Jan 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Re-evaluating Online Universities</title>
       <link>https://www.andyvanee.com/2014/01/11/reevaluating-online-universities.html</link>
@@ -28,7 +24,7 @@ To compensate for a high dropout rate, Udacity has made a shift to focusing on c
       <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2013/11/29/accidental-cms.html</guid>
-      <description>When I started reading this article called CMS Trap, I had no idea what the hell he was talking about. As I pushed through, I began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go back and re-read it again because so much rang true.</description>
+      <description>When I started reading [this article called CMS Trap](http://hakunin.com/cms- trap), I had no idea what the hell he was talking about. As I pushed through, I began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go back and re-read it again because so much rang true.</description>
     </item>
     
     <item>
@@ -47,7 +43,7 @@ MVC has long been the defacto standard for building web and desktop applications
       <pubDate>Sun, 01 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://www.andyvanee.com/2010/08/01/unix-and-the-emerging-web.html</guid>
-      <description>After reading &#34;The Art Of UNIX Programming&#34; again, it&#39;s got me thinking about the nature of the technological explosion that has happened since the quaint days of mainframes and text-based consoles.</description>
+      <description></description>
     </item>
     
   </channel>

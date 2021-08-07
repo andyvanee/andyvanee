@@ -18,65 +18,51 @@
                 <p>I&rsquo;d like to document a problem that I&rsquo;ve never had before, and the solution
 I arrived at. It was not a real complicated problem, but I got hung up on an
 even simpler problem.</p>
-
 <p>Say I want to store directories in the database, and the files within those
 directories in an associated table. The actual problem is much more specific,
 but I&rsquo;ve made it generic. Here are some sample entries:</p>
-
 <p>Directories:</p>
-
 <pre><code>id: 1, name: home
 id: 2, name: example
 </code></pre>
-
 <p>Files:</p>
-
 <pre><code>a_dir_id: 1, filename: 'test', content: 'some content'
 </code></pre>
-
 <p>Looking at this, it seemed fairly basic. The catch was that the
 directory id and filename would have to be a composite primary key, which I
 haven&rsquo;t really used all that much. On top of that, the directory id also needs
 to be a foreign key. I read a bit and decided that this was probably doable,
 so this is where I got to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;data_mapper&#39;</span>
+<span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">.</span>setup(<span style="color:#e6db74">:default</span>, <span style="color:#e6db74">&#39;mysql://root@127.0.0.1/sample&#39;</span>)
 
-<pre><code class="language-ruby">require 'data_mapper'
-DataMapper.setup(:default, 'mysql://root@127.0.0.1/sample')
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ADir</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Resource</span>
+  property <span style="color:#e6db74">:id</span>, <span style="color:#66d9ef">Serial</span>
+  property <span style="color:#e6db74">:name</span>, String, <span style="color:#e6db74">:unique</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+  has n, <span style="color:#e6db74">:a_files</span>
+<span style="color:#66d9ef">end</span>
 
-class ADir
-  include DataMapper::Resource
-  property :id, Serial
-  property :name, String, :unique =&gt; true
-  has n, :a_files
-end
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AFile</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Resource</span>
+  property <span style="color:#e6db74">:a_dir_id</span>, Integer, <span style="color:#e6db74">:key</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+  property <span style="color:#e6db74">:filename</span>, String, <span style="color:#e6db74">:key</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+  property <span style="color:#e6db74">:content</span>, <span style="color:#66d9ef">Text</span>
+  belongs_to <span style="color:#e6db74">:a_dir</span>
+<span style="color:#66d9ef">end</span>
 
-class AFile
-  include DataMapper::Resource
-  property :a_dir_id, Integer, :key =&gt; true
-  property :filename, String, :key =&gt; true
-  property :content, Text
-  belongs_to :a_dir
-end
-
-DataMapper.auto_migrate!
-</code></pre>
-
-<p>Running this, I ended up with this cryptic error:</p>
-
+<span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">.</span>auto_migrate!
+</code></pre></div><p>Running this, I ended up with this cryptic error:</p>
 <pre><code>...Can't create table 'sample.#sql-1ed_113' (errno: 150) (DataObjects::SQLError)
 </code></pre>
-
 <p>It was not a helpful error message. I assumed that what I was trying was simply
 not possible, but I blazed through and started writing the raw SQL to acheive
 what I wanted, and it turns out that it certainly is possible in MySQL.</p>
-
 <p>After many rabbit trails, it dawned on me that <code>Serial</code> columns are unsigned and
 <code>Integer</code> columns are not. Adding a <code>:min</code> argument to this one line made it
 work like a charm:</p>
-
 <pre><code>property :a_dir_id, Integer, :min =&gt; 0, :key =&gt; true
 </code></pre>
-
 <p>Success!!</p>
 
             </article>

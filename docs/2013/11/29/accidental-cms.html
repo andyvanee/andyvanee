@@ -15,62 +15,46 @@
             <article>
                 <h1>Accidental CMS</h1>
                 <time>November 29, 2013</time>
-                
-
-<p>When I started reading <a href="http://hakunin.com/cms-
-trap">this article called CMS Trap</a>, I had no idea what the hell he was talking about. As I pushed through, I
+                <p>When I started reading [this article called CMS Trap](<a href="http://hakunin.com/cms-">http://hakunin.com/cms-</a>
+trap), I had no idea what the hell he was talking about. As I pushed through, I
 began saying &lsquo;yes&rsquo; more and more, and by the time I was finished I had to go
 back and re-read it again because so much rang true.</p>
-
 <p>Here&rsquo;s the gist:</p>
-
 <blockquote>
 <p>Ruthlessly axe the moving parts in your app.</p>
 </blockquote>
-
 <p>The primary target of the article is admin interfaces. Elaborate architectures
 and interfaces make our code exponentially harder to refactor and extend. Simple
 changes become bogged down in database migrations, complex dependencies and
 unpredictable production data.</p>
-
 <p>Near the end, he proposes some simpler alternatives to a full blow database-
 backed CRUD admin interface. A class, a static page, a constant or a string in
 the database.</p>
-
 <p>I&rsquo;d like to propose another. A technique that I&rsquo;ve been using more and more:</p>
-
 <h3 id="static-models">Static Models</h3>
-
 <p>These are models that look and behave just like your standard database-backed
 models, with the exception that they just store hard-coded values.</p>
-
 <p>It should be pretty easy to mimic the interface of your standard model classes.
 The rest of your code doesn&rsquo;t need to know where that data is coming from, and
 doesn&rsquo;t need to change if you decide it really needs to be database backed.</p>
-
 <p>Here&rsquo;s how it looks in DataMapper:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Countries</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">all</span>
+    <span style="color:#f92672">[</span>{<span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;US&#39;</span>}, {<span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;CA&#39;</span>}<span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
-<pre><code class="language-ruby">class Countries
-  def self.all
-    [{:name =&gt; 'US'}, {:name =&gt; 'CA'}]
-  end
-end
-
-class Users
-  def self.all
-    YAML.load_file('data/users.yml')
-  end
-end
-</code></pre>
-
-<p>Go ahead and fake any other model methods you might need as well.</p>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Users</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">all</span>
+    <span style="color:#66d9ef">YAML</span><span style="color:#f92672">.</span>load_file(<span style="color:#e6db74">&#39;data/users.yml&#39;</span>)
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Go ahead and fake any other model methods you might need as well.</p>
 <p>I&rsquo;ve been surprised at how flexible this approach is. It&rsquo;s much easier to define
 tightly focused models, test their interactions, and refactor mercilessly while
 prototyping. Some never end up needing to be runtime-editable, so they can stay
 as they are. Others may come in handy as mock objects for testing (wrapping
 external API&rsquo;s, for example).</p>
-
 <p>So throw those generators and migrations away and keep things static as long as
 you can!</p>
 

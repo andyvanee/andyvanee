@@ -15,44 +15,37 @@
             <article>
                 <h1>Chaining in JavaScript</h1>
                 <time>November 25, 2010</time>
-                <p>It&rsquo;s been bugging me for a while that I didn&rsquo;t understand the method behind jQuery&rsquo;s function chaining. So I built the smallest functional version of it. I call it aQuery <em>(for andy, or awesome).</em></p><p>This is the calling code:</p>
-
-<pre><code class="language-javascript">window.onload = function(){
-    aQ(&quot;#content&quot;).height().background().elem.innerHTML = &quot;hello&quot;;
+                <p>It&rsquo;s been bugging me for a while that I didn&rsquo;t understand the method behind jQuery&rsquo;s function chaining. So I built the smallest functional version of it. I call it aQuery <!-- raw HTML omitted -->(for andy, or awesome).<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->This is the calling code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+    <span style="color:#a6e22e">aQ</span>(<span style="color:#e6db74">&#34;#content&#34;</span>).<span style="color:#a6e22e">height</span>().<span style="color:#a6e22e">background</span>().<span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>;
 };
-</code></pre>
-
-<p>I have made two functions .height() and .background(), which do pretty much what their names suggest. The elem is the original object and so I use it to call &ldquo;native&rdquo; code. Maybe should have called it &ldquo;target&rdquo; to be consistent.</p>
-
+</code></pre></div><p>I have made two functions .height() and .background(), which do pretty much what their names suggest. The elem is the original object and so I use it to call &ldquo;native&rdquo; code. Maybe should have called it &ldquo;target&rdquo; to be consistent.</p>
 <p>Here&rsquo;s the meat and potatoes of the &ldquo;library&rdquo;:</p>
-
-<pre><code class="language-javascript">(function() {
-    var aQ = function(selector) {
-        return new aQuery.fn(selector);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aQ</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">selector</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">aQuery</span>.<span style="color:#a6e22e">fn</span>(<span style="color:#a6e22e">selector</span>);
     };
 
-    var aQuery = {};
-    aQuery.fn = function(selector) {
-        this.elem = document.getElementById(selector.split(&quot;#&quot;)[1]);
-        this.cssText = &quot;&quot;;
-        this.height = function(){
-            this.cssText = this.cssText + &quot;height: &quot; + window.innerHeight + &quot;px;&quot;;
-            this.elem.style.cssText = this.cssText;
-            return this;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aQuery</span> <span style="color:#f92672">=</span> {};
+    <span style="color:#a6e22e">aQuery</span>.<span style="color:#a6e22e">fn</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">selector</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">elem</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">selector</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;#&#34;</span>)[<span style="color:#ae81ff">1</span>]);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;height: &#34;</span> <span style="color:#f92672">+</span> window.<span style="color:#a6e22e">innerHeight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;px;&#34;</span>;
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span>;
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
         };
-        this.background = function(){
-            this.cssText = this.cssText + &quot;background-color: #444;&quot;;
-            this.elem.style.cssText = this.cssText;
-            return this;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">background</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;background-color: #444;&#34;</span>;
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">elem</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cssText</span>;
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
         };
-        return this;
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
     };
 
-    return (window.aQ = aQ);
+    <span style="color:#66d9ef">return</span> (window.<span style="color:#a6e22e">aQ</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aQ</span>);
 })();
-</code></pre>
-
-<p>Each call to aQ makes a new object, primed with the selector string. This object has several functions and attributes, and all the functions return &ldquo;this&rdquo;, so they can be chained together. As it stands, it&rsquo;s not dynamic at all but you can use your imagination!</p>
+</code></pre></div><p>Each call to aQ makes a new object, primed with the selector string. This object has several functions and attributes, and all the functions return &ldquo;this&rdquo;, so they can be chained together. As it stands, it&rsquo;s not dynamic at all but you can use your imagination!</p>
 
             </article>
             <footer>

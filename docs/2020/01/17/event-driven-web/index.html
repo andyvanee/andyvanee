@@ -17,38 +17,31 @@
                 <time>January 17, 2020</time>
                 <p>I&rsquo;ve recently been working on a project that uses WebSockets as a core mechanic.
 These are my thoughts&hellip;</p>
-
 <p>For starters, an event-driven architecture all the way from Server to UI brings
 some interesting features. Most notably, it allows you to think about the app as
 a single one-way rendering flow.</p>
-
 <p>The app is driven by a log file which stores events and publishes them to
 clients connected through web sockets. When a client first connects, they get
 the backlog of events (filtered to remove duplicates, deletions, etc) and then
 from then on recieve and process future events in exactly the same way.</p>
-
 <p>The frontend uses <a href="https://lit-element.polymer-project.org/">LitElement</a>
 components which work very well for this kind of one-way data flow.</p>
-
 <p>One aspect that I really enjoy about my implementation is that events bubble all
 the way up the DOM and into the backend. The backend registers event listeners
 and can also trigger events on the client, or broadcast events to all clients. I
 was definitely influenced by my reading on Event Sourcing and Erlang message
 passing, but I haven&rsquo;t really found a system that&rsquo;s implemented in this way.</p>
-
 <p>Another aspect I&rsquo;ve really enjoyed about using Web Sockets is how good the
 Chrome Developer tools are at inspecting the traffic. If you click on a
 websocket request in the Network tab and are using JSON formatted messages, you
 get a nice JSON inspector. I had initially started using MessagePack, but found
 it too difficult for rapid prototyping, testing and debugging.</p>
-
 <p>On the negative side, I&rsquo;ve found Web Sockets to be pretty reliable, but
 obviously not 100%. The failure mode of traditional web architecture is quite
 predictable, but it&rsquo;s something you really have to think about when using
 sockets. With this project I had full access to all client machines, so I could
 make breaking changes and just refresh them. I can definitely see it being an
 issue if you didn&rsquo;t have that luxury.</p>
-
 <p>I don&rsquo;t have any code to show at the moment as it&rsquo;s a closed codebase, but I
 think it&rsquo;s a really powerful idea, so will likely work on something open source
 in the future.</p>
@@ -56,6 +49,8 @@ in the future.</p>
             </article>
             <footer>
                 <div>
+                    
+                    Newer: <a href="https://www.andyvanee.com/2020/03/30/dont-panic/">Don&#39;t Panic</a>
                     
                 </div>
                 <div>

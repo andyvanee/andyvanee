@@ -16,22 +16,17 @@
                 <h1>Prose, Github and S3</h1>
                 <time>April 25, 2013</time>
                 <p>In an effort to make the static site workflow a little less manual, I&rsquo;ve created a little web-service to automate things a bit. Here&rsquo;s how it works:</p>
-
 <ol>
 <li>Edit posts/pages/layouts etc with <a href="http://prose.io/">prose.io</a></li>
 <li>Github web-hook hits my service, triggering a build.</li>
 </ol>
-
 <p>The build stage looks like this:</p>
-
 <ol>
 <li>git pull (or clone if need be)</li>
 <li>make</li>
 <li>s3cmd sync</li>
 </ol>
-
 <p>Setting up the server was a bit difficult for a couple of reasons. My blog is pretty straightforward, but it did need a number of things installed on the server for a successful build: make, jekyll, uglifyjs, recess, pygments and s3cmd. Also, this all had to be run as the www-data user, which had a pretty minimal environment.</p>
-
 <p>So far, it&rsquo;s awesome. Editing and publishing my blog as a static site on S3 is now completely automated. Code coming soon on <a href="https://github.com/Andyvanee">github</a>&hellip;</p>
 
             </article>

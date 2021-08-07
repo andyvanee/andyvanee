@@ -25,12 +25,9 @@ output of gcc -S. There is some strange optimizations and flags in the
 resulting assembly code. The key, as the tutorial points out, is in
 the compiler options. Here&rsquo;s what I used on the ubiquitous &ldquo;Hello
 World&rdquo; program:</p>
-
 <pre><code>gcc -S -fno-PIC -O2 -Wall -o hello.s hello.c
 </code></pre>
-
 <p>And here&rsquo;s the assembly code it spit out:</p>
-
 <pre><code>.cstring
 LC0:
    .ascii &quot;Hello World!%d\12\0&quot;
@@ -50,7 +47,6 @@ LC0:
    ret
    .subsections_via_symbols
 </code></pre>
-
 <p>This is more familiar territory, the only differences being the
 <code>.cstring</code> directive instead of <code>.section .text</code>, the leading underscore
 on printf, and the <code>.subsections_via_symbols</code> directive. The general
