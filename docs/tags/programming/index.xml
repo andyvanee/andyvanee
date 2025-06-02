@@ -4,47 +4,37 @@
     <title>Programming on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming/</link>
     <description>Recent content in Programming on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Re-evaluating Online Universities</title>
       <link>https://www.andyvanee.com/2014/01/11/reevaluating-online-universities.html</link>
       <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2014/01/11/reevaluating-online-universities.html</guid>
-      <description>Here&amp;rsquo;s an article I read a couple days ago about the founder of Udacity and his struggle with very low success rates for online courses.
-http://www.fastcompany.com/3021473/udacity-sebastian-thrun-uphill-climb
-To compensate for a high dropout rate, Udacity has made a shift to focusing on corporate training.</description>
+      <description>&lt;p&gt;Here&amp;rsquo;s an article I read a couple days ago about the founder of Udacity&#xA;and his struggle with very low success rates for online courses.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.fastcompany.com/3021473/udacity-sebastian-thrun-uphill-climb&#34;&gt;http://www.fastcompany.com/3021473/udacity-sebastian-thrun-uphill-climb&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;To compensate for a high dropout rate, Udacity has made a shift to focusing&#xA;on corporate training. Company sponsored courses on the practical tools&#xA;and frameworks that are used today. These courses are generally taught by&#xA;corporate &amp;ldquo;Technology Evangelists&amp;rdquo;, or some such title.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Accidental CMS</title>
       <link>https://www.andyvanee.com/2013/11/29/accidental-cms.html</link>
       <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/11/29/accidental-cms.html</guid>
-      <description>When I started reading [this article called CMS Trap](http://hakunin.com/cms- trap), I had no idea what the hell he was talking about. As I pushed through, I began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go back and re-read it again because so much rang true.</description>
+      <description>&lt;p&gt;When I started reading [this article called CMS Trap](&lt;a href=&#34;http://hakunin.com/cms-&#34;&gt;http://hakunin.com/cms-&lt;/a&gt;&#xA;trap), I had no idea what the hell he was talking about. As I pushed through, I&#xA;began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go&#xA;back and re-read it again because so much rang true.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>MVC-r The pattern you already use</title>
       <link>https://www.andyvanee.com/2012/04/15/mvc-r.html</link>
       <pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/04/15/mvc-r.html</guid>
-      <description>The pattern you already use
-MVC has long been the defacto standard for building web and desktop applications. There are many variations on the theme, but I think the acronym is missing one component that is already an important part of any MVC application&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;The pattern you already use&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;MVC has long been the defacto standard for building web and desktop applications. There are many variations on the theme, but I think the acronym is missing one component that is already an important part of any MVC application&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>UNIX and the Emerging Web</title>
       <link>https://www.andyvanee.com/2010/08/01/unix-and-the-emerging-web.html</link>
       <pubDate>Sun, 01 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/01/unix-and-the-emerging-web.html</guid>
-      <description></description>
+      <description>&lt;p&gt;After reading &#34;The Art Of UNIX Programming&#34; again, it&#39;s got me thinking about the&#xA;nature of the technological explosion that has happened since the&#xA;quaint days of mainframes and text-based consoles.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

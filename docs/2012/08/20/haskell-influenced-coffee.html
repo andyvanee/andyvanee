@@ -31,27 +31,27 @@ that can arise with this is that your function might lose things it
 previously had in scope.</p>
 <p>Take this example of reading a file asynchronously with node (inside
 a request):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript">handler = <span style="color:#a6e22e">(req, res) -&gt;</span>
-  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span> <span style="color:#e6db74">&#39;myfile.html&#39;</span>, <span style="color:#a6e22e">(err, data) -&gt;</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span>
-      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#e6db74">&#39;ack!&#39;</span>
-      <span style="color:#66d9ef">return</span>
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#a6e22e">data</span>
-</code></pre></div><p>Not bad, but those inline functions are essentially untestable and have
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-coffeescript" data-lang="coffeescript"><span style="display:flex;"><span>handler = <span style="color:#a6e22e">(req, res) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span> <span style="color:#e6db74">&#39;myfile.html&#39;</span>, <span style="color:#a6e22e">(err, data) -&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#e6db74">&#39;ack!&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#a6e22e">data</span>
+</span></span></code></pre></div><p>Not bad, but those inline functions are essentially untestable and have
 a tendency to grow in ugly ways. I&rsquo;d like to break it into it&rsquo;s own
 named function, but I have a problem: my response handle will go out of
 scope so I can&rsquo;t actually write my response. My Haskell-influenced
 solution uses a function-returning function and looks surprisingly
 like a Haskell type signature:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript">handler = <span style="color:#a6e22e">(req, res) -&gt;</span>
-  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span> <span style="color:#e6db74">&#39;myfile.html&#39;</span>, <span style="color:#a6e22e">fileResponder</span>(<span style="color:#a6e22e">res</span>)
-
-fileResponder = <span style="color:#a6e22e">(res) -&gt;</span> <span style="color:#a6e22e">(err, data) -&gt;</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span>
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#e6db74">&#39;ack!&#39;</span>
-    <span style="color:#66d9ef">return</span>
-  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#a6e22e">data</span>
-</code></pre></div><p>So this is a function that returns a callback function (taking err,data)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-coffeescript" data-lang="coffeescript"><span style="display:flex;"><span>handler = <span style="color:#a6e22e">(req, res) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span> <span style="color:#e6db74">&#39;myfile.html&#39;</span>, <span style="color:#a6e22e">fileResponder</span>(<span style="color:#a6e22e">res</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fileResponder = <span style="color:#a6e22e">(res) -&gt;</span> <span style="color:#a6e22e">(err, data) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#e6db74">&#39;ack!&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span> <span style="color:#a6e22e">data</span>
+</span></span></code></pre></div><p>So this is a function that returns a callback function (taking err,data)
 with the proper response writer in scope. Nice!</p>
 <p>And now, with a minimal mock of res, err and data, it would be nice
 and easy to test the output of the responder across many inputs.</p>
@@ -61,12 +61,12 @@ harder to understand for some. I&rsquo;ve found that I naturally tend to solve
 things recursively more since using Haskell. Here&rsquo;s a simple example that
 pads a string with another string up to a certain length. I didn&rsquo;t even
 think, &ldquo;I should do this recursively&rdquo;, it just came naturally.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript"><span style="color:#75715e"># Pad a string to len using padding
-</span><span style="color:#75715e"></span>String.prototype.pad = <span style="color:#a6e22e">(padding, len) -&gt;</span>
-  <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">&#39;Argument 1 for pad must me a string&#39;</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">padding</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;string&#39;</span>
-  <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">&#39;Argument 2 for pad must be a number&#39;</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">len</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;number&#39;</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">@</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">len</span> <span style="color:#66d9ef">then</span> (<span style="color:#a6e22e">padding</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">@</span>).<span style="color:#a6e22e">pad</span>(<span style="color:#a6e22e">padding</span>, <span style="color:#a6e22e">len</span>) <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">@</span>
-</code></pre></div><p>Now we can change &ldquo;7&rdquo; to &ldquo;007&rdquo;, just by doing <code>&quot;7&quot;.pad(&quot;0&quot;, 3)</code>. Sure, this
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-coffeescript" data-lang="coffeescript"><span style="display:flex;"><span><span style="color:#75715e"># Pad a string to len using padding
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>String.prototype.pad = <span style="color:#a6e22e">(padding, len) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">&#39;Argument 1 for pad must me a string&#39;</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">padding</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;string&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">&#39;Argument 2 for pad must be a number&#39;</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">len</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;number&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">@</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">len</span> <span style="color:#66d9ef">then</span> (<span style="color:#a6e22e">padding</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">@</span>).<span style="color:#a6e22e">pad</span>(<span style="color:#a6e22e">padding</span>, <span style="color:#a6e22e">len</span>) <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">@</span>
+</span></span></code></pre></div><p>Now we can change &ldquo;7&rdquo; to &ldquo;007&rdquo;, just by doing <code>&quot;7&quot;.pad(&quot;0&quot;, 3)</code>. Sure, this
 could have been done just fine with a while or for loop. The thing I like
 about recursive solutions is that the edge conditions are clearer than in
 an iterative solution.</p>
@@ -74,27 +74,27 @@ an iterative solution.</p>
 <p>One definite influence of writing Haskell is the size of functions I&rsquo;ve
 been writing. Each function is only a couple lines long and does a single
 thing. Here&rsquo;s an excerpt of some filename processing I did:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript"><span style="color:#75715e"># Convert dashed, lowercase title to proper title
-</span><span style="color:#75715e"></span>dashToTitleCase = <span style="color:#a6e22e">(title) -&gt;</span>
-  <span style="color:#a6e22e">properCase</span> <span style="color:#a6e22e">dashToSpace</span> <span style="color:#a6e22e">title</span>
-
-<span style="color:#75715e"># Capitalize each space-separated word in the string
-</span><span style="color:#75715e"></span>properCase = <span style="color:#a6e22e">(xs) -&gt;</span>
-  <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">replace</span>(
-    <span style="color:#e6db74">/\w\S*/g</span>,
-    <span style="color:#a6e22e">(xs) -&gt;</span> <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">toLowerCase</span>()
-  )
-
-<span style="color:#75715e"># Convert dashes to spaces
-</span><span style="color:#75715e"></span>dashToSpace = <span style="color:#a6e22e">(xs) -&gt;</span>
-  <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">replace</span>( <span style="color:#e6db74">/-/g</span> , <span style="color:#e6db74">&#39; &#39;</span>)
-</code></pre></div><p>In the past, it&rsquo;s quite possible that I wouldn&rsquo;t have even created a
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-coffeescript" data-lang="coffeescript"><span style="display:flex;"><span><span style="color:#75715e"># Convert dashed, lowercase title to proper title
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>dashToTitleCase = <span style="color:#a6e22e">(title) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">properCase</span> <span style="color:#a6e22e">dashToSpace</span> <span style="color:#a6e22e">title</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Capitalize each space-separated word in the string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>properCase = <span style="color:#a6e22e">(xs) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">replace</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">/\w\S*/g</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">(xs) -&gt;</span> <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">toLowerCase</span>()
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Convert dashes to spaces
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>dashToSpace = <span style="color:#a6e22e">(xs) -&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">replace</span>( <span style="color:#e6db74">/-/g</span> , <span style="color:#e6db74">&#39; &#39;</span>)
+</span></span></code></pre></div><p>In the past, it&rsquo;s quite possible that I wouldn&rsquo;t have even created a
 single function for this, much less three. It&rsquo;s only a couple string
 replacements which wouldn&rsquo;t have cluttered up the calling code too much.
 As it turns out, I was able to use this inside a string interpolation
 which was much cleaner and more or less self-documenting.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-coffeescript" data-lang="coffeescript">fileContents = <span style="color:#e6db74">&#34;title: </span><span style="color:#e6db74">#{</span><span style="color:#a6e22e">dashToTitleCase</span> <span style="color:#a6e22e">postTitle</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-coffeescript" data-lang="coffeescript"><span style="display:flex;"><span>fileContents = <span style="color:#e6db74">&#34;title: </span><span style="color:#e6db74">#{</span><span style="color:#a6e22e">dashToTitleCase</span> <span style="color:#a6e22e">postTitle</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div>
             </article>
             <footer>
                 <div>

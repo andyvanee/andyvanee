@@ -4,26 +4,23 @@
     <title>Programming, JavaScript on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming-javascript/</link>
     <description>Recent content in Programming, JavaScript on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Mar 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sandbox your external scripts</title>
       <link>https://www.andyvanee.com/2014/03/29/sandbox-your-external-scripts.html</link>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2014/03/29/sandbox-your-external-scripts.html</guid>
-      <description>Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion.</description>
+      <description>&lt;p&gt;Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion. The best solution is to completely sandbox your external scripts like social media widgets. Fonts could use similar treatment.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Chaining in JavaScript</title>
       <link>https://www.andyvanee.com/2010/11/25/chaining-in-javascript.html</link>
       <pubDate>Thu, 25 Nov 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/11/25/chaining-in-javascript.html</guid>
-      <description>It&amp;rsquo;s been bugging me for a while that I didn&amp;rsquo;t understand the method behind jQuery&amp;rsquo;s function chaining. So I built the smallest functional version of it. I call it aQuery (for andy, or awesome).</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been bugging me for a while that I didn&amp;rsquo;t understand the method behind jQuery&amp;rsquo;s function chaining. So I built the smallest functional version of it. I call it aQuery &lt;em&gt;(for andy, or awesome).&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

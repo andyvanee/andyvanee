@@ -21,8 +21,7 @@ began saying &lsquo;yes&rsquo; more and more, and by the time I was finished I h
 back and re-read it again because so much rang true.</p>
 <p>Here&rsquo;s the gist:</p>
 <blockquote>
-<p>Ruthlessly axe the moving parts in your app.</p>
-</blockquote>
+<p>Ruthlessly axe the moving parts in your app.</p></blockquote>
 <p>The primary target of the article is admin interfaces. Elaborate architectures
 and interfaces make our code exponentially harder to refactor and extend. Simple
 changes become bogged down in database migrations, complex dependencies and
@@ -38,18 +37,18 @@ models, with the exception that they just store hard-coded values.</p>
 The rest of your code doesn&rsquo;t need to know where that data is coming from, and
 doesn&rsquo;t need to change if you decide it really needs to be database backed.</p>
 <p>Here&rsquo;s how it looks in DataMapper:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Countries</span>
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">all</span>
-    <span style="color:#f92672">[</span>{<span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;US&#39;</span>}, {<span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;CA&#39;</span>}<span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Users</span>
-  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">all</span>
-    <span style="color:#66d9ef">YAML</span><span style="color:#f92672">.</span>load_file(<span style="color:#e6db74">&#39;data/users.yml&#39;</span>)
-  <span style="color:#66d9ef">end</span>
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>Go ahead and fake any other model methods you might need as well.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Countries</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">all</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span>{<span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;US&#39;</span>}, {<span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;CA&#39;</span>}<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Users</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">all</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">YAML</span><span style="color:#f92672">.</span>load_file(<span style="color:#e6db74">&#39;data/users.yml&#39;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Go ahead and fake any other model methods you might need as well.</p>
 <p>I&rsquo;ve been surprised at how flexible this approach is. It&rsquo;s much easier to define
 tightly focused models, test their interactions, and refactor mercilessly while
 prototyping. Some never end up needing to be runtime-editable, so they can stay

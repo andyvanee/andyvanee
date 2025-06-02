@@ -33,26 +33,26 @@ directory id and filename would have to be a composite primary key, which I
 haven&rsquo;t really used all that much. On top of that, the directory id also needs
 to be a foreign key. I read a bit and decided that this was probably doable,
 so this is where I got to:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;data_mapper&#39;</span>
-<span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">.</span>setup(<span style="color:#e6db74">:default</span>, <span style="color:#e6db74">&#39;mysql://root@127.0.0.1/sample&#39;</span>)
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ADir</span>
-  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Resource</span>
-  property <span style="color:#e6db74">:id</span>, <span style="color:#66d9ef">Serial</span>
-  property <span style="color:#e6db74">:name</span>, String, <span style="color:#e6db74">:unique</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
-  has n, <span style="color:#e6db74">:a_files</span>
-<span style="color:#66d9ef">end</span>
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AFile</span>
-  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Resource</span>
-  property <span style="color:#e6db74">:a_dir_id</span>, Integer, <span style="color:#e6db74">:key</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
-  property <span style="color:#e6db74">:filename</span>, String, <span style="color:#e6db74">:key</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
-  property <span style="color:#e6db74">:content</span>, <span style="color:#66d9ef">Text</span>
-  belongs_to <span style="color:#e6db74">:a_dir</span>
-<span style="color:#66d9ef">end</span>
-
-<span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">.</span>auto_migrate!
-</code></pre></div><p>Running this, I ended up with this cryptic error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;data_mapper&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">.</span>setup(<span style="color:#e6db74">:default</span>, <span style="color:#e6db74">&#39;mysql://root@127.0.0.1/sample&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ADir</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Resource</span>
+</span></span><span style="display:flex;"><span>  property <span style="color:#e6db74">:id</span>, <span style="color:#66d9ef">Serial</span>
+</span></span><span style="display:flex;"><span>  property <span style="color:#e6db74">:name</span>, String, <span style="color:#e6db74">:unique</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  has n, <span style="color:#e6db74">:a_files</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AFile</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Resource</span>
+</span></span><span style="display:flex;"><span>  property <span style="color:#e6db74">:a_dir_id</span>, Integer, <span style="color:#e6db74">:key</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  property <span style="color:#e6db74">:filename</span>, String, <span style="color:#e6db74">:key</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  property <span style="color:#e6db74">:content</span>, <span style="color:#66d9ef">Text</span>
+</span></span><span style="display:flex;"><span>  belongs_to <span style="color:#e6db74">:a_dir</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DataMapper</span><span style="color:#f92672">.</span>auto_migrate!
+</span></span></code></pre></div><p>Running this, I ended up with this cryptic error:</p>
 <pre><code>...Can't create table 'sample.#sql-1ed_113' (errno: 150) (DataObjects::SQLError)
 </code></pre>
 <p>It was not a helpful error message. I assumed that what I was trying was simply

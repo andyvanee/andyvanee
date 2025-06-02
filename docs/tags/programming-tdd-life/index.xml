@@ -4,18 +4,16 @@
     <title>Programming, TDD, Life on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming-tdd-life/</link>
     <description>Recent content in Programming, TDD, Life on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Dec 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-tdd-life/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-tdd-life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Global Day of Code Retreat</title>
       <link>https://www.andyvanee.com/2011/12/07/global-day-of-code-retreat.html</link>
       <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/12/07/global-day-of-code-retreat.html</guid>
-      <description>This past weekend my co-worker, Jon, and I participated in the Global Day of Code Retreat, an event that focuses on two things: Test-Driven Development (TDD) and Pair Programming.
-Neither of which are exactly new to me, but in my day-to-day work there are only a handful of projects that use TDD, and we basically never do pair-programming.</description>
+      <description>&lt;p&gt;This past weekend my co-worker, Jon, and I participated in the Global&#xA;Day of Code Retreat, an event that focuses on two things: Test-Driven&#xA;Development (TDD) and Pair Programming.&lt;/p&gt;&#xA;&lt;p&gt;Neither of which are exactly new to me, but in my day-to-day work&#xA;there are only a handful of projects that use TDD, and we basically&#xA;never do pair-programming. We collaborate, but never really in front&#xA;of the same computer for any length of time.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

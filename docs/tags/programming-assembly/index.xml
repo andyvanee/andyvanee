@@ -4,27 +4,23 @@
     <title>Programming, Assembly on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming-assembly/</link>
     <description>Recent content in Programming, Assembly on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Mar 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-assembly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Mar 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-assembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Assembly Language For Mac</title>
       <link>https://www.andyvanee.com/2010/03/03/assembly-language-for-mac.html</link>
       <pubDate>Wed, 03 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/03/03/assembly-language-for-mac.html</guid>
-      <description>I&amp;rsquo;m away from my Linux box and want to do some assembly programming. Mac installs GCC with the developer tools, but there are enough differences that I haven&amp;rsquo;t bothered to work through them until now.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m away from my Linux box and want to do some assembly&#xA;programming. Mac installs GCC with the developer tools, but there are&#xA;enough differences that I haven&amp;rsquo;t bothered to work through them until&#xA;now. Here&amp;rsquo;s &lt;a href=&#34;http://shorestreet.com/node/21&#34;&gt;a decent tutorial&lt;/a&gt;,&#xA;although it focuses on PPC assembly and I&amp;rsquo;m using an Intel Mac. The&#xA;thing that frightened me about the Mac assembler was the default&#xA;output of gcc -S. There is some strange optimizations and flags in the&#xA;resulting assembly code. The key, as the tutorial points out, is in&#xA;the compiler options. Here&amp;rsquo;s what I used on the ubiquitous &amp;ldquo;Hello&#xA;World&amp;rdquo; program:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RPN Calculator - v0.02</title>
       <link>https://www.andyvanee.com/2010/02/03/rpn-calculator-v002.html</link>
       <pubDate>Wed, 03 Feb 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/02/03/rpn-calculator-v002.html</guid>
-      <description>disclaimer: I copied this from my old blog. Not sure if it actually works:)
-My calculator code was quite easily polished up. Here&amp;rsquo;s the revised code which stacks operands properly and supports the main arithmetic operators +, -, * , /.</description>
+      <description>&lt;p&gt;&lt;em&gt;disclaimer: I copied this from my old blog. Not sure if it actually works:)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;My calculator code was quite easily polished up. Here&amp;rsquo;s the revised&#xA;code which stacks operands properly and supports the main arithmetic&#xA;operators +, -, * , /. If you flush the stack completely, you get&#xA;a &amp;ldquo;nan&amp;rdquo; warning, which seems reasonable. Here&amp;rsquo;s the code: (gas, x86)&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

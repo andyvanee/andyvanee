@@ -4,18 +4,16 @@
     <title>Process on andyvanee</title>
     <link>https://www.andyvanee.com/tags/process/</link>
     <description>Recent content in Process on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jan 2011 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/process/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/process/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rapid Game Prototyping in Quartz Composer</title>
       <link>https://www.andyvanee.com/2011/01/07/rapid-game-prototyping-in-quartz-composer.html</link>
       <pubDate>Fri, 07 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/01/07/rapid-game-prototyping-in-quartz-composer.html</guid>
-      <description>I am a Quartz Composer junky. I love tinkering with ideas and hacking together logic gates within this kind of visual programming environment.
-I think this it&amp;rsquo;s the best way to teach core CS techniques that are often obscured in text-based code.</description>
+      <description>&lt;p&gt;I am a Quartz Composer junky. I love tinkering with ideas and hacking together logic gates within this kind of visual programming environment.&lt;/p&gt;&#xA;&lt;p&gt;I think this it&amp;rsquo;s the best way to teach core CS techniques that are often obscured in text-based code. Things like logic gates, the value of modularity, and application structure start to really make sense when you lay them out visually. It&amp;rsquo;s like a UML diagram that functions and evaluates in real-time.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

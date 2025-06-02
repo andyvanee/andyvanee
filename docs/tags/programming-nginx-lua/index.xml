@@ -4,17 +4,16 @@
     <title>Programming, Nginx, Lua on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming-nginx-lua/</link>
     <description>Recent content in Programming, Nginx, Lua on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-nginx-lua/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-nginx-lua/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Playing With OpenResty</title>
       <link>https://www.andyvanee.com/2013/10/28/playing-with-openresty.html</link>
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/10/28/playing-with-openresty.html</guid>
-      <description>OpenResty is a bit of an enigma. I first heard about the project a few months back when reading about some benchmarks of various web application platforms. OpenResty was WAY ahead of all the others.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://openresty.org/&#34;&gt;OpenResty&lt;/a&gt; is a bit of an enigma. I first heard about&#xA;the project a few months back when reading about some benchmarks of various&#xA;web application platforms. OpenResty was WAY ahead of all the others.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

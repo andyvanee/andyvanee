@@ -4,452 +4,338 @@
     <title>andyvanee</title>
     <link>https://www.andyvanee.com/</link>
     <description>Recent content on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2020 22:38:08 -0600</lastBuildDate><atom:link href="https://www.andyvanee.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Mar 2020 22:38:08 -0600</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Don&#39;t Panic</title>
       <link>https://www.andyvanee.com/2020/03/30/dont-panic/</link>
       <pubDate>Mon, 30 Mar 2020 22:38:08 -0600</pubDate>
-      
       <guid>https://www.andyvanee.com/2020/03/30/dont-panic/</guid>
-      <description>&amp;ldquo;DON&amp;rsquo;T PANIC&amp;rdquo; - are the words printed in bold letters across the cover of The Hitchiker&amp;rsquo;s Guide To The Galaxy. I don&amp;rsquo;t think there could be any better motto for our time.</description>
+      <description>&lt;p&gt;&lt;strong&gt;&amp;ldquo;DON&amp;rsquo;T PANIC&amp;rdquo;&lt;/strong&gt; - are the words printed in bold letters across the cover of The Hitchiker&amp;rsquo;s Guide To The Galaxy. I don&amp;rsquo;t think there could be any better motto for our time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Event Driven Web</title>
       <link>https://www.andyvanee.com/2020/01/17/event-driven-web/</link>
       <pubDate>Fri, 17 Jan 2020 00:04:51 -0700</pubDate>
-      
       <guid>https://www.andyvanee.com/2020/01/17/event-driven-web/</guid>
-      <description>I&amp;rsquo;ve recently been working on a project that uses WebSockets as a core mechanic. These are my thoughts&amp;hellip;
-For starters, an event-driven architecture all the way from Server to UI brings some interesting features.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve recently been working on a project that uses WebSockets as a core mechanic.&#xA;These are my thoughts&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;For starters, an event-driven architecture all the way from Server to UI brings&#xA;some interesting features. Most notably, it allows you to think about the app as&#xA;a single one-way rendering flow.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Deconstruct 2017 - Stronger Communities</title>
       <link>https://www.andyvanee.com/2017/04/21/deconstruct-2017-stronger-communities.html</link>
       <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2017/04/21/deconstruct-2017-stronger-communities.html</guid>
-      <description>Deconstruct 2017 is over, and I&amp;rsquo;m still processing a lot of what I heard, but I did want to get a few notes down while the ideas are fresh.
-It came up a few times that the software community needs to do better in terms of inclusivity and overcoming the biases that have accumulated.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.andyvanee.com/images/deconstruct-badge-2017.jpg&#34; alt=&#34;Deconstruct 2017 Badge&#34; title=&#34;Deconstruct 2017 Badge&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://deconstructconf.com/&#34;&gt;Deconstruct 2017&lt;/a&gt; is over, and I&amp;rsquo;m still&#xA;processing a lot of what I heard, but I did want to get a few notes down while&#xA;the ideas are fresh.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Converting Atmospheric CO₂</title>
       <link>https://www.andyvanee.com/2016/05/19/converting-co2.html</link>
       <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2016/05/19/converting-co2.html</guid>
-      <description>I had an idea as I was driving today. It seems so obvious that I&amp;rsquo;m sure it has some fundamental flaw. Either that, or someone is already working on it. I&amp;rsquo;m writing this only in the hopes that a Chemist or Biologist can explain to me how I&amp;rsquo;m wrong and why I&amp;rsquo;m wrong.</description>
+      <description>&lt;p&gt;I had an idea as I was driving today. It seems so obvious that I&amp;rsquo;m sure it has&#xA;some fundamental flaw. Either that, or someone is already working on it. I&amp;rsquo;m&#xA;writing this only in the hopes that a Chemist or Biologist can explain to me how&#xA;I&amp;rsquo;m wrong and why I&amp;rsquo;m wrong.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Advent of Code</title>
       <link>https://www.andyvanee.com/2015/12/19/advent-of-code.html</link>
       <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2015/12/19/advent-of-code.html</guid>
-      <description>I&amp;rsquo;ve really been enjoying working my way through the code challenges at http://adventofcode.com/.
-My solutions are here: https://github.com/andyvanee/adventofcode
-I&amp;rsquo;m now on day 8, and the examples have ranged from very easy to pretty involved, but none have been devilishly complicated or tricky.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve really been enjoying working my way through the code challenges at&#xA;&lt;a href=&#34;http://adventofcode.com/&#34;&gt;http://adventofcode.com/&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;My solutions are here: &lt;a href=&#34;https://github.com/andyvanee/adventofcode&#34;&gt;https://github.com/andyvanee/adventofcode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m now on day 8, and the examples have ranged from&#xA;&lt;a href=&#34;https://github.com/andyvanee/adventofcode/blob/master/bin/day_1&#34;&gt;very easy&lt;/a&gt; to&#xA;&lt;a href=&#34;https://github.com/andyvanee/adventofcode/blob/master/lib/bt.rb&#34;&gt;pretty involved&lt;/a&gt;,&#xA;but none have been devilishly complicated or tricky.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Multiple Foreign Keys</title>
       <link>https://www.andyvanee.com/2014/07/31/multi-comp-foreign-key.html</link>
       <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2014/07/31/multi-comp-foreign-key.html</guid>
-      <description>I&amp;rsquo;d like to document a problem that I&amp;rsquo;ve never had before, and the solution I arrived at. It was not a real complicated problem, but I got hung up on an even simpler problem.</description>
+      <description>&lt;p&gt;I&amp;rsquo;d like to document a problem that I&amp;rsquo;ve never had before, and the solution&#xA;I arrived at. It was not a real complicated problem, but I got hung up on an&#xA;even simpler problem.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Case Against Frameworks</title>
       <link>https://www.andyvanee.com/2014/04/20/the-case-against-frameworks.html</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2014/04/20/the-case-against-frameworks.html</guid>
-      <description>This may come across as a rant, but I&amp;rsquo;m hoping I can keep this as objective as possible: I don&amp;rsquo;t like frameworks.
-I&amp;rsquo;m going to use a broad definition of frameworks defined like this:</description>
+      <description>&lt;p&gt;This may come across  as a rant, but I&amp;rsquo;m hoping I can keep this as objective as possible: I don&amp;rsquo;t like frameworks.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m going to use a broad definition of frameworks defined like this:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Sandbox your external scripts</title>
       <link>https://www.andyvanee.com/2014/03/29/sandbox-your-external-scripts.html</link>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2014/03/29/sandbox-your-external-scripts.html</guid>
-      <description>Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion.</description>
+      <description>&lt;p&gt;Fonts and external scripts can be a real performance killer for modern websites. This is the white-screen of death for front-end web development. Anytime a page is blocked for 0.5 or more seconds due to scripts and hosts outside of your control is a serious problem in my opinion. The best solution is to completely sandbox your external scripts like social media widgets. Fonts could use similar treatment.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Re-evaluating Online Universities</title>
       <link>https://www.andyvanee.com/2014/01/11/reevaluating-online-universities.html</link>
       <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2014/01/11/reevaluating-online-universities.html</guid>
-      <description>Here&amp;rsquo;s an article I read a couple days ago about the founder of Udacity and his struggle with very low success rates for online courses.
-http://www.fastcompany.com/3021473/udacity-sebastian-thrun-uphill-climb
-To compensate for a high dropout rate, Udacity has made a shift to focusing on corporate training.</description>
+      <description>&lt;p&gt;Here&amp;rsquo;s an article I read a couple days ago about the founder of Udacity&#xA;and his struggle with very low success rates for online courses.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.fastcompany.com/3021473/udacity-sebastian-thrun-uphill-climb&#34;&gt;http://www.fastcompany.com/3021473/udacity-sebastian-thrun-uphill-climb&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;To compensate for a high dropout rate, Udacity has made a shift to focusing&#xA;on corporate training. Company sponsored courses on the practical tools&#xA;and frameworks that are used today. These courses are generally taught by&#xA;corporate &amp;ldquo;Technology Evangelists&amp;rdquo;, or some such title.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Accidental CMS</title>
       <link>https://www.andyvanee.com/2013/11/29/accidental-cms.html</link>
       <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/11/29/accidental-cms.html</guid>
-      <description>When I started reading [this article called CMS Trap](http://hakunin.com/cms- trap), I had no idea what the hell he was talking about. As I pushed through, I began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go back and re-read it again because so much rang true.</description>
+      <description>&lt;p&gt;When I started reading [this article called CMS Trap](&lt;a href=&#34;http://hakunin.com/cms-&#34;&gt;http://hakunin.com/cms-&lt;/a&gt;&#xA;trap), I had no idea what the hell he was talking about. As I pushed through, I&#xA;began saying &amp;lsquo;yes&amp;rsquo; more and more, and by the time I was finished I had to go&#xA;back and re-read it again because so much rang true.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The World is Immutable</title>
       <link>https://www.andyvanee.com/2013/11/28/the-world-is-immutable.html</link>
       <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/11/28/the-world-is-immutable.html</guid>
-      <description>Interesting slide deck here called Clojure: The JFDI language
-I haven&amp;rsquo;t done any Clojure programming, but I have done some lisp (sbcl) and Haskell, so this off-the-cuff remark caught my attention:</description>
+      <description>&lt;p&gt;Interesting slide deck here called&#xA;&lt;a href=&#34;https://docs.google.com/presentation/d/15-7qFy6URdE7Owi2LitkQI_OHBu1AFWPUwHxgBc-O4E/edit#slide=id.g177bd4cb5_0173&#34;&gt;Clojure: The JFDI language&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I haven&amp;rsquo;t done any Clojure programming, but I have done some lisp (sbcl) and&#xA;Haskell, so this off-the-cuff remark caught my attention:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Udacity CS-212</title>
       <link>https://www.andyvanee.com/2013/10/29/udacity-cs212.html</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/10/29/udacity-cs212.html</guid>
-      <description>Peter Norvig is a big name in computer programming. I stumbled across some of his code and was struck by how he could often accomplish in 4 lines of code things that might take me pages.</description>
+      <description>&lt;p&gt;Peter Norvig is a big name in computer programming. I stumbled across some of&#xA;his code and was struck by how he could often accomplish in 4 lines of code&#xA;things that might take me pages.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Playing With OpenResty</title>
       <link>https://www.andyvanee.com/2013/10/28/playing-with-openresty.html</link>
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/10/28/playing-with-openresty.html</guid>
-      <description>OpenResty is a bit of an enigma. I first heard about the project a few months back when reading about some benchmarks of various web application platforms. OpenResty was WAY ahead of all the others.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://openresty.org/&#34;&gt;OpenResty&lt;/a&gt; is a bit of an enigma. I first heard about&#xA;the project a few months back when reading about some benchmarks of various&#xA;web application platforms. OpenResty was WAY ahead of all the others.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Taking Stock</title>
       <link>https://www.andyvanee.com/2013/10/28/taking-stock.html</link>
       <pubDate>Mon, 28 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/10/28/taking-stock.html</guid>
-      <description>As I&amp;rsquo;ve given this blog a little refresh, it&amp;rsquo;s caused me to look back on what I&amp;rsquo;ve written so far and think about what I want to write in the future.</description>
+      <description>&lt;p&gt;As I&amp;rsquo;ve given this blog a little refresh, it&amp;rsquo;s caused me to look back&#xA;on what I&amp;rsquo;ve written so far and think about what I want to write in the&#xA;future.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>New Layout</title>
       <link>https://www.andyvanee.com/2013/10/27/new-layout.html</link>
       <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/10/27/new-layout.html</guid>
-      <description>This blog is now compiled with Middleman and deployed with Wercker (still deploying to S3). I&amp;rsquo;ve updated the look/feel as well, mostly taking stuff away to make it really clean &amp;amp; simple.</description>
+      <description>&lt;p&gt;This blog is now compiled with &lt;a href=&#34;http://middlemanapp.com&#34;&gt;Middleman&lt;/a&gt; and deployed with &lt;a href=&#34;http://wercker.com/&#34;&gt;Wercker&lt;/a&gt; (still deploying to &lt;a href=&#34;http://aws.amazon.com/s3/&#34;&gt;S3&lt;/a&gt;). I&amp;rsquo;ve updated the look/feel as well, mostly taking stuff away to make it really clean &amp;amp; simple.&lt;/p&gt;&#xA;&lt;p&gt;I think this will be a nice setup :)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Event Driven Programming</title>
       <link>https://www.andyvanee.com/2013/05/11/event-driven-programming.html</link>
       <pubDate>Sat, 11 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/05/11/event-driven-programming.html</guid>
-      <description>I haven&amp;rsquo;t been doing a lot of JavaScript lately, but every time I do i try to explore the idea of doing everything event driven.
- &amp;ldquo;I want the world to be made of hooks&amp;rdquo; -Andrew Plotkin</description>
+      <description>&lt;p&gt;I haven&amp;rsquo;t been doing a lot of JavaScript lately, but every time I do i try to explore the idea of doing everything &lt;strong&gt;event driven&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;I want the world to be made of hooks&amp;rdquo; -&lt;a href=&#34;http://www.eblong.com/zarf/home.html&#34;&gt;Andrew Plotkin&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Spamming the Internet</title>
       <link>https://www.andyvanee.com/2013/05/03/spamming-the-internet.html</link>
       <pubDate>Fri, 03 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/05/03/spamming-the-internet.html</guid>
-      <description>When Google announced that Reader was to be no more, I, like many other geeks took things into my own hands. I was, until recently, a daily user of Reader. There are only a handful of RSS feeds that I follow, but I like them for the very fact that they are not Rich content or an Immersive Experience.</description>
+      <description>&lt;p&gt;When Google announced that Reader was to be no more, I, like many other geeks took things into my own hands. I was, until recently, a daily user of Reader. There are only a handful of RSS feeds that I follow, but I like them for the very fact that they are not &lt;strong&gt;Rich content&lt;/strong&gt; or an &lt;strong&gt;Immersive Experience&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Writing Is Hard</title>
       <link>https://www.andyvanee.com/2013/04/27/writing-is-hard.html</link>
       <pubDate>Sat, 27 Apr 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/04/27/writing-is-hard.html</guid>
-      <description>&amp;hellip;for a number of reasons.
-One reason, which is often addressed, is the challenge of effectively communicating your ideas. This is partly technical, but has more to do with how effectively you communicate in any manner.</description>
+      <description>&lt;p&gt;&amp;hellip;for a number of reasons.&lt;/p&gt;&#xA;&lt;p&gt;One reason, which is often addressed, is the challenge of effectively&#xA;communicating your ideas. This is partly technical, but has more to do with&#xA;how effectively you communicate in any manner. The benefits of learning to&#xA;write effectively, whether it be blogging or public speaking or whatever, will&#xA;transform other parts of your life as well. So they tell me.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Prose, Github and S3</title>
       <link>https://www.andyvanee.com/2013/04/25/prose-github-s3.html</link>
       <pubDate>Thu, 25 Apr 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/04/25/prose-github-s3.html</guid>
-      <description>In an effort to make the static site workflow a little less manual, I&amp;rsquo;ve created a little web-service to automate things a bit. Here&amp;rsquo;s how it works:
- Edit posts/pages/layouts etc with prose.</description>
+      <description>&lt;p&gt;In an effort to make the static site workflow a little less manual, I&amp;rsquo;ve created a little web-service to automate things a bit. Here&amp;rsquo;s how it works:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Edit posts/pages/layouts etc with &lt;a href=&#34;http://prose.io/&#34;&gt;prose.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Github web-hook hits my service, triggering a build.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The build stage looks like this:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Software Developers Home Lab</title>
       <link>https://www.andyvanee.com/2013/02/06/software-home-lab.html</link>
       <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/02/06/software-home-lab.html</guid>
-      <description>This post caught my eye: Why you need a home lab to keep your job.
-What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware.</description>
+      <description>&lt;p&gt;This post caught my eye:&#xA;&lt;a href=&#34;http://www.theregister.co.uk/2013/02/07/home_lab_career_saver/&#34;&gt;Why you need a home lab to keep your job&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;Your boss won&#39;t pay for training, so your partner has to put up with servers at home&lt;/blockquote&gt;&#xA;&lt;p&gt;What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware. It was the question of what exactly the &amp;lsquo;Home Lab&amp;rsquo; looks like for a web developer. I have a number of things cooking in my home lab but I&amp;rsquo;m thinking I really should have more. These are non-paying projects, built for fun or necessity or just to develop my skills with tools I don&amp;rsquo;t use at work. Here&amp;rsquo;s a rundown of a couple of them:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Haskell Influenced Coffee</title>
       <link>https://www.andyvanee.com/2012/08/20/haskell-influenced-coffee.html</link>
       <pubDate>Mon, 20 Aug 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/08/20/haskell-influenced-coffee.html</guid>
-      <description>I&amp;rsquo;ve been learning Haskell. It&amp;rsquo;s been a very interesting experience to learn to think in the Haskell way, but I have been unsure whether it will actually have any practical benefit in my day to day work.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been learning Haskell. It&amp;rsquo;s been a very interesting experience to&#xA;learn to think in the Haskell way, but I have been unsure whether it will&#xA;actually have any practical benefit in my day to day work.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Global Virtual Collaboration</title>
       <link>https://www.andyvanee.com/2012/08/08/global-virtual-collaboration.html</link>
       <pubDate>Wed, 08 Aug 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/08/08/global-virtual-collaboration.html</guid>
-      <description>I have a feeling that the current age could be described as the dawn of the open-source model. It&amp;rsquo;s not just software that can benefit from a workflow that is distributed, versioned and collaborative.</description>
+      <description>&lt;p&gt;I have a feeling that the current age could be described as the dawn of&#xA;the open-source model. It&amp;rsquo;s not just software that can benefit from a&#xA;workflow that is distributed, versioned and collaborative. And it&amp;rsquo;s not&#xA;only &amp;ldquo;open&amp;rdquo; products that benefit from these tools. Here&amp;rsquo;s a great&#xA;example of this at work in the latest Mars rover:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Declarative Data</title>
       <link>https://www.andyvanee.com/2012/07/15/declarative-data.html</link>
       <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/07/15/declarative-data.html</guid>
-      <description>There seems to be certain mystique surrounding declarative programming and how it applies to the real world. There are not many technologies in the average web programmer toolkit that are truly declarative.</description>
+      <description>&lt;p&gt;There seems to be certain mystique surrounding declarative programming&#xA;and how it applies to the real world. There are not many technologies in&#xA;the average web programmer toolkit that are truly declarative.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Digital Archiving</title>
       <link>https://www.andyvanee.com/2012/06/16/digital-archiving.html</link>
       <pubDate>Sat, 16 Jun 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/06/16/digital-archiving.html</guid>
-      <description>Librarians Helping Their Communities with Personal Digital Archiving</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://blogs.loc.gov/digitalpreservation/2012/05/librarians-helping-their-communities-with-personal-digital-archiving/&#34;&gt;Librarians Helping Their Communities with Personal Digital Archiving&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Old Projects onto Github Pages</title>
       <link>https://www.andyvanee.com/2012/06/07/old-projects-and-gh-pages.html</link>
       <pubDate>Thu, 07 Jun 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/06/07/old-projects-and-gh-pages.html</guid>
-      <description>I&amp;rsquo;ve moved my blog over to Github Pages, and it&amp;rsquo;s working out pretty well so far. I&amp;rsquo;m using Jekyll to generate it, which works awesome for a simple blog like this.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve moved my blog over to &lt;a href=&#34;http://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;, and it&amp;rsquo;s&#xA;working out pretty well so far. I&amp;rsquo;m using Jekyll to generate it, which works&#xA;awesome for a simple blog like this.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>MVC-r The pattern you already use</title>
       <link>https://www.andyvanee.com/2012/04/15/mvc-r.html</link>
       <pubDate>Sun, 15 Apr 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/04/15/mvc-r.html</guid>
-      <description>The pattern you already use
-MVC has long been the defacto standard for building web and desktop applications. There are many variations on the theme, but I think the acronym is missing one component that is already an important part of any MVC application&amp;hellip;</description>
+      <description>&lt;p&gt;&lt;em&gt;The pattern you already use&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;MVC has long been the defacto standard for building web and desktop applications. There are many variations on the theme, but I think the acronym is missing one component that is already an important part of any MVC application&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Copy Path to Clipboard</title>
       <link>https://www.andyvanee.com/2012/03/13/copy-path-to-clipboard.html</link>
       <pubDate>Tue, 13 Mar 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2012/03/13/copy-path-to-clipboard.html</guid>
-      <description>Finder makes it a bit difficult to get the full path to a file; like when you&amp;rsquo;re pasting it into config files or Terminal.
-So here&amp;rsquo;s a little script that makes it this easy: Browse in Finder, right click a file or folder and choose &amp;lsquo;Copy Path to Clipboard&amp;rsquo;.</description>
+      <description>&lt;p&gt;Finder makes it a bit difficult to get the full path to a file; like&#xA;when you&amp;rsquo;re pasting it into config files or Terminal.&lt;/p&gt;&#xA;&lt;p&gt;So here&amp;rsquo;s a little script that makes it this easy: Browse in Finder,&#xA;right click a file or folder and choose &amp;lsquo;Copy Path to Clipboard&amp;rsquo;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Global Day of Code Retreat</title>
       <link>https://www.andyvanee.com/2011/12/07/global-day-of-code-retreat.html</link>
       <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/12/07/global-day-of-code-retreat.html</guid>
-      <description>This past weekend my co-worker, Jon, and I participated in the Global Day of Code Retreat, an event that focuses on two things: Test-Driven Development (TDD) and Pair Programming.
-Neither of which are exactly new to me, but in my day-to-day work there are only a handful of projects that use TDD, and we basically never do pair-programming.</description>
+      <description>&lt;p&gt;This past weekend my co-worker, Jon, and I participated in the Global&#xA;Day of Code Retreat, an event that focuses on two things: Test-Driven&#xA;Development (TDD) and Pair Programming.&lt;/p&gt;&#xA;&lt;p&gt;Neither of which are exactly new to me, but in my day-to-day work&#xA;there are only a handful of projects that use TDD, and we basically&#xA;never do pair-programming. We collaborate, but never really in front&#xA;of the same computer for any length of time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Guru Graduate!</title>
       <link>https://www.andyvanee.com/2011/03/04/guru-graduate.html</link>
       <pubDate>Fri, 04 Mar 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/03/04/guru-graduate.html</guid>
-      <description>Well, today was my last day at Guru Digital Arts College. It&amp;rsquo;s been an amazing six months! I had a great feeling about the school from the day I walked in for a tour, and they didn&amp;rsquo;t disappoint.</description>
+      <description>&lt;p&gt;Well, today was my last day at&#xA;&lt;a href=&#34;http://www.gurudigitalarts.com/&#34;&gt;Guru Digital Arts College&lt;/a&gt;. It&amp;rsquo;s&#xA;been an amazing six months! I had a great feeling about the school&#xA;from the day I walked in for a tour, and they didn&amp;rsquo;t disappoint.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Automate The Itch - Part 1</title>
       <link>https://www.andyvanee.com/2011/02/11/automate-the-itch---part-1.html</link>
       <pubDate>Fri, 11 Feb 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/02/11/automate-the-itch---part-1.html</guid>
-      <description>Small, single-purpose utility applications have a long lineage in computing history. They are the cornerstone of the UNIX philosophy, and are rampant on mobile platforms. They are the small building blocks in a larger task.</description>
+      <description>&lt;p&gt;Small, single-purpose utility applications have a long lineage in computing history. They are the cornerstone of the UNIX philosophy, and are rampant on mobile platforms. They are the small building blocks in a larger task. These are apps that scratch an itch. They do things that could be done in another way, but with less time and effort.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hashtag Search</title>
       <link>https://www.andyvanee.com/2011/02/09/hashtag-search.html</link>
       <pubDate>Wed, 09 Feb 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/02/09/hashtag-search.html</guid>
-      <description>As a sideline to one of my bigger projects, I decided to build a little webapp that would search Twitter for a hashtag. Fairly basic, but it&amp;rsquo;s got a few interesting little features:</description>
+      <description>&lt;p&gt;As a sideline to one of my bigger projects, I decided to build a little webapp that would search Twitter for a hashtag. Fairly basic, but it&amp;rsquo;s got a few interesting little features:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Automator Services</title>
       <link>https://www.andyvanee.com/2011/02/07/automator-services.html</link>
       <pubDate>Mon, 07 Feb 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/02/07/automator-services.html</guid>
-      <description>I keep discovering new uses for Automator.
-I&amp;rsquo;m not sure when the &amp;ldquo;Services&amp;rdquo; option became available, but it&amp;rsquo;s worth checking out. I had previously wrote a text-to-markdown action, which converted the clipboard contents from markdown to HTML.</description>
+      <description>&lt;p&gt;I keep discovering new uses for Automator.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m not sure when the &amp;ldquo;Services&amp;rdquo; option became available, but it&amp;rsquo;s worth checking out. I had previously wrote a text-to-markdown action, which converted the clipboard contents from markdown to HTML. This was convenient, but it involved copying, running the app and then pasting. The script did this:&#xA;&lt;code&gt;pbpaste | Markdown.pl | pbcopy&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Rapid Game Prototyping in Quartz Composer</title>
       <link>https://www.andyvanee.com/2011/01/07/rapid-game-prototyping-in-quartz-composer.html</link>
       <pubDate>Fri, 07 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2011/01/07/rapid-game-prototyping-in-quartz-composer.html</guid>
-      <description>I am a Quartz Composer junky. I love tinkering with ideas and hacking together logic gates within this kind of visual programming environment.
-I think this it&amp;rsquo;s the best way to teach core CS techniques that are often obscured in text-based code.</description>
+      <description>&lt;p&gt;I am a Quartz Composer junky. I love tinkering with ideas and hacking together logic gates within this kind of visual programming environment.&lt;/p&gt;&#xA;&lt;p&gt;I think this it&amp;rsquo;s the best way to teach core CS techniques that are often obscured in text-based code. Things like logic gates, the value of modularity, and application structure start to really make sense when you lay them out visually. It&amp;rsquo;s like a UML diagram that functions and evaluates in real-time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>From Command-line to XCode</title>
       <link>https://www.andyvanee.com/2010/12/21/from-command-line-to-xcode.html</link>
       <pubDate>Tue, 21 Dec 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/12/21/from-command-line-to-xcode.html</guid>
-      <description>I&amp;rsquo;m a command-line guy at heart when it comes to programming. It seems much more organic to know what every project file is doing and how each one contributes to the whole.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m a command-line guy at heart when it comes to programming. It seems much more organic to know what every project file is doing and how each one contributes to the whole. Which files might break things, which files are optional and which files can be refactored or optimized.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Endangered Species and UX</title>
       <link>https://www.andyvanee.com/2010/12/01/endangered-species-and-ux.html</link>
       <pubDate>Wed, 01 Dec 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/12/01/endangered-species-and-ux.html</guid>
-      <description>I&amp;rsquo;ve just picked up Gene Wolfe&amp;rsquo;s collection of short stories, &amp;ldquo;Endangered Species&amp;rdquo; for a second read. I stopped after the introduction to think about it for a while. It&amp;rsquo;s that good.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve just picked up Gene Wolfe&amp;rsquo;s collection of short stories, &lt;a href=&#34;http://amzn.com/0765310333&#34;&gt;&amp;ldquo;Endangered Species&amp;rdquo;&lt;/a&gt; for a second read. I stopped after the introduction to think about it for a while. It&amp;rsquo;s that good.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Chaining in JavaScript</title>
       <link>https://www.andyvanee.com/2010/11/25/chaining-in-javascript.html</link>
       <pubDate>Thu, 25 Nov 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/11/25/chaining-in-javascript.html</guid>
-      <description>It&amp;rsquo;s been bugging me for a while that I didn&amp;rsquo;t understand the method behind jQuery&amp;rsquo;s function chaining. So I built the smallest functional version of it. I call it aQuery (for andy, or awesome).</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been bugging me for a while that I didn&amp;rsquo;t understand the method behind jQuery&amp;rsquo;s function chaining. So I built the smallest functional version of it. I call it aQuery &lt;em&gt;(for andy, or awesome).&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Call For Web Standard</title>
       <link>https://www.andyvanee.com/2010/10/08/call-for-web-standard.html</link>
       <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/10/08/call-for-web-standard.html</guid>
-      <description>Developing native apps is a pain. Yes, you have the luxury of fixed screen dimensions and access to hardware features that may not be available elsewhere, but when you&amp;rsquo;re done, you have an app that only works on one platform.</description>
+      <description>&lt;p&gt;Developing native apps is a pain. Yes, you have the luxury of fixed screen dimensions and access to hardware features that may not be available elsewhere, but when you&amp;rsquo;re done, you have an app that only works on one platform.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Divide And Conquer</title>
       <link>https://www.andyvanee.com/2010/09/16/divide-and-conquer.html</link>
       <pubDate>Thu, 16 Sep 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/09/16/divide-and-conquer.html</guid>
-      <description>School has started and I&amp;rsquo;ve been very busy with projects, but haven&amp;rsquo;t had time to write. And in fact there&amp;rsquo;s not a lot to write about. Sure, I&amp;rsquo;ve been working on a lot of cool stuff, but the big picture hasn&amp;rsquo;t come into focus.</description>
+      <description>&lt;p&gt;School has started and I&amp;rsquo;ve been very busy with projects, but haven&amp;rsquo;t&#xA;had time to write. And in fact there&amp;rsquo;s not a lot to write about. Sure,&#xA;I&amp;rsquo;ve been working on a lot of cool stuff, but the big picture hasn&amp;rsquo;t&#xA;come into focus.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Photo Archiving</title>
       <link>https://www.andyvanee.com/2010/08/27/photo-archiving.html</link>
       <pubDate>Fri, 27 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/27/photo-archiving.html</guid>
-      <description>Backups and Archives are two different things. Ideally you should have a good archiving system, and your backup would be a redundant copy of that.
-In photography, a robust archiving system has between two and four copies of any file.</description>
+      <description>&lt;p&gt;Backups and Archives are two different things. Ideally you should have&#xA;a good archiving system, and your backup would be a redundant copy of&#xA;that.&lt;/p&gt;&#xA;&lt;p&gt;In photography, a robust archiving system has between two and four copies of&#xA;any file. These copies are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>What The Internet Needs Now</title>
       <link>https://www.andyvanee.com/2010/08/27/what-the-internet-needs-now.html</link>
       <pubDate>Fri, 27 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/27/what-the-internet-needs-now.html</guid>
-      <description>I&amp;rsquo;ve been blogging a fair bit lately about metadata, archiving and dealing with the masses of information that we produce and consume today.
-It all comes from an idea that has been alternatively percolating and distilling in my mind.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been blogging a fair bit lately about metadata, archiving and&#xA;dealing with the masses of information that we produce and consume&#xA;today.&lt;/p&gt;&#xA;&lt;p&gt;It all comes from an idea that has been alternatively percolating and&#xA;distilling in my mind. It&amp;rsquo;s the idea of stability.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Auto Metadata</title>
       <link>https://www.andyvanee.com/2010/08/24/auto-metadata.html</link>
       <pubDate>Tue, 24 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/24/auto-metadata.html</guid>
-      <description></description>
+      <description>&lt;p&gt;One interesting part of the weekend photographic seminar I just got&#xA;back from was the emphasis on metadata.&lt;/p&gt;&#xA;&lt;p&gt;It&#39;s important to take great photos, but it&#39;s just as important to&#xA;know how you got those results. In the days of film, A photographer&#xA;would keep a shooting log, recording aperature, speed, lens, etc. A&#xA;decent digital camera will record all that information for you as long&#xA;as you know where to look for it.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Meota Summer Photographic Seminar</title>
       <link>https://www.andyvanee.com/2010/08/22/meota-summer-photographic-seminar.html</link>
       <pubDate>Sun, 22 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/22/meota-summer-photographic-seminar.html</guid>
-      <description>Just finishing up the weekend photographic seminar at the lake. Got some good shots and some good practice at composition, lighting and rhythm.</description>
+      <description>&lt;p&gt;Just finishing up the weekend photographic seminar at the lake. Got some good shots and some good practice at composition, lighting and rhythm.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://2.bp.blogspot.com/_ZApMPFF0N4c/THC7nF0P32I/AAAAAAAABFw/aYhGw9Dlc98/s1600/MeotaSmall5.jpg&#34;&gt;&lt;img alt=&#34;&#34; border=&#34;0&#34; id=&#34;BLOGGER_PHOTO_ID_5508108624524730210&#34; src=&#34;http://2.bp.blogspot.com/_ZApMPFF0N4c/THC7nF0P32I/AAAAAAAABFw/aYhGw9Dlc98/s320/MeotaSmall5.jpg&#34; style=&#34;margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 240px; height: 320px;&#34; /&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;http://1.bp.blogspot.com/_ZApMPFF0N4c/THC7micwEtI/AAAAAAAABFo/4X7Q3aoTpIU/s1600/MeotaSmall4.jpg&#34;&gt;&lt;img alt=&#34;&#34; border=&#34;0&#34; id=&#34;BLOGGER_PHOTO_ID_5508108615030936274&#34; src=&#34;http://1.bp.blogspot.com/_ZApMPFF0N4c/THC7micwEtI/AAAAAAAABFo/4X7Q3aoTpIU/s320/MeotaSmall4.jpg&#34; style=&#34;margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 320px; height: 240px;&#34; /&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;http://1.bp.blogspot.com/_ZApMPFF0N4c/THC7mBaiyGI/AAAAAAAABFg/JDCyZ6qP2m4/s1600/MeotaSmall3.jpg&#34;&gt;&lt;img alt=&#34;&#34; border=&#34;0&#34; id=&#34;BLOGGER_PHOTO_ID_5508108606163306594&#34; src=&#34;http://1.bp.blogspot.com/_ZApMPFF0N4c/THC7mBaiyGI/AAAAAAAABFg/JDCyZ6qP2m4/s320/MeotaSmall3.jpg&#34; style=&#34;margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 320px; height: 240px;&#34; /&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;http://2.bp.blogspot.com/_ZApMPFF0N4c/THC7l5cgvQI/AAAAAAAABFY/TFtDGxofUBw/s1600/MeotaSmall2.jpg&#34;&gt;&lt;img alt=&#34;&#34; border=&#34;0&#34; id=&#34;BLOGGER_PHOTO_ID_5508108604024077570&#34; src=&#34;http://2.bp.blogspot.com/_ZApMPFF0N4c/THC7l5cgvQI/AAAAAAAABFY/TFtDGxofUBw/s320/MeotaSmall2.jpg&#34; style=&#34;margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 320px; height: 180px;&#34; /&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;http://4.bp.blogspot.com/_ZApMPFF0N4c/THC7lglXZXI/AAAAAAAABFQ/8p8tOyLO4vg/s1600/MeotaSmall1.jpg&#34;&gt;&lt;img alt=&#34;&#34; border=&#34;0&#34; id=&#34;BLOGGER_PHOTO_ID_5508108597350327666&#34; src=&#34;http://4.bp.blogspot.com/_ZApMPFF0N4c/THC7lglXZXI/AAAAAAAABFQ/8p8tOyLO4vg/s320/MeotaSmall1.jpg&#34; style=&#34;margin: 0 10px 10px 0; cursor: pointer; cursor: hand; width: 320px; height: 240px;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Chaotic Data</title>
       <link>https://www.andyvanee.com/2010/08/11/chaotic-data.html</link>
       <pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/11/chaotic-data.html</guid>
-      <description>Data is chaotic. Our attempts to tame it are largely attempts at dehumanizing ourselves. Here&amp;rsquo;s a transcript of a piece of cardboard on my Grandfathers wall:
-------------------------- | | | WALLET LIST | | ------ | | EARS | | CANE | | WATCH | | | | SWIM | | | |_________________________| Even by typing it here, I am imposing a fair bit more order than the original had.</description>
+      <description>&lt;p&gt;Data is chaotic. Our attempts to tame it are largely attempts at dehumanizing&#xA;ourselves. Here&amp;rsquo;s a transcript of a piece of cardboard on my Grandfathers wall:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-------------------------&#xA;|                         |&#xA;|  WALLET    LIST         |&#xA;|            ------       |&#xA;|   EARS                  |&#xA;|             CANE        |&#xA;|  WATCH                  |&#xA;|                         |&#xA;|   SWIM                  |&#xA;|                         |&#xA;|_________________________|&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Even by typing it here, I am imposing a fair bit more order than the original&#xA;had. The original was written with a Sharpie and, although it was very legible,&#xA;the intent and structure was &lt;strong&gt;difficult to parse&lt;/strong&gt;. &amp;ldquo;List&amp;rdquo; may or may not have&#xA;been the title or one of the items to remember. &amp;ldquo;Ears&amp;rdquo;, I assume, meant his&#xA;hearing aid. All the items seemed like a general checklist for leaving the house&#xA;until &amp;ldquo;Swim&amp;rdquo;, which makes the list seem very specific to a certain day, or day&#xA;of the week. He has had this list posted by the door for quite some time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Champions Of Order</title>
       <link>https://www.andyvanee.com/2010/08/09/champions-of-order.html</link>
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/09/champions-of-order.html</guid>
-      <description></description>
+      <description>&lt;p&gt;Software Engineers assume that your data can be ordered logically. This&#xA;assumption is built in to the file system. They assume that it&#39;s an easy task,&#xA;but that it&#39;s best left to the user. Better than imposing an order that doesn&#39;t&#xA;make sense for some users. &lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>UNIX and the Emerging Web</title>
       <link>https://www.andyvanee.com/2010/08/01/unix-and-the-emerging-web.html</link>
       <pubDate>Sun, 01 Aug 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/08/01/unix-and-the-emerging-web.html</guid>
-      <description></description>
+      <description>&lt;p&gt;After reading &#34;The Art Of UNIX Programming&#34; again, it&#39;s got me thinking about the&#xA;nature of the technological explosion that has happened since the&#xA;quaint days of mainframes and text-based consoles.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Assembly Language For Mac</title>
       <link>https://www.andyvanee.com/2010/03/03/assembly-language-for-mac.html</link>
       <pubDate>Wed, 03 Mar 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/03/03/assembly-language-for-mac.html</guid>
-      <description>I&amp;rsquo;m away from my Linux box and want to do some assembly programming. Mac installs GCC with the developer tools, but there are enough differences that I haven&amp;rsquo;t bothered to work through them until now.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m away from my Linux box and want to do some assembly&#xA;programming. Mac installs GCC with the developer tools, but there are&#xA;enough differences that I haven&amp;rsquo;t bothered to work through them until&#xA;now. Here&amp;rsquo;s &lt;a href=&#34;http://shorestreet.com/node/21&#34;&gt;a decent tutorial&lt;/a&gt;,&#xA;although it focuses on PPC assembly and I&amp;rsquo;m using an Intel Mac. The&#xA;thing that frightened me about the Mac assembler was the default&#xA;output of gcc -S. There is some strange optimizations and flags in the&#xA;resulting assembly code. The key, as the tutorial points out, is in&#xA;the compiler options. Here&amp;rsquo;s what I used on the ubiquitous &amp;ldquo;Hello&#xA;World&amp;rdquo; program:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>RPN Calculator - v0.02</title>
       <link>https://www.andyvanee.com/2010/02/03/rpn-calculator-v002.html</link>
       <pubDate>Wed, 03 Feb 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/02/03/rpn-calculator-v002.html</guid>
-      <description>disclaimer: I copied this from my old blog. Not sure if it actually works:)
-My calculator code was quite easily polished up. Here&amp;rsquo;s the revised code which stacks operands properly and supports the main arithmetic operators +, -, * , /.</description>
+      <description>&lt;p&gt;&lt;em&gt;disclaimer: I copied this from my old blog. Not sure if it actually works:)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;My calculator code was quite easily polished up. Here&amp;rsquo;s the revised&#xA;code which stacks operands properly and supports the main arithmetic&#xA;operators +, -, * , /. If you flush the stack completely, you get&#xA;a &amp;ldquo;nan&amp;rdquo; warning, which seems reasonable. Here&amp;rsquo;s the code: (gas, x86)&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

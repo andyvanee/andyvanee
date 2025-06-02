@@ -20,14 +20,14 @@
 <p>As an example, I will use a game-idea I had, and how I quickly mocked it up in Quartz Composer. It&rsquo;s called &ldquo;Stellar Debris&rdquo;, and the point of the prototype is to demonstrate vertical parallax motion in a 2D game (like the background scrolling in Canabalt).</p>
 <p>The storyline is that your character is a flying robot(spaceship?) that takes off from the surface and must make it through the layer of orbiting debris in a post-apocalyptic earth. The controls are very basic, click to takeoff, mouse back and forth to move and click to shoot.</p>
 <p>Here&rsquo;s the start screen. The graphics are very rudimentary (prototype remember!).</p>
-<!-- raw HTML omitted -->
+<div class="separator" style="clear: both; text-align: center;">[![](http://3.bp.blogspot.com/_ZApMPFF0N4c/TSdxTfHERcI/AAAAAAAABH4/JyBV3W7qbzU/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.01.50%2BPM.png)](http://3.bp.blogspot.com/_ZApMPFF0N4c/TSdxTfHERcI/AAAAAAAABH4/JyBV3W7qbzU/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.01.50%2BPM.png)</div>
 <p>Once you click, the character takes off and you can control his motion and fire bullets.</p>
-<!-- raw HTML omitted -->
+<div class="separator" style="clear: both; text-align: center;">[![](http://1.bp.blogspot.com/_ZApMPFF0N4c/TSdx3k7Fa_I/AAAAAAAABIA/QgbL0WU524Y/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.03.45%2BPM.png)](http://1.bp.blogspot.com/_ZApMPFF0N4c/TSdx3k7Fa_I/AAAAAAAABIA/QgbL0WU524Y/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.03.45%2BPM.png)</div>
 <p>You&rsquo;ll notice the foreground has scrolled off screen already and there are blocks to shoot. The background scrolls much slower, and the sky doesn&rsquo;t scroll at all. It also gets darker as you ascend into the atmosphere.</p>
-<!-- raw HTML omitted -->
+<div class="separator" style="clear: both; text-align: center;">[![](http://1.bp.blogspot.com/_ZApMPFF0N4c/TSd0bTyu6kI/AAAAAAAABII/kSi4zXp1yM0/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.14.41%2BPM.png)](http://1.bp.blogspot.com/_ZApMPFF0N4c/TSd0bTyu6kI/AAAAAAAABII/kSi4zXp1yM0/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.14.41%2BPM.png)</div>
 <h3 id="game-logic">Game Logic</h3>
 <p>I don&rsquo;t think I would want to build an entire game in Quartz Composer. But having a mockup like this is great for prototyping because most of the game logic is there in a clear modular structure, which makes it a great starting point for porting it to your programming language of choice. Here&rsquo;s a look at the patches involved in making this &ldquo;game&rdquo; happen.</p>
-<!-- raw HTML omitted -->
+<div class="separator" style="clear: both; text-align: center;">[![](http://2.bp.blogspot.com/_ZApMPFF0N4c/TSd15vRWBJI/AAAAAAAABIQ/HkUsEsywbV4/s320/Screen%2Bshot%2B2011-01-07%2Bat%2B1.18.04%2BPM.png)](http://2.bp.blogspot.com/_ZApMPFF0N4c/TSd15vRWBJI/AAAAAAAABIQ/HkUsEsywbV4/s1600/Screen%2Bshot%2B2011-01-07%2Bat%2B1.18.04%2BPM.png)</div>
 <p>Rather than coding blindly, many of the logic bits required for gameplay are already in place. Things like &ldquo;the bullet needs to know the character&rsquo;s position at the time of firing&rdquo; or &ldquo;each 2D layer needs to know the absolute position and multiply it by some factor&rdquo; or even &ldquo;the clouds look good enough as a blurred semi-opaque sprite&rdquo;.</p>
 
             </article>

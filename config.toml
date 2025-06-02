@@ -6,3 +6,5 @@ summaryLength = 30
 publishDir = "docs"
 [permalinks]
 posts = "/:year/:month/:day/:title"
+[markup.goldmark.renderer]
+    unsafe = true

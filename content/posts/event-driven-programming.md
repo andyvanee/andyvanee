@@ -1,5 +1,4 @@
 ---
-published: true
 title: Event Driven Programming
 tags: JavaScript, Programming
 
@@ -23,7 +22,7 @@ It's basically a couple of jQuery plugins to do time-sequence type stuff.
 
 `$.stepper [line 122]` builds on top of this (without any awkward inheritance) and increments a counter every heartbeat. It adds the `reset` and `set:increment` events to control how the counter behaves.
 
-`$.looper [line 158]` builds on top of this and resets the counter whenever it reaches a threshold. It doesn't add any events but *inherits all the events of it's sub-components*, including `reset` which may be more interesting in this context. Notice I'm using the `reset` event `[line 38]` to randomize the color of the target.
+`$.looper [line 158]` builds on top of this and resets the counter whenever it reaches a threshold. It doesn't add any events but _inherits all the events of it's sub-components_, including `reset` which may be more interesting in this context. Notice I'm using the `reset` event `[line 38]` to randomize the color of the target.
 
 The important point is that these plugins define **no methods**, only events. And because they're events we can call them, or listen for them, from anywhere. This is the most clear, open and powerful implementation of hooks that I can imagine.
 

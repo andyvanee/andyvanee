@@ -4,17 +4,16 @@
     <title>Programming, Process on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming-process/</link>
     <description>Recent content in Programming, Process on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Dec 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-process/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Dec 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-process/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Command-line to XCode</title>
       <link>https://www.andyvanee.com/2010/12/21/from-command-line-to-xcode.html</link>
       <pubDate>Tue, 21 Dec 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2010/12/21/from-command-line-to-xcode.html</guid>
-      <description>I&amp;rsquo;m a command-line guy at heart when it comes to programming. It seems much more organic to know what every project file is doing and how each one contributes to the whole.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m a command-line guy at heart when it comes to programming. It seems much more organic to know what every project file is doing and how each one contributes to the whole. Which files might break things, which files are optional and which files can be refactored or optimized.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

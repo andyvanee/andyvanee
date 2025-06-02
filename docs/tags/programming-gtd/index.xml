@@ -4,18 +4,16 @@
     <title>Programming, GTD on andyvanee</title>
     <link>https://www.andyvanee.com/tags/programming-gtd/</link>
     <description>Recent content in Programming, GTD on andyvanee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Feb 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.andyvanee.com/tags/programming-gtd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Feb 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-gtd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Software Developers Home Lab</title>
       <link>https://www.andyvanee.com/2013/02/06/software-home-lab.html</link>
       <pubDate>Wed, 06 Feb 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://www.andyvanee.com/2013/02/06/software-home-lab.html</guid>
-      <description>This post caught my eye: Why you need a home lab to keep your job.
-What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware.</description>
+      <description>&lt;p&gt;This post caught my eye:&#xA;&lt;a href=&#34;http://www.theregister.co.uk/2013/02/07/home_lab_career_saver/&#34;&gt;Why you need a home lab to keep your job&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;Your boss won&#39;t pay for training, so your partner has to put up with servers at home&lt;/blockquote&gt;&#xA;&lt;p&gt;What intrigued me, as a web developer, was not setting up servers with the latest and greatest hardware. It was the question of what exactly the &amp;lsquo;Home Lab&amp;rsquo; looks like for a web developer. I have a number of things cooking in my home lab but I&amp;rsquo;m thinking I really should have more. These are non-paying projects, built for fun or necessity or just to develop my skills with tools I don&amp;rsquo;t use at work. Here&amp;rsquo;s a rundown of a couple of them:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
