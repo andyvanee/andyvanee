@@ -2,13 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.andyvanee.com/</loc>
-    <lastmod>2020-03-30T22:38:08-06:00</lastmod>
+    <loc>https://www.andyvanee.com/2025/06/02/ai-and-the-emerging-status-quo.html</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.andyvanee.com/2020/03/30/dont-panic/</loc>
-    <lastmod>2020-03-30T22:38:08-06:00</lastmod>
+    <loc>https://www.andyvanee.com/</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.andyvanee.com/posts/</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.andyvanee.com/tags/programming-ai/</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.andyvanee.com/tags/</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.andyvanee.com/2020/03/30/dont-panic/</loc>
     <lastmod>2020-03-30T22:38:08-06:00</lastmod>
   </url><url>
     <loc>https://www.andyvanee.com/2020/01/17/event-driven-web/</loc>
@@ -33,9 +42,6 @@
     <lastmod>2014-03-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.andyvanee.com/2014/03/29/sandbox-your-external-scripts.html</loc>
-    <lastmod>2014-03-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.andyvanee.com/tags/</loc>
     <lastmod>2014-03-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.andyvanee.com/tags/programming/</loc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming, AI on andyvanee</title>
+    <link>https://www.andyvanee.com/tags/programming-ai/</link>
+    <description>Recent content in Programming, AI on andyvanee</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.andyvanee.com/tags/programming-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI and the emerging status quo</title>
+      <link>https://www.andyvanee.com/2025/06/02/ai-and-the-emerging-status-quo.html</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.andyvanee.com/2025/06/02/ai-and-the-emerging-status-quo.html</guid>
+      <description>&lt;p&gt;Much has been said in the last few years about the death of software development jobs due to AI. While I don&amp;rsquo;t totally disagree, I think the current blip is the result of shortsighted managment rather than the capabilities of the AI.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

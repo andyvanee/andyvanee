@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI and the emerging status quo</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/Main.css" />
+        <script type="module" src="/App.js"></script>
+    </head>
+    <body>
+        <main>
+            <header>
+    <h1><a href="/">andyvanee</a></h1>
+</header>
+
+            <article>
+                <h1>AI and the emerging status quo</h1>
+                <time>June 2, 2025</time>
+                <p>Much has been said in the last few years about the death of software development jobs due to AI. While I don&rsquo;t totally disagree, I think the current blip is the result of shortsighted managment rather than the capabilities of the AI.</p>
+<h3 id="vibe-check">Vibe check</h3>
+<p>Let me start by establishing some assumptions. The job of a software developer is not measured in lines of code - it never has and it never will be. The real 10x developers are those that can <strong>remove</strong> lines of code and <strong>simplify</strong> interfaces rather than add to them. Better systems come through better abstractions and better core assumptions. This is <strong>even more true</strong> in the age of AI-driven software.</p>
+<p>One of my first experiments with 100% vibe coded software produced around 5000 lines of code in one evening which was easily doubled if you include the verbose commentary which AI will include by default. It was a good functional prototype - as long as you only looked at the result and didn&rsquo;t dig into the code. It didn&rsquo;t pass my own vibe check at code level for quite a few reasons, but it passed all my functional tests.</p>
+<p>On it&rsquo;s own, this covers a broad range of useful software products that aren&rsquo;t yet being built, but can now be built. The important note is that this is a <strong>net new</strong> capability that unlocks new options for non-technical folks. It is another tool in the category of &ldquo;nocode&rdquo; options which is a fantastic growth area with it&rsquo;s own distinct opportunities and limitations.</p>
+<p>For larger projects, performance critical applications and core infrastructure, the skills of a competent software developer are even more important to unlock future capabilities. Future systems are more than ever only limited by the power of the fundamental building blocks and the skill of the developers who build them.</p>
+<h3 id="future-oriented-design">Future oriented design</h3>
+<p>Non-developers may assume that I&rsquo;m being pedantic about software quality when I say that the code didn&rsquo;t pass my vibe check. I&rsquo;ll admit that there may be some of this going on. I make a practice of code reviewing code bases in different languages with different technical goals regularly, and every time I&rsquo;m struck by the wildly different conventions and practices used in different codebases. Some recent examples of codebases that I&rsquo;ve reviewed with very different standards and conventions are:</p>
+<ul>
+<li><a href="https://github.com/cc65/cc65">https://github.com/cc65/cc65</a></li>
+<li><a href="https://github.com/git/git">https://github.com/git/git</a></li>
+<li><a href="https://github.com/raysan5/raylib">https://github.com/raysan5/raylib</a></li>
+</ul>
+<p>Yes, it&rsquo;s been weirdly C oriented for a frontend leaning developer, but that&rsquo;s where I&rsquo;ve been at. This goes back to a blog post that was highly influential for me <a href="https://tomayko.com/blog/2009/unicorn-is-unix">I like Unicorn because it&rsquo;s Unix</a>. Before that post, I remember being interested in what was under the hood, but it opened my eyes to being more precise and methodical about how to analyze a codebase and how to answer specific questions.</p>
+<p>The primary factor in what makes a codebase good, or not so good, is a sort of abstract notion of how prepared it is for the future. The natural &ldquo;gravity&rdquo; of a software project is to optimize for the present which manifests in vague names and interfaces. This can <em>have the appearance</em> of a well structured application, but hide leaky abstractions all over the place. My vibe-coded example ended up with objects called <code>State</code>, <code>Grid</code>, <code>Block</code> and <code>Status</code> which all variously mixed into and manipulated each other and shared global state. I could have got ahead of this with more specific instructions, but I was avoiding that to see what the end result would be.</p>
+<p>The point being that good design is still good design which will always require a certain amount of forethought and rigor. If we can build these pieces in a way that enables end users to prototype more quickly to develop useful applications, everyone wins.</p>
+<p>This does mean that developers who primarily <strong>consume</strong> API&rsquo;s and components must level up and <strong>produce</strong> the building blocks which humans and AI will consume. This was true to some extent before AI came into the picture, but I think it&rsquo;s only going to become a more meaningful distinction. Having skill in using software does not always map cleanly to skill in producing software.</p>
+<h3 id="unopinionated-and-enthusiastic">Unopinionated and enthusiastic</h3>
+<p>Subject matter experts have often made the point that AI assistants are very good on topics where you have little context, but often are outright wrong on topics where you have a lot of context. Similarly, coding assistants will often happily churn out thousands of lines of code in the wrong direction. I think it&rsquo;s important to deeply consider this malleable nature of AI Assistants. They will happily entertain bad ideas since it makes no difference to them.</p>
+<p>By nature, AI Assistants are extremely unopinionated and unmotivated while possessing infinite enthusiasm.</p>
+<p>I think it&rsquo;s important for everyone, in any line of work, to consider the ways in which we build networks around ourselves which end up confirming and reinforcing our biases.</p>
+<p>The critical thinking skills of knowledge workers using AI assistants are even more important than they&rsquo;ve ever been, as is the need to surround ourselves with diverse voices. The emerging status quo means that the best knowledge workers will be the ones that are able to add meaninful direction and mental frameworks to direct these tools to the best outcomes.</p>
+<p>Another key skill that&rsquo;s not often mentioned is being very explicit and precise about code quality issues on multiple levels, from specific syntax all the way to broad abstractions. This is valuable in feedback to peers but even more crucial when directing AI assistants. AI (and people, including me) will miss things all the time and part of the job is being clear and specific about what these things are.</p>
+<h3 id="the-emerging-status-quo">The emerging status quo</h3>
+<p>A point I&rsquo;m willing to double down on is that zero-sum thinking is actively wrong and harmful when predicting our future with this technology. If companies believe that the current status-quo can be achieved by cutting the workforce and replacing them with AI, they <strong>will be eaten</strong> by companies which embrace the emerging status quo and continue hiring for the next stage of evolution.</p>
+<p>This is not a new thought and can probably be traced well back of the famous Henry Ford quote:</p>
+<blockquote>
+<p>“If I had asked people what they wanted, they would have said faster horses.”</p></blockquote>
+<p>We may have unlocked a faster horse, but any company which evaluates the new capabilities against the current status quo <em>will be left behind</em>. This could be true if it was something only available to the elite technology companies. The truth is that this technology gives them <em>zero competitive advantage</em> since it is available to all.</p>
+<h3 id="the-future">The future</h3>
+<p>I could easily be wrong. Perhaps all the doomsday predictions are correct and my field of work is just months or years away from extinction?</p>
+<p>It is my strong belief though that with new capabilities come expanding opportunities and features. The horizon widens as we step into this future, and any company which recoils into zero-sum thinking will not survive the unfolding revolution.</p>
+
+            </article>
+            <footer>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                    Older: <a href="https://www.andyvanee.com/2020/03/30/dont-panic/">Don&#39;t Panic</a>
+                    
+                </div>
+            </footer>
+        </main>
+        <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-41421022-1', 'andyvanee.com');
+ga('send', 'pageview');
+</script>
+    </body>
+</html>
