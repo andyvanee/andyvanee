@@ -47,9 +47,9 @@ Another key skill that's not often mentioned is being very explicit and precise 
 
 ### The emerging status quo
 
-A point I'm willing to double down on is that zero-sum thinking is actively wrong and harmful when predicting our future with this technology. If companies believe that the current status-quo can be achieved by cutting the workforce and replacing them with AI, they **will be eaten** by companies which embrace the emerging status quo and continue hiring for the next stage of evolution.
+I'm willing to double down on this: zero-sum thinking is actively wrong and harmful when predicting our future with this technology. If companies believe that the current status-quo can be achieved by cutting the workforce and replacing them with AI, they **will be eaten** by companies which embrace the emerging status quo and continue hiring for the next stage of evolution.
 
-This is not a new thought and can probably be traced well back of the famous Henry Ford quote:
+This is not a new thought and can probably be traced well beyond the famous Henry Ford quote:
 
 > “If I had asked people what they wanted, they would have said faster horses.”
 
