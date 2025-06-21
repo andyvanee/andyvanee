@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wasm Baby Steps</title>
+        <title>WASM Baby Steps</title>
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="/Main.css" />
         <script type="module" src="/App.js"></script>
@@ -13,7 +13,7 @@
 </header>
 
             <article>
-                <h1>Wasm Baby Steps</h1>
+                <h1>WASM Baby Steps</h1>
                 <time>June 21, 2025</time>
                 <p>I&rsquo;ve finally had some time to pick up WebAssembly a bit more seriously and get some real work done with it. I&rsquo;ve found that it&rsquo;s better than expected in some ways, but has it&rsquo;s challenges. Lets dive in!</p>
 <p>This article is about &ldquo;raw&rdquo; WebAssembly (WASM) and WebAssembly System Interface (WASI) rather than a full runtime like emscripten. Nothing against emscripten, but my first experience with it seemed like a lot of &ldquo;magic&rdquo; incantations. I wanted to have a firm grasp of the entire system at the binary level. For this experiment, I&rsquo;m using clang/LLVM on it&rsquo;s own to compile a C module to a WASM targets.</p>
@@ -79,8 +79,8 @@
 </span></span></code></pre></div><p>It&rsquo;s a bit crude, but it gets the job done. I&rsquo;m not using any libraries yet since it adds a lot of complexity to compile and statically link most packages, and most depend on a lot more of the system interfaces than I have stubbed out thus far.</p>
 <h3 id="a-note-on-wasi">A note on WASI</h3>
 <p>I have (deliberately) omitted the CLI arguments to actually compile this stuff, since it&rsquo;s pretty arcane and likely to be outdated already. For those interested in digging further, you need a very recent clang/LLVM with WASM support as well as an up to date WASI/sysroot to compile against.</p>
-<pre tabindex="0"><code>/opt/homebrew/Cellar/llvm/20.1.5/bin/clang --target=wasm32 -nostdlib -O3 -I/opt/homebrew/Cellar/wasi-libc/25/share/wasi-sysroot/include/wasm32-wasi -Wl,--no-entry -Wl,--export-all -Wl,--import-memory -lc -L/opt/homebrew/Cellar/wasi-libc/25/share/wasi-sysroot/lib/wasm32-wasi -o client.wasm client.c
-</code></pre><p>When running from <code>bun</code> I&rsquo;ve found that <code>node:wasi</code> gives you pretty much everything you need, but on the browser side, you&rsquo;re pretty much on your own. Although some packages seemed promising, every one I tried had different issues so I rolled my own. It has meant writing three methods from <code>wasi_snapshot_preview1</code> - two file-access methods for being able to write to <code>stdout</code> and one time-related method so I could use <code>srand(time(NULL))</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>/opt/homebrew/Cellar/llvm/20.1.5/bin/clang --target<span style="color:#f92672">=</span>wasm32 -nostdlib -O3 -I/opt/homebrew/Cellar/wasi-libc/25/share/wasi-sysroot/include/wasm32-wasi -Wl,--no-entry -Wl,--export-all -Wl,--import-memory -lc -L/opt/homebrew/Cellar/wasi-libc/25/share/wasi-sysroot/lib/wasm32-wasi -o client.wasm client.c
+</span></span></code></pre></div><p>When running from <code>bun</code> I&rsquo;ve found that <code>node:wasi</code> gives you pretty much everything you need, but on the browser side, you&rsquo;re pretty much on your own. Although some packages seemed promising, every one I tried had different issues so I rolled my own. It has meant writing three methods from <code>wasi_snapshot_preview1</code> - two file-access methods for being able to write to <code>stdout</code> and one time-related method so I could use <code>srand(time(NULL))</code>.</p>
 <p>I&rsquo;m sure there&rsquo;s something I can repurpose for this in <code>emscripten</code> or elsewhere, but it has been interesting to implement only the parts of WASI that I&rsquo;m actually using.</p>
 <h3 id="next-steps">Next steps</h3>
 <p>As I hinted at, dealing with interop between C&lt;-&gt;TS using pointers an structs is a bit unwieldy. I&rsquo;m currently working on <code>stdint.ts</code> which adds some types and readers/writers for dealing with common data types.</p>

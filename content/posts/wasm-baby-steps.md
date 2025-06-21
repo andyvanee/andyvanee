@@ -87,7 +87,7 @@ It's a bit crude, but it gets the job done. I'm not using any libraries yet sinc
 
 I have (deliberately) omitted the CLI arguments to actually compile this stuff, since it's pretty arcane and likely to be outdated already. For those interested in digging further, you need a very recent clang/LLVM with WASM support as well as an up to date WASI/sysroot to compile against.
 
-```
+```sh
 /opt/homebrew/Cellar/llvm/20.1.5/bin/clang --target=wasm32 -nostdlib -O3 -I/opt/homebrew/Cellar/wasi-libc/25/share/wasi-sysroot/include/wasm32-wasi -Wl,--no-entry -Wl,--export-all -Wl,--import-memory -lc -L/opt/homebrew/Cellar/wasi-libc/25/share/wasi-sysroot/lib/wasm32-wasi -o client.wasm client.c
 ```
 
