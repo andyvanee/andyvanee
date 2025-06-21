@@ -6,8 +6,15 @@
     <description>Recent content in Posts on andyvanee</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2025 10:07:06 -0600</lastBuildDate>
     <atom:link href="https://www.andyvanee.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wasm Baby Steps</title>
+      <link>https://www.andyvanee.com/2025/06/21/wasm-baby-steps/</link>
+      <pubDate>Sat, 21 Jun 2025 10:07:06 -0600</pubDate>
+      <guid>https://www.andyvanee.com/2025/06/21/wasm-baby-steps/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve finally had some time to pick up WebAssembly a bit more seriously and get some real work done with it. I&amp;rsquo;ve found that it&amp;rsquo;s better than expected in some ways, but has it&amp;rsquo;s challenges. Lets dive in!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI and the emerging status quo</title>
       <link>https://www.andyvanee.com/2025/06/02/ai-and-the-emerging-status-quo.html</link>
