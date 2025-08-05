@@ -1,6 +1,7 @@
 ---
-title: "WASM Baby Steps"
+title: "WASM Up and Running"
 date: 2025-06-21T10:07:06-06:00
+url: /2025/06/21/wasm-baby-steps/index.html
 ---
 
 I've finally had some time to pick up WebAssembly a bit more seriously and get some real work done with it. I've found that it's better than expected in some ways, but has it's challenges. Lets dive in!

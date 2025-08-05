@@ -3,6 +3,7 @@ title: AI and the emerging status quo
 tags: Programming, AI
 date: 2025-06-02
 url: "/2025/06/02/ai-and-the-emerging-status-quo.html"
+draft: true
 ---
 
 Much has been said in the last few years about the death of software development jobs due to AI. While I don't totally disagree, I think the current blip is the result of shortsighted managment rather than the capabilities of the AI.
