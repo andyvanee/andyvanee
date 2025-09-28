@@ -122,10 +122,6 @@ blockquote {
   padding-left: 1em;
 }
 
-strong {
-  color: #a41d30;
-}
-
 code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 0.85em;

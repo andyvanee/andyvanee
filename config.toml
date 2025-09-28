@@ -8,3 +8,5 @@ publishDir = "docs"
 posts = "/:year/:month/:day/:title"
 [markup.goldmark.renderer]
     unsafe = true
+[pagination]
+pagerSize = 9
